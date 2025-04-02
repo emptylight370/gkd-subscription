@@ -1,6 +1,9 @@
 name: build_release
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
+    paths: 'src/subscription.ts'
 
 jobs:
   build_release:
