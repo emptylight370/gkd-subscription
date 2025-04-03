@@ -8,12 +8,13 @@ export default defineGkdApp({
       key: 1,
       name: '桌面组件打卡',
       desc: '打卡之后点击完成',
+      matchDelay: 700,
       rules: [
         {
           fastQuery: true,
           matchTime: 5000,
           action: 'clickCenter',
-          actionMaximum: 1,
+          actionMaximum: 5,
           activityIds:
             'com.zjzy.calendartime.desktop_widget.ui.WidgetTargetTransActivity',
           matches: 'TextView[text="打卡成功"] +3 Button[text="完成"]',
