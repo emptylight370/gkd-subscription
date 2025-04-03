@@ -91,3 +91,9 @@ jobs:
           node -e "import('@gkd-kit/tools').then((m) => m.updatePkgVersion());"
           pnpm publish --no-git-checks
           node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"
+
+      - name: Refresh jsDeliver
+        if: ${{ steps.commit.outcome == 'success' }}
+        run: |
+          curl -X GET https://purge.jsdeliver.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
+          curl -X GET https://purge.jsdeliver.net/gh/emptylight370/gkd-subscription@main/dist/gkd.version.json5
