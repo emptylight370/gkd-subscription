@@ -59,8 +59,25 @@ jobs:
           version=$(node -e "import('@gkd-kit/tools').then((m) => m.stdoutGkdVersion());")
           echo "version=${version}" >> "$GITHUB_OUTPUT"
 
+      - name: Compare Version
+        id: compare_version
+        run: |
+          # 获取最新的tag
+          latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0")
+          # 提取版本号数字部分
+          latest_version=${latest_tag#v}
+          current_version=${{ steps.version.outputs.version }}
+          if [ "$latest_version" = "$current_version" ]; then
+            echo "Version unchanged, skipping release"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "New version detected"
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Git commit
         id: commit
+        if: steps.compare_version.outputs.skip == 'false'
         run: |
           git config --local user.email github-actions[bot]@users.noreply.github.com
           git config --local user.name github-actions[bot]
