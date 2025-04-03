@@ -20,6 +20,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
           check-name: 'check_fix_push'
+          repo-token: ${{ github.token }}
           wait-interval: 10
 
   build_release:
