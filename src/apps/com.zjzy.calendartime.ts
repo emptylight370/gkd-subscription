@@ -6,10 +6,12 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '桌面组件打卡完成',
+      name: '桌面组件打卡',
+      desc: '打卡之后点击完成',
       rules: [
         {
           fastQuery: true,
+          matchTime: 5000,
           action: 'clickCenter',
           actionMaximum: 1,
           activityIds:
