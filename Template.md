@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/emptylight370/gkd-subscription/main/dist/gkd.j
 - jsDeliver源
 
 ```txt
-https://cdn.jsdeliver.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
+https://cdn.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
 ```
 
 - 当前版本: v--VERSION--

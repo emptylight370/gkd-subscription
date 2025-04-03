@@ -96,5 +96,5 @@ jobs:
       - name: Refresh jsDeliver
         if: ${{ steps.commit.outcome == 'success' }}
         run: |
-          curl -X GET https://purge.jsdeliver.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
-          curl -X GET https://purge.jsdeliver.net/gh/emptylight370/gkd-subscription@main/dist/gkd.version.json5
+          curl -X GET https://purge.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
+          curl -X GET https://purge.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.version.json5
