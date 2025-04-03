@@ -1,0 +1,22 @@
+import { defineGkdApp } from '@gkd-kit/define';
+
+export default defineGkdApp({
+  id: 'com.zjzy.calendartime',
+  name: '指尖时光',
+  groups: [
+    {
+      key: 1,
+      name: '桌面组件打卡完成',
+      rules: [
+        {
+          fastQuery: true,
+          action: 'clickCenter',
+          actionMaximum: 1,
+          activityIds:
+            'com.zjzy.calendartime.desktop_widget.ui.WidgetTargetTransActivity',
+          matches: 'TextView[text="打卡成功"] +3 Button[text="完成"]',
+        },
+      ],
+    },
+  ],
+});

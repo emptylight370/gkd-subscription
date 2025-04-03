@@ -50,13 +50,13 @@ pnpm install --registry=https://registry.npmmirror.com
 - 订阅详情 [./src/subscription.ts](./src/subscription.ts)
 - 全局规则 [./src/globalGroups.ts](./src/globalGroups.ts)
 - 规则分类 [./src/categories.ts](./src/categories.ts)
-- 应用规则 [./src/apps](./src/apps/)
+- 应用规则 [./src/apps](./src/apps)
 
 在 vscode 内使用鼠标悬浮在任意字段上即可查看注释说明, 也可在 <https://gkd.li/api> 搜索查看
 
 ![image](https://github.com/gkd-kit/gkd/assets/38517192/35400b43-0d79-4a67-bd4c-6915613488db)
 
-现在您可编辑 [./src](./src/) 下的文件来自定义您的订阅, 构建后的订阅文件处于 [./dist](./dist/) 目录下
+现在您可编辑 [./src](./src) 下的文件来自定义您的订阅, 构建后的订阅文件处于 [./dist](./dist) 目录下
 
 另外您必须修改 订阅详情 [./src/subscription.ts](./src/subscription.ts) 下的 id 字段, 否则可能会和其它订阅冲突, 填一个较大的随机数字即可
 
@@ -78,7 +78,7 @@ pnpm install --registry=https://registry.npmmirror.com
 
 ## 构建订阅
 
-我们需要将 [./src](./src/) 分散的文件合并为一个 gkd.json5 的最终订阅文件并输出到 [./dist](./dist/) 目录下
+我们需要将 [./src](./src) 分散的文件合并为一个 gkd.json5 的最终订阅文件并输出到 [./dist](./dist) 目录下
 
 推荐使用 github actions 进行构建, 在 [./.github/workflows](./.github/workflows) 下有 3 个工作流
 

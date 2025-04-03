@@ -10,13 +10,11 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
-          matchTime: 3000,
           actionMaximum: 1,
           fastQuery: true,
-          action: 'clickCenter',
+          action: 'back',
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-          matches:
-            'TextView[text="恭喜你获得"] <2 ViewGroup < FrameLayout + FrameLayout > ImageView',
+          matches: 'TextView[text="恭喜你获得"]',
         },
       ],
     },
@@ -26,7 +24,6 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
-          matchTime: 3000,
           actionMaximum: 1,
           fastQuery: true,
           action: 'back',
@@ -41,7 +38,7 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
-          matchTime: 3000,
+          matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
           action: 'clickCenter',
