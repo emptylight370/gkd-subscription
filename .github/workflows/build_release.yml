@@ -92,12 +92,12 @@ jobs:
 
       - name: Create Release
         if: ${{ steps.commit.outcome == 'success' }}
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           tag_name: v${{ steps.version.outputs.version }}
-          release_name: Release ${{ steps.version.outputs.version }}
+          name: Release ${{ steps.version.outputs.version }}
           body_path: ./dist/CHANGELOG.md
 
       - name: Publish package(if npm token exists)
