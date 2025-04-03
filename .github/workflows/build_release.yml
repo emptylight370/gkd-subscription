@@ -18,25 +18,12 @@ jobs:
     timeout-minutes: 5
     if: github.event_name=='push'
     steps:
-      - name: Initial delay
-        run: sleep 10
-
       - name: Wait For Check Complete
         uses: lewagon/wait-on-check-action@master
         id: wait-check
         with:
           ref: ${{ github.sha }}
-          check-name: 'check_fix_push'
-          repo-token: ${{ github.token }}
-          wait-interval: 10
-
-      - name: Retry Wait For Check
-        if: steps.wait-check.outcome == 'failure'
-        uses: lewagon/wait-on-check-action@master
-        id: wait-check-again
-        with:
-          ref: ${{ github.sha }}
-          check-name: 'check_fix_push'
+          check-name: 'check'
           repo-token: ${{ github.token }}
           wait-interval: 10
 
@@ -93,12 +80,11 @@ jobs:
       - name: Create Release
         if: ${{ steps.commit.outcome == 'success' }}
         uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
         with:
           tag_name: v${{ steps.version.outputs.version }}
           name: Release ${{ steps.version.outputs.version }}
           body_path: ./dist/CHANGELOG.md
+          make_latest: true
 
       - name: Publish package(if npm token exists)
         env:
