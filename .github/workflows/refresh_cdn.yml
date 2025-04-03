@@ -22,13 +22,20 @@ jobs:
           ref: main
           fetch-depth: 1
 
+      - name: Install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Install deps
-        run: sudo apt-get install jq -y
+        run: |
+          sudo apt-get install jq -y
+          npm install -g json5
 
       - name: Get Version
         id: local_version
         run: |
-          version=$(cat dist/gkd.version.json5 | jq -r '.version')
+          version=$(json5 dist/gkd.version.json5 | jq -r '.version')
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
       - name: Check Remote Version
@@ -40,7 +47,7 @@ jobs:
             echo "Attempt $attempt of $max_retries"
 
             # 从 GitHub Raw 获取远程版本
-            remote_version=$(curl -s https://raw.githubusercontent.com/${{ github.repository }}/main/dist/gkd.version.json5 | jq -r '.version')
+            remote_version=$(curl -s https://raw.githubusercontent.com/${{ github.repository }}/main/dist/gkd.version.json5 | json5 | jq -r '.version')
             local_version=${{ steps.local_version.outputs.version }}
 
             echo "Remote version: $remote_version"
