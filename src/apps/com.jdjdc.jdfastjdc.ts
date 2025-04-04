@@ -55,33 +55,47 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '功能类-奶酪福利',
+      name: '分段功能-奶酪福利',
       desc: '可能不会多次触发',
       enable: true,
       rules: [
         {
+          key: 1,
           fastQuery: true,
           action: 'clickCenter',
           activityIds:
             'com.jdjdc.jdfastjdc.refactor.ui.newhome.HomeNewActivity',
           matches: '[vid="tv_action"][text="领取"]',
         },
+        {
+          preKeys: [1],
+          fastQuery: true,
+          forcedTime: 2000,
+          action: 'clickCenter',
+          activityIds:
+            'com.jdjdc.jdfastjdc.refactor.ui.newhome.HomeNewActivity',
+          anyMatches: ['[vid="btn_get"][text="直接收下"]'],
+        },
       ],
     },
     {
       key: 5,
       name: '功能弹窗-奶酪福利领取',
-      desc: '点击“直接收下”，需启用奶酪福利',
+      desc: '点击“直接收下”，可能和奶酪福利同时触发',
       matchTime: 3000,
       enable: true,
       rules: [
         {
-          preKeys: [4],
+          matchDelay: 300,
+          actionDelay: 300,
           fastQuery: true,
           action: 'clickCenter',
           activityIds:
             'com.jdjdc.jdfastjdc.refactor.ui.newhome.HomeNewActivity',
-          matches: '[vid="btn_get"][text="直接收下"]',
+          anyMatches: [
+            '[vid="btn_get"][text="直接收下"]',
+            '[vid="tv_left"][text="直接收下"]',
+          ],
         },
       ],
     },

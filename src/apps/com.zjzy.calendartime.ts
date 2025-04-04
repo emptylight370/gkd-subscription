@@ -1,10 +1,3 @@
-/*
- * @Author Emptylight
- * @Date 2025-04-03 10:58
- * @LastEditors Emptylight
- * @LastEditTime 2025-04-04 14:56
- * @Description
- */
 import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({

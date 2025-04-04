@@ -11,16 +11,25 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
+          // 每日阅读奖励
           actionMaximum: 10,
           fastQuery: true,
           action: 'back',
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
           anyMatches: [
-            '[id = "com.dragon.read:id/title"][text="恭喜你获得"]',
+            '[vid = "title"][text="恭喜你获得"]',
             'TextView[text="恭喜你获得"]',
-            '[id="com.dragon.read:id/hp3"][text^="看视频"]',
+            '[vid="hp3"][text^="看视频"]',
             'TextView[text^="看视频"]',
           ],
+        },
+        {
+          // 每日阅读新作奖励
+          actionMaximum: 10,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: '.pages.main.MainFragmentActivity',
+          anyMatches: ['[vid = "hp3"][text="开心收下"]', '[vid="d_j"]'],
         },
       ],
     },
@@ -31,6 +40,7 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
+          // text能快查，ui不行
           actionMaximum: 1,
           fastQuery: true,
           action: 'back',
@@ -44,11 +54,12 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '功能类-每日签到',
-      desc: '点击签到按钮',
+      name: '功能类-每日签到1',
+      desc: '点击签到按钮并返回',
       enable: true,
       rules: [
         {
+          key: 1,
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
@@ -59,19 +70,11 @@ export default defineGkdApp({
             'LynxFlattenUI[text^="立即签到"]',
           ],
         },
-      ],
-    },
-    {
-      key: 4,
-      name: '功能弹窗-关闭签到窗口',
-      desc: '签到完成后返回，需启用每日签到功能',
-      enable: true,
-      rules: [
         {
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
-          preKeys: [3],
+          preKeys: [1],
           action: 'back',
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
           anyMatches: [
@@ -82,54 +85,28 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '功能弹窗-签到观看视频',
-      desc: '签到完成后观看视频，需启用每日签到功能',
+      key: 8,
+      name: '功能类-每日签到2',
+      desc: '点击签到按钮并观看广告',
       enable: false,
       rules: [
         {
+          key: 1,
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
-          preKeys: [3],
           action: 'clickCenter',
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
           anyMatches: [
-            'FlattenUIText[text^="看视频"]',
-            'LynxFlattenUI[text^="看视频"]',
+            'FlattenUIText[text^="立即签到"]',
+            'LynxFlattenUI[text^="立即签到"]',
           ],
         },
-      ],
-    },
-    {
-      key: 6,
-      name: '功能弹窗-关闭签到窗口（独立）',
-      desc: '签到完成后返回，不需启用每日签到功能，可能误判',
-      enable: false,
-      rules: [
         {
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
-          action: 'back',
-          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-          anyMatches: [
-            'FlattenUIText[text^="看视频"]',
-            'LynxFlattenUI[text^="看视频"]',
-          ],
-        },
-      ],
-    },
-    {
-      key: 7,
-      name: '功能弹窗-签到观看视频（独立）',
-      desc: '签到完成后观看视频，不需启用每日签到功能，可能误判',
-      enable: false,
-      rules: [
-        {
-          matchTime: 10000,
-          actionMaximum: 1,
-          fastQuery: true,
+          preKeys: [1],
           action: 'clickCenter',
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
           anyMatches: [

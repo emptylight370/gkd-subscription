@@ -15,8 +15,7 @@ export default defineGkdApp({
           fastQuery: true,
           action: 'back',
           activityIds: 'com.mihoyo.cloudgame.main.MiHoYoCloudMainActivity',
-          matches:
-            '[id="com.miHoYo.cloudgames.hkrpg:id/mTvPopTitle"][text="活动商品赠送"]',
+          matches: '[vid="mTvPopTitle"][text="活动商品赠送"]',
         },
       ],
     },
@@ -36,8 +35,7 @@ export default defineGkdApp({
           action: 'clickCenter',
           position: { left: 10, top: 10 },
           activityIds: 'com.mihoyo.cloudgame.main.MiHoYoCloudMainActivity',
-          matches:
-            '[id="com.miHoYo.cloudgames.hkrpg:id/mTvPopTitle"][text="活动商品赠送"]',
+          matches: '[vid="mTvPopTitle"][text="活动商品赠送"]',
         },
       ],
     },
