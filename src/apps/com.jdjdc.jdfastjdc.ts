@@ -6,7 +6,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '每日任务领取',
+      name: '功能类-每日任务领取',
       enable: true,
       rules: [
         {
@@ -22,7 +22,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '每周任务领取',
+      name: '功能类-每周任务领取',
       desc: '延迟3秒开始查询',
       enable: true,
       rules: [
@@ -40,8 +40,8 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '领取任务奖励',
-      desc: '非会员直接领取',
+      name: '功能弹窗-领取任务奖励',
+      desc: '非会员界面直接领取，需搭配日/周任务使用',
       enable: true,
       rules: [
         {
@@ -55,7 +55,7 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '奶酪福利',
+      name: '功能类-奶酪福利',
       desc: '可能不会多次触发',
       enable: true,
       rules: [
@@ -70,8 +70,8 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '奶酪福利领取',
-      desc: '点击“直接收下”',
+      name: '功能弹窗-奶酪福利领取',
+      desc: '点击“直接收下”，需启用奶酪福利',
       matchTime: 3000,
       enable: true,
       rules: [

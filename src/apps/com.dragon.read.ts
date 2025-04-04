@@ -6,12 +6,12 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '关闭领取金币窗口',
+      name: '功能弹窗-关闭领取金币窗口',
       desc: '领取金币后返回',
       enable: true,
       rules: [
         {
-          actionMaximum: 1,
+          actionMaximum: 10,
           fastQuery: true,
           action: 'back',
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
@@ -26,7 +26,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '关闭宝箱窗口',
+      name: '功能弹窗-关闭宝箱窗口',
       desc: '领取宝箱后返回',
       enable: true,
       rules: [
@@ -44,7 +44,7 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '每日签到',
+      name: '功能类-每日签到',
       desc: '点击签到按钮',
       enable: true,
       rules: [
@@ -63,9 +63,8 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '关闭签到窗口',
-      desc: '签到完成后返回',
-
+      name: '功能弹窗-关闭签到窗口',
+      desc: '签到完成后返回，需启用每日签到功能',
       enable: true,
       rules: [
         {
@@ -84,8 +83,8 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '签到观看视频',
-      desc: '签到完成后观看视频',
+      name: '功能弹窗-签到观看视频',
+      desc: '签到完成后观看视频，需启用每日签到功能',
       enable: false,
       rules: [
         {
@@ -93,6 +92,44 @@ export default defineGkdApp({
           actionMaximum: 1,
           fastQuery: true,
           preKeys: [3],
+          action: 'clickCenter',
+          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+          anyMatches: [
+            'FlattenUIText[text^="看视频"]',
+            'LynxFlattenUI[text^="看视频"]',
+          ],
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '功能弹窗-关闭签到窗口',
+      desc: '签到完成后返回，不需启用每日签到功能，可能误判',
+      enable: false,
+      rules: [
+        {
+          matchTime: 10000,
+          actionMaximum: 1,
+          fastQuery: true,
+          action: 'back',
+          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+          anyMatches: [
+            'FlattenUIText[text^="看视频"]',
+            'LynxFlattenUI[text^="看视频"]',
+          ],
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '功能弹窗-签到观看视频',
+      desc: '签到完成后观看视频，不需启用每日签到功能，可能误判',
+      enable: false,
+      rules: [
+        {
+          matchTime: 10000,
+          actionMaximum: 1,
+          fastQuery: true,
           action: 'clickCenter',
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
           anyMatches: [

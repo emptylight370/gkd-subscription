@@ -6,7 +6,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '桌面组件打卡',
+      name: '局部弹窗-桌面组件打卡',
       desc: '打卡之后点击完成',
       matchDelay: 700,
       rules: [
