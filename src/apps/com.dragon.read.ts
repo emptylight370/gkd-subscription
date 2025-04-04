@@ -103,7 +103,7 @@ export default defineGkdApp({
     },
     {
       key: 6,
-      name: '功能弹窗-关闭签到窗口',
+      name: '功能弹窗-关闭签到窗口（独立）',
       desc: '签到完成后返回，不需启用每日签到功能，可能误判',
       enable: false,
       rules: [
@@ -121,8 +121,8 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '功能弹窗-签到观看视频',
+      key: 7,
+      name: '功能弹窗-签到观看视频（独立）',
       desc: '签到完成后观看视频，不需启用每日签到功能，可能误判',
       enable: false,
       rules: [

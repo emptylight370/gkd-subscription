@@ -1,3 +1,10 @@
+/*
+ * @Author Emptylight
+ * @Date 2025-04-03 10:58
+ * @LastEditors Emptylight
+ * @LastEditTime 2025-04-04 14:56
+ * @Description
+ */
 import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
@@ -6,7 +13,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '局部弹窗-桌面组件打卡',
+      name: '功能弹窗-桌面组件打卡',
       desc: '打卡之后点击完成',
       matchDelay: 700,
       rules: [
