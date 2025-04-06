@@ -6,12 +6,21 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '功能类-每日签到',
+      name: '分段功能-每日签到',
       rules: [
         {
+          name: '领取签到奖励',
+          key: 1,
           action: 'clickCenter',
-          activityIds: 'com.hypergryph.skland.MainActivity',
+          activityIds: '.MainActivity',
           matches: 'TextView[text="领"] <2 ViewGroup',
+        },
+        {
+          name: '关闭签到窗口',
+          preKeys: [1],
+          action: 'back',
+          activityIds: '.MainActivity',
+          matches: '@TextView[text*="*"] + ViewGroup > ViewGroup > TextView',
         },
       ],
     },

@@ -14,7 +14,7 @@ export default defineGkdApp({
           actionMaximum: 1,
           matchTime: 5000,
           action: 'clickCenter',
-          activityIds: 'com.jdjdc.jdfastjdc.refactor.ui.home.TaskActivityV2',
+          activityIds: '.refactor.ui.home.TaskActivityV2',
           matches:
             '[vid="tv_get_or_complete"][text="领取"] <2 * < * < [vid="cl_daily_container"] + [vid="btn_daily_collect_all"]',
         },
@@ -32,7 +32,7 @@ export default defineGkdApp({
           matchDelay: 3000,
           matchTime: 5000,
           action: 'clickCenter',
-          activityIds: 'com.jdjdc.jdfastjdc.refactor.ui.home.TaskActivityV2',
+          activityIds: '.refactor.ui.home.TaskActivityV2',
           matches:
             '[vid="tv_get_or_complete"][text="领取"] <2 * < * < [vid="cl_week_container"] + [vid="btn_week_collect_all"]',
         },
@@ -48,7 +48,7 @@ export default defineGkdApp({
           preKeys: [1, 2],
           fastQuery: true,
           action: 'clickCenter',
-          activityIds: 'com.jdjdc.jdfastjdc.refactor.ui.home.TaskActivityV2',
+          activityIds: '.refactor.ui.home.TaskActivityV2',
           matches: '[vid="tv_receive"][text*="收下"]',
         },
       ],
@@ -60,20 +60,20 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
+          name: '领取奶酪福利',
           key: 1,
           fastQuery: true,
           action: 'clickCenter',
-          activityIds:
-            'com.jdjdc.jdfastjdc.refactor.ui.newhome.HomeNewActivity',
+          activityIds: '.refactor.ui.newhome.HomeNewActivity',
           matches: '[vid="tv_action"][text="领取"]',
         },
         {
+          name: '关闭领取弹窗',
           preKeys: [1],
           fastQuery: true,
           forcedTime: 2000,
           action: 'clickCenter',
-          activityIds:
-            'com.jdjdc.jdfastjdc.refactor.ui.newhome.HomeNewActivity',
+          activityIds: '.refactor.ui.newhome.HomeNewActivity',
           anyMatches: ['[vid="btn_get"][text="直接收下"]'],
         },
       ],
@@ -90,8 +90,7 @@ export default defineGkdApp({
           actionDelay: 300,
           fastQuery: true,
           action: 'clickCenter',
-          activityIds:
-            'com.jdjdc.jdfastjdc.refactor.ui.newhome.HomeNewActivity',
+          activityIds: '.refactor.ui.newhome.HomeNewActivity',
           anyMatches: [
             '[vid="btn_get"][text="直接收下"]',
             '[vid="tv_left"][text="直接收下"]',

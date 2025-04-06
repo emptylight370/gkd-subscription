@@ -11,11 +11,11 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
-          // 每日阅读奖励
+          name: '每日阅读奖励',
           actionMaximum: 10,
           fastQuery: true,
           action: 'back',
-          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+          activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             '[vid = "title"][text="恭喜你获得"]',
             'TextView[text="恭喜你获得"]',
@@ -24,7 +24,7 @@ export default defineGkdApp({
           ],
         },
         {
-          // 每日阅读新作奖励
+          name: '每日阅读新作奖励',
           actionMaximum: 10,
           fastQuery: true,
           action: 'clickCenter',
@@ -44,75 +44,82 @@ export default defineGkdApp({
           actionMaximum: 1,
           fastQuery: true,
           action: 'back',
-          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-          anyMatches: [
-            'FlattenUIText[text*="宝箱"][text*="奖励"]',
-            'LynxFlattenUI[text*="宝箱"][text*="奖励"]',
-          ],
+          activityIds: '.pages.main.MainFragmentActivity',
+          matches: '[text*="宝箱"][text*="奖励"]',
         },
       ],
     },
     {
       key: 3,
-      name: '功能类-每日签到1',
+      name: '分段功能-每日签到1',
       desc: '点击签到按钮并返回',
       enable: true,
       rules: [
         {
+          name: '点击签到',
           key: 1,
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
           action: 'clickCenter',
-          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-          anyMatches: [
-            'FlattenUIText[text^="立即签到"]',
-            'LynxFlattenUI[text^="立即签到"]',
-          ],
+          activityIds: '.pages.main.MainFragmentActivity',
+          matches: '[text^="立即签到"]',
         },
         {
+          name: '签到后返回',
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
           preKeys: [1],
           action: 'back',
-          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-          anyMatches: [
-            'FlattenUIText[text^="看视频"]',
-            'LynxFlattenUI[text^="看视频"]',
-          ],
+          activityIds: '.pages.main.MainFragmentActivity',
+          matches: '[text^="看视频"]',
         },
       ],
     },
     {
       key: 8,
-      name: '功能类-每日签到2',
+      name: '分段功能-每日签到2',
       desc: '点击签到按钮并观看广告',
       enable: false,
       rules: [
         {
+          name: '点击签到',
           key: 1,
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
           action: 'clickCenter',
-          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-          anyMatches: [
-            'FlattenUIText[text^="立即签到"]',
-            'LynxFlattenUI[text^="立即签到"]',
-          ],
+          activityIds: '.pages.main.MainFragmentActivity',
+          matches: '[text^="立即签到"]',
         },
         {
+          name: '签到后观看广告',
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
           preKeys: [1],
           action: 'clickCenter',
-          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-          anyMatches: [
-            'FlattenUIText[text^="看视频"]',
-            'LynxFlattenUI[text^="看视频"]',
-          ],
+          activityIds: '.pages.main.MainFragmentActivity',
+          matches: '[text^="看视频"]',
+        },
+      ],
+    },
+    {
+      key: 9,
+      name: '局部广告-广告抽奖弹窗',
+      rules: [
+        {
+          action: 'back',
+          activityIds: '.pages.main.MainFragmentActivity',
+          fastQuery: true,
+          matches: '[text="前往抽奖"]',
+        },
+        {
+          matchDelay: 100,
+          action: 'clickCenter',
+          activityIds: '.pages.main.MainFragmentActivity',
+          matches: '[text="前往抽奖"] +2 LynxFlattenUI',
         },
       ],
     },

@@ -11,23 +11,32 @@ export default defineGkdApp({
       matchDelay: 700,
       rules: [
         {
+          name: '打卡完成弹窗',
+          key: 1,
           fastQuery: true,
           matchTime: 5000,
           action: 'clickCenter',
           actionMaximum: 5,
-          activityIds:
-            'com.zjzy.calendartime.desktop_widget.ui.WidgetTargetTransActivity',
-          matches: 'TextView[text="打卡成功"] +3 Button[text="完成"]',
-        },
-        {
-          fastQuery: true,
-          matchTime: 5000,
-          action: 'clickCenter',
-          activityIds: 'com.zjzy.calendartime.ui.main.MainActivity',
+          activityIds: [
+            '.desktop_widget.ui.WidgetTargetTransActivity',
+            '.ui.main.MainActivity',
+          ],
           anyMatches: [
             '[vid="tv_card_tile"][text="补卡成功"] +3 [vid="btn_share"][text="完成"]',
             '[vid="tv_card_tile"][text="打卡成功"] +3 [vid="btn_share"][text="完成"]',
           ],
+        },
+        {
+          name: '打卡一周弹窗',
+          key: 2,
+          preKeys: [1],
+          fastQuery: true,
+          action: 'back',
+          activityIds: [
+            '.desktop_widget.ui.WidgetTargetTransActivity',
+            '.ui.main.MainActivity',
+          ],
+          matches: '[vid="targetTitle"][text$="任务已完成"]',
         },
       ],
     },
