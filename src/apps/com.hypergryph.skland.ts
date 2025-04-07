@@ -18,9 +18,9 @@ export default defineGkdApp({
         {
           name: '关闭签到窗口',
           preKeys: [1],
-          action: 'back',
+          action: 'clickCenter',
           activityIds: '.MainActivity',
-          matches: '@TextView[text*="*"] + ViewGroup > ViewGroup > TextView',
+          matches: 'TextView[text*="*"] <4 ViewGroup - ViewGroup >2 ImageView',
         },
       ],
     },
