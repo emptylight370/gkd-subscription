@@ -60,6 +60,7 @@ export default defineGkdApp({
       name: '分段功能-每日签到1',
       desc: '点击签到按钮并返回',
       enable: true,
+      actionCdKey: 3,
       rules: [
         {
           name: '点击签到',
@@ -96,6 +97,7 @@ export default defineGkdApp({
       name: '分段功能-每日签到2',
       desc: '点击签到按钮并观看广告',
       enable: false,
+      actionCdKey: 3,
       rules: [
         {
           name: '点击签到',
@@ -148,6 +150,24 @@ export default defineGkdApp({
             'FlattenUIText[text="前往抽奖"] +2 LynxFlattenUI',
             'LynxFlattenUI[text="前往抽奖"] +2 LynxFlattenUI',
             '[text="前往抽奖"] +2 LynxFlattenUI',
+          ],
+        },
+      ],
+    },
+    {
+      key: 10,
+      name: '功能类-催更',
+      desc: '选择器有点奇怪',
+      enable: false,
+      rules: [
+        {
+          actionMaximum: 1,
+          action: 'clickCenter',
+          activityIds: '.reader.ui.ReaderActivity',
+          anyMatches: [
+            // e9d这个版本是6.6.8.16（66816）获取的
+            '@LinearLayout[vid="e9d"] > FrameLayout[childCount=1]',
+            'TextView[text$="次"][text.length<7] <2 @LinearLayout > FrameLayout[childCount=1]',
           ],
         },
       ],

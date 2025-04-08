@@ -41,5 +41,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能弹窗-更新说明',
+      enable: true,
+      rules: [
+        {
+          actionMaximum: 1,
+          matchTime: 2000,
+          fastQuery: true,
+          action: 'back',
+          activityIds: '.ui.main.MainActivity',
+          matches: '[vid="dialogTitle"][text="更新说明"]',
+        },
+      ],
+    },
   ],
 });
