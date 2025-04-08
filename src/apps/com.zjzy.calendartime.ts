@@ -9,6 +9,7 @@ export default defineGkdApp({
       name: '功能弹窗-打卡',
       desc: '打卡、补卡之后点击完成',
       matchDelay: 700,
+      enable: true,
       rules: [
         {
           name: '打卡完成弹窗',

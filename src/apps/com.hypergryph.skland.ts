@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '分段功能-每日签到',
+      enable: true,
       rules: [
         {
           name: '领取签到奖励',

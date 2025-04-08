@@ -15,6 +15,7 @@ export default defineGkdApp({
           actionMaximum: 10,
           fastQuery: true,
           action: 'back',
+          actionCdKey: 1,
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             '[vid = "title"][text="恭喜你获得"]',
@@ -27,6 +28,7 @@ export default defineGkdApp({
           name: '每日阅读新作奖励',
           actionMaximum: 10,
           fastQuery: true,
+          actionCdKey: 1,
           action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: ['[vid = "hp3"][text="开心收下"]', '[vid="d_j"]'],
@@ -128,17 +130,20 @@ export default defineGkdApp({
     {
       key: 9,
       name: '局部广告-广告抽奖弹窗',
+      enable: true,
       rules: [
         {
           action: 'back',
           activityIds: '.pages.main.MainFragmentActivity',
           fastQuery: true,
+          actionCdKey: 2,
           matches: '[text="前往抽奖"]',
         },
         {
           matchDelay: 100,
           action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
+          actionCdKey: 2,
           anyMatches: [
             'FlattenUIText[text="前往抽奖"] +2 LynxFlattenUI',
             'LynxFlattenUI[text="前往抽奖"] +2 LynxFlattenUI',

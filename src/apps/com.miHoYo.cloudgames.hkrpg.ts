@@ -10,6 +10,7 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
+          name: '返回操作退出',
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
@@ -17,20 +18,13 @@ export default defineGkdApp({
           activityIds: 'com.mihoyo.cloudgame.main.MiHoYoCloudMainActivity',
           matches: '[vid="mTvPopTitle"][text="活动商品赠送"]',
         },
-      ],
-    },
-    {
-      key: 2,
-      name: '通知提示-活动时长领取（方法2）',
-      desc: '需要先匹配方法1，无法执行才进入方法2',
-      enable: false,
-      rules: [
         {
+          name: '点击屏幕退出',
           matchTime: 10000,
           actionMaximum: 1,
           preKeys: [1],
           matchDelay: 200,
-          actionDelay: 1000,
+          actionDelay: 500,
           fastQuery: true,
           action: 'clickCenter',
           position: { left: 10, top: 10 },

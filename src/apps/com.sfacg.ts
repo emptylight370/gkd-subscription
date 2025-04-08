@@ -8,6 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '功能类-每日签到',
       desc: '未测试，书架页面触发',
+      enable: false,
       rules: [
         {
           fastQuery: true,

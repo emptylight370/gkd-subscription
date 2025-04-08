@@ -6,46 +6,26 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '功能类-每日任务领取',
+      name: '功能类-每日/每周任务领取',
+      desc: '在20秒内匹配生效',
       enable: true,
       rules: [
         {
+          name: '每日/每周任务一键领取',
+          key: 1,
           fastQuery: true,
-          actionMaximum: 1,
-          matchTime: 5000,
+          actionMaximum: 2,
+          matchTime: 20000,
           action: 'clickCenter',
           activityIds: '.refactor.ui.home.TaskActivityV2',
-          matches:
+          anyMatches: [
             '[vid="tv_get_or_complete"][text="领取"] <2 * < * < [vid="cl_daily_container"] + [vid="btn_daily_collect_all"]',
-        },
-      ],
-    },
-    {
-      key: 2,
-      name: '功能类-每周任务领取',
-      desc: '延迟3秒开始查询',
-      enable: true,
-      rules: [
-        {
-          fastQuery: true,
-          actionMaximum: 1,
-          matchDelay: 3000,
-          matchTime: 5000,
-          action: 'clickCenter',
-          activityIds: '.refactor.ui.home.TaskActivityV2',
-          matches:
             '[vid="tv_get_or_complete"][text="领取"] <2 * < * < [vid="cl_week_container"] + [vid="btn_week_collect_all"]',
+          ],
         },
-      ],
-    },
-    {
-      key: 3,
-      name: '功能弹窗-领取任务奖励',
-      desc: '非会员界面直接领取，需搭配日/周任务使用',
-      enable: true,
-      rules: [
         {
-          preKeys: [1, 2],
+          name: '关闭领取弹窗',
+          preKeys: [1],
           fastQuery: true,
           action: 'clickCenter',
           activityIds: '.refactor.ui.home.TaskActivityV2',
@@ -74,14 +54,14 @@ export default defineGkdApp({
           forcedTime: 2000,
           action: 'clickCenter',
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
-          anyMatches: ['[vid="btn_get"][text="直接收下"]'],
+          matches: '[vid="btn_get"][text="直接收下"]',
         },
       ],
     },
     {
       key: 5,
-      name: '功能弹窗-奶酪福利领取',
-      desc: '点击“直接收下”，可能和奶酪福利同时触发',
+      name: '功能弹窗-点击直接收下',
+      desc: '在领取弹窗没能及时关闭时保底',
       matchTime: 3000,
       enable: true,
       rules: [
