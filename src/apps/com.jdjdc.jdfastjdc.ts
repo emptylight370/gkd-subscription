@@ -25,6 +25,7 @@ export default defineGkdApp({
         },
         {
           name: '关闭领取弹窗',
+          matchDelay: 300,
           preKeys: [1],
           fastQuery: true,
           action: 'clickCenter',
@@ -49,6 +50,7 @@ export default defineGkdApp({
         },
         {
           name: '关闭领取弹窗',
+          matchDelay: 300,
           preKeys: [1],
           fastQuery: true,
           forcedTime: 2000,
@@ -66,14 +68,13 @@ export default defineGkdApp({
       enable: true,
       rules: [
         {
-          matchDelay: 300,
-          actionDelay: 300,
           fastQuery: true,
           action: 'clickCenter',
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
           anyMatches: [
             '[vid="btn_get"][text="直接收下"]',
             '[vid="tv_left"][text="直接收下"]',
+            '[vid="btn_get"][text="全部收下"]',
           ],
         },
       ],
