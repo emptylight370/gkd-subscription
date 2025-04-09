@@ -12,18 +12,21 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          name: '书架点击签到',
+          name: '点击签到按钮',
           fastQuery: true,
           actionMaximum: 1,
           resetMatch: 'app',
           action: 'clickCenter',
           activityIds: 'com.sf.ui.main.MainActivity',
-          matches: '@[vid="sign_container"] > [text="签到"]',
+          anyMatches: [
+            '@[vid="sign_container"] > [text="签到"]',
+            'ImageView[vid="signInBtn"] + TextView[text="签到"] <2 LinearLayout',
+          ],
         },
         {
           key: 2,
           preKeys: [1],
-          name: '点击签到',
+          name: '签到',
           fastQuery: true,
           action: 'clickCenter',
           activityIds: 'com.sf.ui.main.MainActivity',
