@@ -8,6 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '分段功能-签到',
       desc: '居然有签到功能',
+      enable: false,
       rules: [
         {
           name: '点击签到按钮',

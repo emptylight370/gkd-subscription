@@ -75,6 +75,7 @@ export default defineGkdApp({
       key: 3,
       name: '功能类-打卡',
       desc: '全分区适配',
+      enable: false,
       rules: [
         {
           fastQuery: true,
