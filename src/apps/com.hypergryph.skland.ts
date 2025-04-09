@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '分段功能-每日签到',
-      enable: true,
+      enable: false,
       rules: [
         {
           name: '领取签到奖励',
@@ -22,6 +22,19 @@ export default defineGkdApp({
           action: 'clickCenter',
           activityIds: '.MainActivity',
           matches: 'TextView[text*="*"] <4 ViewGroup - ViewGroup >2 ImageView',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '功能类-自动检票',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: '.MainActivity',
+          matches: 'ImageView[vid="check"]',
         },
       ],
     },
