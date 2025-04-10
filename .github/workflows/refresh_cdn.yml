@@ -42,7 +42,7 @@ jobs:
         id: version_check
         run: |
           max_retries=5
-          attempt=0
+          attempt=1
           while [ $attempt -le $max_retries ]; do
             echo "Attempt $attempt of $max_retries"
 
@@ -80,7 +80,51 @@ jobs:
           done
 
       - name: Refresh CDN
+        id: refresh_cdn
         if: steps.version_check.outputs.should_refresh == 'true'
         run: |
-          curl -X GET https://purge.jsdelivr.net/gh/${{ github.repository }}@main/dist/gkd.json5
-          curl -X GET https://purge.jsdelivr.net/gh/${{ github.repository }}@main/dist/gkd.version.json5
+          max_retries=5
+          attempt=1
+
+          while [ $attempt -le $max_retries ]; do
+            echo "Attempt $attempt of $max_retries"
+
+            # 刷新CDN
+            curl -X GET https://purge.jsdelivr.net/gh/${{ github.repository }}@main/dist/gkd.json5
+            curl -X GET https://purge.jsdelivr.net/gh/${{ github.repository }}@main/dist/gkd.version.json5
+
+            # 等待 CDN 更新
+            wait_time=$((15 + attempt * 15))
+            echo "Waiting ${wait_time} seconds for CDN to update..."
+            sleep $wait_time
+
+            # 检查 CDN 版本
+            remote_version=$(curl -s https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/dist/gkd.version.json5 | json5 | jq -r '.version')
+            local_version=${{ steps.local_version.outputs.version }}
+
+            echo "CDN version: $remote_version"
+            echo "Local version: $local_version"
+
+            if [ "$remote_version" = "$local_version" ]; then
+              echo "Version match, CDN refresh successful"
+              exit 0
+            fi
+
+            if [ "$remote_version" -gt "$local_version" ]; then
+              echo "CDN version is newer than local version"
+              echo "Repository should have newer commits, skip this workflow"
+              exit 0
+            fi
+
+            if [ $attempt -lt $max_retries ]; then
+              echo "Version mismatch, will retry..."
+              wait_time=$((30 + attempt * 10))
+              echo "Waiting ${wait_time} seconds..."
+              sleep $wait_time
+            else
+              echo "Failed to refresh CDN after $max_retries attempts"
+              exit 1
+            fi
+
+            attempt=$((attempt + 1))
+          done
