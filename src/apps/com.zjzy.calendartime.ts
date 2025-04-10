@@ -32,12 +32,13 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           fastQuery: true,
-          action: 'back',
+          action: 'clickCenter',
           activityIds: [
             '.desktop_widget.ui.WidgetTargetTransActivity',
             '.ui.main.MainActivity',
           ],
-          matches: '[vid="targetTitle"][text$="任务已完成"]',
+          matches:
+            '[vid="targetTitle"][text$="任务已完成"] <2 * < LinearLayout +2 [vid="iv_close"]',
         },
       ],
     },

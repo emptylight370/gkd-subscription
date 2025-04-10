@@ -32,6 +32,8 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
+          actionMaximum: 1,
+          resetMatch: 'activity',
           action: 'clickCenter',
           activityIds: '.MainActivity',
           matches: 'ImageView[vid="check"]',
