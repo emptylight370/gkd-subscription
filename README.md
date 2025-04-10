@@ -37,7 +37,7 @@ https://raw.githubusercontent.com/emptylight370/gkd-subscription/main/dist/gkd.j
 https://cdn.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
 ```
 
-- 当前版本: v16
+- 当前版本: v17
 
 - 当前订阅文件已适配 11 个应用，共有 23 应用规则组，0 全局规则组
 
