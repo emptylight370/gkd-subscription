@@ -43,6 +43,7 @@ export default defineGkdApp({
       rules: [
         {
           // text能快查，ui不行
+          name: '可领取',
           actionMaximum: 1,
           fastQuery: true,
           action: 'back',
@@ -51,6 +52,16 @@ export default defineGkdApp({
             'FlattenUIText[text*="宝箱"][text*="奖励"]',
             'LynxFlattenUI[text*="宝箱"][text*="奖励"]',
             '[text*="宝箱"][text*="奖励"]',
+          ],
+        },
+        {
+          name: '不可领取',
+          action: 'clickCenter',
+          activityIds: '.pages.main.MainFragmentActivity',
+          anyMatches: [
+            'FlattenUIText[text*="倒计时"][text*="宝箱"] +43 LynxFlattenUI',
+            'LynxFlattenUI[text*="倒计时"][text*="宝箱"] +43 LynxFlattenUI',
+            '[text*="倒计时"][text*="宝箱"] +43 LynxFlattenUI',
           ],
         },
       ],

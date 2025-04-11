@@ -63,5 +63,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '局部广告-福利弹窗(去看看)',
+      desc: '3秒关闭',
+      rules: [
+        {
+          actionDelay: 3000,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: '.refactor.ui.newhome.HomeNewActivity',
+          matches: '[vid="tv_go_to"][text="去看看"] + [vid="iv_close"]',
+        },
+      ],
+    },
   ],
 });
