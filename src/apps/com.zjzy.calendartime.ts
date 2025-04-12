@@ -8,7 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '功能弹窗-打卡',
       desc: '打卡、补卡之后点击完成',
-      matchDelay: 500,
+      matchDelay: 200,
       enable: true,
       rules: [
         {

@@ -45,7 +45,6 @@ export default defineGkdApp({
       key: 5,
       name: '功能弹窗-点击直接收下',
       desc: '用于关闭其他功能弹出的弹窗',
-      matchTime: 3000,
       enable: true,
       rules: [
         {
