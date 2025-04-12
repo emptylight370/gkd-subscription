@@ -43,5 +43,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '局部广告-书库广告',
+      rules: [
+        {
+          actionMaximum: 1,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'com.sf.ui.main.MainActivity',
+          matches: 'ImageView[vid="imgClose"]',
+        },
+      ],
+    },
   ],
 });

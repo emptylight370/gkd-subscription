@@ -54,5 +54,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '局部广告-书架广告',
+      rules: [
+        {
+          actionMaximum: 1,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: '.activity.MainFlutterActivity',
+          matches: 'ImageView[vid="close_btn"]',
+        },
+      ],
+    },
   ],
 });
