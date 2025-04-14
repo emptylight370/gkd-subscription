@@ -8,7 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '功能弹窗-关闭领取金币窗口',
       desc: '领取金币后返回',
-      enable: true,
+      enable: false,
       rules: [
         {
           name: '每日阅读奖励',
@@ -39,7 +39,7 @@ export default defineGkdApp({
       key: 2,
       name: '功能弹窗-关闭宝箱窗口',
       desc: '领取宝箱后返回',
-      enable: true,
+      enable: false,
       rules: [
         {
           // text能快查，ui不行
@@ -70,7 +70,7 @@ export default defineGkdApp({
       key: 3,
       name: '分段功能-每日签到1',
       desc: '点击签到按钮并返回',
-      enable: true,
+      enable: false,
       actionCdKey: 3,
       rules: [
         {
@@ -143,7 +143,7 @@ export default defineGkdApp({
     {
       key: 9,
       name: '局部广告-广告抽奖弹窗',
-      enable: true,
+      enable: false,
       rules: [
         {
           action: 'back',

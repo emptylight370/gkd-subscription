@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '通知提示-活动时长领取',
-      enable: true,
+      enable: false,
       rules: [
         {
           name: '返回操作退出',

@@ -8,7 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '功能类-确认退出',
       desc: '确认退出QQ阅读？',
-      enable: true,
+      enable: false,
       rules: [
         {
           fastQuery: true,
@@ -24,7 +24,7 @@ export default defineGkdApp({
       key: 2,
       name: '分段功能-每日签到',
       desc: '书架页面触发，重进应用刷新激活次数',
-      enable: true,
+      enable: false,
       rules: [
         {
           key: 1,

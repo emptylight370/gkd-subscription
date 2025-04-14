@@ -8,7 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '局部广告-角色大图广告',
       desc: '也可以是游戏',
-      enable: true,
+      enable: false,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',

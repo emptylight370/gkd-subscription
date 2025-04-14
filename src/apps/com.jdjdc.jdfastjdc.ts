@@ -8,7 +8,7 @@ export default defineGkdApp({
       key: 1,
       name: '功能类-每日/每周任务领取',
       desc: '在20秒内匹配生效',
-      enable: true,
+      enable: false,
       rules: [
         {
           name: '每日/每周任务一键领取',
@@ -28,7 +28,7 @@ export default defineGkdApp({
       key: 4,
       name: '功能类-奶酪福利',
       desc: '可能不会多次触发',
-      enable: true,
+      enable: false,
       rules: [
         {
           name: '领取奶酪福利',
@@ -44,7 +44,7 @@ export default defineGkdApp({
       key: 5,
       name: '功能弹窗-点击直接收下',
       desc: '用于关闭其他功能弹出的弹窗',
-      enable: true,
+      enable: false,
       rules: [
         {
           fastQuery: true,

@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '局部广告-云玩广告',
-      enable: true,
+      enable: false,
       rules: [
         {
           fastQuery: true,
