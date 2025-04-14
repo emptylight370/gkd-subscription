@@ -36,16 +36,16 @@ export default defineGkdApp({
           activityIds: '.web2.MiHoYoWebActivity',
           anyMatches: [
             // 崩坏：星穹铁道
-            'WebView[text*="星穹铁道"][text*="签到"] > View > View + View > View + View > View > @TextView[text*="第"][text*="天"]',
-            'TextView[text*="级"] < View < View < View > @TextView[text*="第"][text*="天"]',
+            'WebView[text*="星穹铁道"][text*="签到"] >2 View + View > View + View > View > @TextView[text*="第"][text*="天"]',
+            'TextView[text*="级"] <<3 View > @TextView[text*="第"][text*="天"]',
             // 崩坏3
-            'WebView[text*="崩坏3"][text*="签到"] > View > View + View > View > View + View > TextView[text*="第"][text*="天"] - @View',
+            'WebView[text*="崩坏3"][text*="签到"] >2 View + View >2 View + View > TextView[text*="第"][text*="天"] - @View',
             'Image[text="996923edce4749eff8536dbb75164c55_351516012348375859"] < @View',
             // 绝区零
-            'WebView[text*="绝区零"][text*="签到"] > View > View + View > View > View + View > TextView[text*="第"][text*="天"] - View',
+            'WebView[text*="绝区零"][text*="签到"] >2 + View >2 View + View > TextView[text*="第"][text*="天"] - View',
             'Image[text="c4568a8bef48b6926eb59957651393f9_5675517246901582253"] < View',
             // 原神
-            'WebView[text*="原神"][text*="签到"] > View > View + View > View > View + View > TextView[text*="第"][text*="天"] - View',
+            'WebView[text*="原神"][text*="签到"] >2 View + View >2 View + View > TextView[text*="第"][text*="天"] - View',
             'Image[text="4404a843b1cf6abe353c0b5b59381db6_655726004525214164"] < View',
           ],
           snapshotUrls: [

@@ -12,15 +12,14 @@ export default defineGkdApp({
       rules: [
         {
           name: '每日/每周任务一键领取',
-          key: 1,
           fastQuery: true,
           actionMaximum: 2,
           matchTime: 20000,
           action: 'clickCenter',
           activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [
-            '[vid="tv_get_or_complete"][text="领取"] <2 * < * < [vid="cl_daily_container"] + [vid="btn_daily_collect_all"]',
-            '[vid="tv_get_or_complete"][text="领取"] <2 * < * < [vid="cl_week_container"] + [vid="btn_week_collect_all"]',
+            '[vid="tv_get_or_complete"][text="领取"] <<n [vid="cl_daily_container"] + [vid="btn_daily_collect_all"]',
+            '[vid="tv_get_or_complete"][text="领取"] <<n [vid="cl_week_container"] + [vid="btn_week_collect_all"]',
           ],
         },
       ],
@@ -58,6 +57,7 @@ export default defineGkdApp({
             '[vid="btn_get"][text="直接收下"]',
             '[vid="tv_left"][text="直接收下"]',
             '[vid="btn_get"][text="全部收下"]',
+            '[vid="tv_receive"][text="直接收下"]',
           ],
         },
       ],
@@ -66,6 +66,7 @@ export default defineGkdApp({
       key: 6,
       name: '局部广告-福利弹窗(去看看)',
       desc: '3秒关闭',
+      enable: false,
       rules: [
         {
           actionDelay: 3000,
