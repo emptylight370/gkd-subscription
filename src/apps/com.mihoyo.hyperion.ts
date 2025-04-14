@@ -42,7 +42,7 @@ export default defineGkdApp({
             'WebView[text*="崩坏3"][text*="签到"] >2 View + View >2 View + View > TextView[text*="第"][text*="天"] - @View',
             'Image[text="996923edce4749eff8536dbb75164c55_351516012348375859"] < @View',
             // 绝区零
-            'WebView[text*="绝区零"][text*="签到"] >2 + View >2 View + View > TextView[text*="第"][text*="天"] - View',
+            'WebView[text*="绝区零"][text*="签到"] >2 View + View >2 View + View > TextView[text*="第"][text*="天"] - View',
             'Image[text="c4568a8bef48b6926eb59957651393f9_5675517246901582253"] < View',
             // 原神
             'WebView[text*="原神"][text*="签到"] >2 View + View >2 View + View > TextView[text*="第"][text*="天"] - View',
