@@ -175,6 +175,7 @@ export default defineGkdApp({
           actionMaximum: 1,
           action: 'clickCenter',
           activityIds: '.reader.ui.ReaderActivity',
+          actionCd: 10000,
           anyMatches: [
             // e9d这个版本是6.6.8.16（66816）获取的
             '@LinearLayout[vid="e9d"] > FrameLayout[childCount=1]',
