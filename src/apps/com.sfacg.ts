@@ -46,6 +46,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '局部广告-书库广告',
+      enable: false,
       rules: [
         {
           actionMaximum: 1,
@@ -53,6 +54,54 @@ export default defineGkdApp({
           action: 'clickCenter',
           activityIds: 'com.sf.ui.main.MainActivity',
           matches: 'ImageView[vid="imgClose"]',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '功能类-开启每日任务',
+      desc: '就是领取任务',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: [
+            'com.sf.ui.my.welfare.WelfareActivity',
+            'com.sf.ui.signresult.SignResultNewActivity',
+          ],
+          matches: '[vid="tvTaskAction"][text="领取任务"]',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '功能类-领取每日任务',
+      desc: '就是领取奖励',
+      enable: false,
+      rules: [
+        {
+          name: '点击领取按钮',
+          key: 1,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: [
+            'com.sf.ui.my.welfare.WelfareActivity',
+            'com.sf.ui.signresult.SignResultNewActivity',
+          ],
+          matches: '[vid="tvTaskAction"][text="领取奖励"]',
+        },
+        {
+          name: '关闭领取成功窗口',
+          key: 2,
+          preKeys: [1],
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: [
+            'com.sf.ui.my.welfare.WelfareActivity',
+            'com.sf.ui.signresult.SignResultNewActivity',
+          ],
+          matches: '[vid="tvConfirm"][text="开心收下"]',
         },
       ],
     },

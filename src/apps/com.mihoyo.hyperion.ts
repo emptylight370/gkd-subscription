@@ -24,10 +24,10 @@ export default defineGkdApp({
     {
       key: 2,
       name: '分段功能-领取签到奖励',
-      desc: '已适配星铁、崩三、绝区零、原神',
+      desc: '已适配星铁、崩三、绝区零、原神，匹配时长1分钟',
       enable: false,
       actionCd: 1000,
-      actionMaximum: 3,
+      actionMaximum: 60,
       rules: [
         {
           name: '点击签到',

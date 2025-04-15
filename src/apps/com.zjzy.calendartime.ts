@@ -51,9 +51,10 @@ export default defineGkdApp({
           actionMaximum: 1,
           matchTime: 2000,
           fastQuery: true,
-          action: 'back',
+          action: 'clickCenter',
           activityIds: '.ui.main.MainActivity',
-          matches: '[vid="dialogTitle"][text="更新说明"]',
+          matches:
+            '[vid="dialogTitle"][text="更新说明"] < LinearLayout + ImageView[vid="iv_close"]',
         },
       ],
     },

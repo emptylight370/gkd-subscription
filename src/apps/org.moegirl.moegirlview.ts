@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '局部广告-首页广告',
+      enable: false,
       rules: [
         {
           matchTime: 10000,

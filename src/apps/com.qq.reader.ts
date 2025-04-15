@@ -13,7 +13,6 @@ export default defineGkdApp({
         {
           fastQuery: true,
           actionMaximum: 1,
-          resetMatch: 'app',
           action: 'clickCenter',
           activityIds: '.activity.MainFlutterActivity',
           matches: '[vid="sureButton"][text="退出"]',
@@ -57,6 +56,7 @@ export default defineGkdApp({
     {
       key: 3,
       name: '局部广告-书架广告',
+      enable: false,
       rules: [
         {
           actionMaximum: 1,
