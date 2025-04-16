@@ -105,5 +105,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '功能类-领取会员权益',
+      desc: '每日/周代券领取',
+      rules: [
+        {
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: 'com.sf.ui.main.member.SFMemberActivity',
+          matches: '[vid="tvGet"][text="立即领取"]',
+        },
+      ],
+    },
   ],
 });
