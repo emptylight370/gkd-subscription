@@ -93,12 +93,14 @@ export default defineGkdApp({
           actionMaximum: 1,
           fastQuery: true,
           preKeys: [1],
-          action: 'back',
+          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
-            'FlattenUIText[text^="看视频"]',
-            'LynxFlattenUI[text^="看视频"]',
-            '[text^="看视频"]',
+            // 这个支持快查，后面的不支持
+            '[text="重新签到"] +5 LynxFlattenUI',
+            'FlattenUIText[text^="看视频"] +7 LynxFlattenUI',
+            'LynxFlattenUI[text^="看视频"] +7 LynxFlattenUI',
+            '[text^="看视频"] +7 LynxFlattenUI',
           ],
         },
       ],

@@ -66,6 +66,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           action: 'clickCenter',
+          actionCd: 1000,
           activityIds: [
             'com.sf.ui.my.welfare.WelfareActivity',
             'com.sf.ui.signresult.SignResultNewActivity',
