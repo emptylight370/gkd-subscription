@@ -111,10 +111,20 @@ export default defineGkdApp({
       desc: '每日/周代券领取',
       rules: [
         {
+          name: '点击领取',
+          key: 1,
           fastQuery: true,
           action: 'clickCenter',
           activityIds: 'com.sf.ui.main.member.SFMemberActivity',
           matches: '[vid="tvGet"][text="立即领取"]',
+        },
+        {
+          name: '收下奖励',
+          key: 2,
+          preKeys: [1],
+          fastQuery: true,
+          activityIds: 'com.sf.ui.main.member.SFMemberActivity',
+          matches: '[vid="btnCatch"][text="收下了"]',
         },
       ],
     },
