@@ -77,5 +77,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 7,
+      name: '全屏广告-奶酪特别企划',
+      desc: '关闭按钮在右上角',
+      enable: false,
+      rules: [
+        {
+          action: 'clickCenter',
+          activityIds: '.refactor.ui.newhome.HomeNewActivity',
+          fastQuery: true,
+          matches: '[vid="fl_container"] > ImageView',
+        },
+      ],
+    },
   ],
 });

@@ -38,7 +38,7 @@ export default defineGkdApp({
             '.ui.main.MainActivity',
           ],
           matches:
-            '[vid="targetTitle"][text$="任务已完成"] <<2 LinearLayout +2 [vid="iv_close"]',
+            '[vid="targetTitle"][text$="任务已完成"] <<3 LinearLayout +2 [vid="iv_close"]',
         },
       ],
     },
