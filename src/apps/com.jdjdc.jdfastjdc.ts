@@ -7,14 +7,12 @@ export default defineGkdApp({
     {
       key: 1,
       name: '功能类-每日/每周任务领取',
-      desc: '在20秒内匹配生效',
       enable: false,
       rules: [
         {
           name: '每日/每周任务一键领取',
           fastQuery: true,
           actionMaximum: 2,
-          matchTime: 20000,
           action: 'clickCenter',
           activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [

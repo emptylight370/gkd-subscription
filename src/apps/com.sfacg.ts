@@ -33,8 +33,19 @@ export default defineGkdApp({
           matches: 'TextView[text="点击签到"]',
         },
         {
-          key: 3,
+          key: 4,
           preKeys: [2],
+          name: '不在签到时间内',
+          // 短时间优先匹配，方便关闭窗口
+          priorityTime: 500,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: '.ui.SysDialogActivity',
+          matches: '[vid="tvConfirm"][text="我知道了"]',
+        },
+        {
+          key: 3,
+          preKeys: [2, 4],
           name: '退出签到完成页',
           fastQuery: true,
           action: 'back',
@@ -66,7 +77,8 @@ export default defineGkdApp({
         {
           fastQuery: true,
           action: 'clickCenter',
-          actionCd: 1000,
+          // 要按钮匹配上一段时间才点击。防止刚领任务没有刷新状态
+          actionDelay: 400,
           activityIds: [
             'com.sf.ui.my.welfare.WelfareActivity',
             'com.sf.ui.signresult.SignResultNewActivity',
@@ -85,6 +97,8 @@ export default defineGkdApp({
           name: '点击领取按钮',
           key: 1,
           fastQuery: true,
+          // 要匹配上一段时间才点击
+          actionDelay: 400,
           action: 'clickCenter',
           activityIds: [
             'com.sf.ui.my.welfare.WelfareActivity',
@@ -95,7 +109,7 @@ export default defineGkdApp({
         {
           name: '关闭领取成功窗口',
           key: 2,
-          preKeys: [1],
+          preKeys: [1, 2],
           fastQuery: true,
           action: 'clickCenter',
           activityIds: [
