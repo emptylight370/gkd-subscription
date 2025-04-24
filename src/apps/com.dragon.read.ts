@@ -178,7 +178,8 @@ export default defineGkdApp({
           actionDelay: 300,
           action: 'clickCenter',
           activityIds: '.reader.ui.ReaderActivity',
-          matches: '@LinearLayout > TextView[text~="\\\\d+次"][text.length<7]',
+          matches:
+            '@LinearLayout > FrameLayout[childCount=1] + TextView[text~="\\\\d+次"][text.length<7]',
         },
       ],
     },
