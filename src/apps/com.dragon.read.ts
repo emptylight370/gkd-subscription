@@ -175,14 +175,10 @@ export default defineGkdApp({
       rules: [
         {
           actionMaximum: 1,
+          actionDelay: 300,
           action: 'clickCenter',
           activityIds: '.reader.ui.ReaderActivity',
-          actionCd: 10000,
-          anyMatches: [
-            // e9d这个版本是6.6.8.16（66816）获取的
-            '@LinearLayout[vid="e9d"] > FrameLayout[childCount=1]',
-            'TextView[text$="次"][text.length<7] <2 @LinearLayout > FrameLayout[childCount=1]',
-          ],
+          matches: '@LinearLayout > TextView[text~="\\\\d+次"][text.length<7]',
         },
       ],
     },
