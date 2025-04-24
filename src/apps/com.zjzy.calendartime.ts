@@ -22,10 +22,8 @@ export default defineGkdApp({
             '.desktop_widget.ui.WidgetTargetTransActivity',
             '.ui.main.MainActivity',
           ],
-          anyMatches: [
-            '[vid="tv_card_tile"][text="补卡成功"] +3 [vid="btn_share"][text="完成"]',
-            '[vid="tv_card_tile"][text="打卡成功"] +3 [vid="btn_share"][text="完成"]',
-          ],
+          matches:
+            '[vid="tv_card_tile"][text~="[打补]卡成功"] +3 [vid="btn_share"][text="完成"]',
         },
         {
           name: '打卡一周弹窗',

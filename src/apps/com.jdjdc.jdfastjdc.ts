@@ -82,10 +82,10 @@ export default defineGkdApp({
       enable: false,
       rules: [
         {
+          fastQuery: true,
           action: 'clickCenter',
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
-          fastQuery: true,
-          matches: '[vid="fl_container"] > ImageView',
+          matches: '@ImageView < [vid="fl_container"]',
         },
       ],
     },

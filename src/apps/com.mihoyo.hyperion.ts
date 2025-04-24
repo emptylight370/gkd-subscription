@@ -81,8 +81,10 @@ export default defineGkdApp({
           fastQuery: true,
           action: 'clickCenter',
           activityIds: '.main.HyperionMainActivity',
-          matches:
-            'LinearLayout[vid="discussSignView"] TextView[vid="signTv"][text="已打卡"]',
+          anyMatches: [
+            'TextView[vid="signTv"][text="打卡"]',
+            '[text="打卡"] <<2 LinearLayout[vid="discussSignView"]',
+          ],
         },
       ],
     },
