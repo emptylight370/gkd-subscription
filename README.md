@@ -12,7 +12,7 @@
 
 ## 赞助
 
-- **如果这个项目对你有帮助，欢迎在 [爱发电](https://ifdian.net/a/tingyuting) 支持我！**
+- **如果这个项目对你有帮助，欢迎在 [爱发电](https://ifdian.net/a/tingyuting) 支持我！**~~（掉认证是正常的，因为一直没人发电）~~
 
 ## 说明
 
@@ -20,6 +20,7 @@
 - **本地调试结果不包含快照链接**
 - **不保证设备通用性**
 - **主观上未达到收录或推荐标准，不希望被任何形式推广**
+- **从个人层面上会避免全局规则，请使用其他规则的全局规则**
 
 ## 订阅
 
@@ -37,7 +38,7 @@ https://raw.githubusercontent.com/emptylight370/gkd-subscription/main/dist/gkd.j
 https://cdn.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
 ```
 
-- 当前版本: v27
+- 当前版本: v28
 
 - 当前订阅文件已适配 15 个应用，共有 34 应用规则组，0 全局规则组
 
