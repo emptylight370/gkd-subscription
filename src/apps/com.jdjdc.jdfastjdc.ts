@@ -89,5 +89,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 8,
+      name: '局部广告-盲盒大会员推广',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: '.refactor.ui.function.BlindBoxActivity',
+          matches:
+            '@[vid="iv_close"] - ViewGroup > [vid="tv_buy"][text*="大会员"]',
+        },
+      ],
+    },
   ],
 });
