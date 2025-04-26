@@ -11,7 +11,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.MainActivity',
           matches:
             '[vid="user_content_vibrant_life"] +2 LinearLayout > TextView[text="取消"]',

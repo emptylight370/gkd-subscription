@@ -13,14 +13,12 @@ export default defineGkdApp({
           name: '领取签到奖励',
           key: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.MainActivity',
           matches: '@ViewGroup > TextView[text="领"]',
         },
         {
           name: '关闭签到窗口',
           preKeys: [1],
-          action: 'clickCenter',
           activityIds: '.MainActivity',
           matches:
             '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~="[^\\\\d]+\\\\*\\\\d+"]',
@@ -37,7 +35,6 @@ export default defineGkdApp({
           fastQuery: true,
           actionMaximum: 1,
           resetMatch: 'app',
-          action: 'clickCenter',
           activityIds: '.MainActivity',
           matches: 'ImageView[vid="check"]',
         },

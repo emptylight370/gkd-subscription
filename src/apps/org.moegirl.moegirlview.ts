@@ -11,7 +11,6 @@ export default defineGkdApp({
       rules: [
         {
           matchTime: 10000,
-          action: 'clickCenter',
           activityIds: '.MainActivity',
           matches: 'View[desc="关闭"] - View >2 ImageView > Button',
         },

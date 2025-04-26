@@ -29,7 +29,6 @@ export default defineGkdApp({
         //   matchDelay: 200,
         //   actionDelay: 500,
         //   fastQuery: true,
-        //   action: 'clickCenter',
         //   position: { left: 10, top: 10 },
         //   activityIds: 'com.mihoyo.cloudgame.main.MiHoYoCloudMainActivity',
         //   matches: '[vid="mTvPopTitle"][text="活动商品赠送"]',

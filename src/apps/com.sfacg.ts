@@ -16,7 +16,6 @@ export default defineGkdApp({
           fastQuery: true,
           actionMaximum: 1,
           resetMatch: 'app',
-          action: 'clickCenter',
           activityIds: 'com.sf.ui.main.MainActivity',
           anyMatches: [
             '@[vid="sign_container"] > [text="签到"]',
@@ -28,7 +27,6 @@ export default defineGkdApp({
           preKeys: [1],
           name: '签到',
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: 'com.sf.ui.main.MainActivity',
           matches: 'TextView[text="点击签到"]',
         },
@@ -39,7 +37,6 @@ export default defineGkdApp({
           // 短时间优先匹配，方便关闭窗口
           priorityTime: 500,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.ui.SysDialogActivity',
           matches: '[vid="tvConfirm"][text="我知道了"]',
         },
@@ -62,7 +59,6 @@ export default defineGkdApp({
         {
           actionMaximum: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: 'com.sf.ui.main.MainActivity',
           matches: 'ImageView[vid="imgClose"]',
         },
@@ -76,7 +72,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           // 要按钮匹配上一段时间才点击。防止刚领任务没有刷新状态
           actionDelay: 400,
           activityIds: [
@@ -99,7 +94,6 @@ export default defineGkdApp({
           fastQuery: true,
           // 要匹配上一段时间才点击
           actionDelay: 400,
-          action: 'clickCenter',
           activityIds: [
             'com.sf.ui.my.welfare.WelfareActivity',
             'com.sf.ui.signresult.SignResultNewActivity',
@@ -111,7 +105,6 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1, 2],
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: [
             'com.sf.ui.my.welfare.WelfareActivity',
             'com.sf.ui.signresult.SignResultNewActivity',
@@ -129,7 +122,6 @@ export default defineGkdApp({
           name: '点击领取',
           key: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: 'com.sf.ui.main.member.SFMemberActivity',
           matches: '[vid="tvGet"][text="立即领取"]',
         },

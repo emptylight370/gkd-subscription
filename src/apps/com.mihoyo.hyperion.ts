@@ -15,7 +15,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.main.popup.HomePopupDialogActivity',
           matches: '[vid="closeIv"]',
         },
@@ -32,7 +31,6 @@ export default defineGkdApp({
         {
           name: '点击签到',
           key: 1,
-          action: 'clickCenter',
           activityIds: '.web2.MiHoYoWebActivity',
           anyMatches: [
             // 崩坏：星穹铁道
@@ -58,7 +56,6 @@ export default defineGkdApp({
           name: '关闭签到成功弹窗',
           key: 2,
           preKeys: [1],
-          action: 'clickCenter',
           activityIds: '.web2.MiHoYoWebActivity',
           matches: 'TextView[text*="签到成功"] < View <2 View + TextView',
           snapshotUrls: [
@@ -79,7 +76,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.main.HyperionMainActivity',
           anyMatches: [
             'TextView[vid="signTv"][text="打卡"]',

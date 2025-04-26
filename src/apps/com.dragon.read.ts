@@ -28,7 +28,6 @@ export default defineGkdApp({
           actionMaximum: 10,
           fastQuery: true,
           actionCdKey: 1,
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           matches: 'TextView[text="开心收下"]',
         },
@@ -55,7 +54,6 @@ export default defineGkdApp({
         },
         {
           name: '不可领取',
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             '@LynxFlattenUI -43 FlattenUIText[text*="倒计时"][text*="宝箱"]',
@@ -79,7 +77,6 @@ export default defineGkdApp({
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             'FlattenUIText[text^="立即签到"]',
@@ -94,7 +91,6 @@ export default defineGkdApp({
           actionMaximum: 1,
           fastQuery: true,
           preKeys: [1],
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             '@LynxFlattenUI -5 [text="重新签到"]',
@@ -118,7 +114,6 @@ export default defineGkdApp({
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             'FlattenUIText[text^="立即签到"]',
@@ -133,7 +128,6 @@ export default defineGkdApp({
           actionMaximum: 1,
           fastQuery: true,
           preKeys: [1],
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             'FlattenUIText[text^="看视频"]',
@@ -158,7 +152,6 @@ export default defineGkdApp({
         },
         {
           matchDelay: 100,
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           actionCdKey: 2,
           anyMatches: [
@@ -179,7 +172,6 @@ export default defineGkdApp({
         {
           actionMaximum: 1,
           actionDelay: 300,
-          action: 'clickCenter',
           activityIds: '.reader.ui.ReaderActivity',
           matches:
             '@LinearLayout > FrameLayout[childCount=1] + TextView[text~="\\\\d+次"][text.length<7]',

@@ -13,7 +13,6 @@ export default defineGkdApp({
           name: '每日/每周任务一键领取',
           fastQuery: true,
           actionMaximum: 2,
-          action: 'clickCenter',
           activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [
             '[vid="tv_get_or_complete"][text="领取"] <<n [vid="cl_daily_container"] + [vid="btn_daily_collect_all"]',
@@ -32,7 +31,6 @@ export default defineGkdApp({
           name: '领取奶酪福利',
           key: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
           matches: '[vid="tv_action"][text="领取"]',
         },
@@ -46,7 +44,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: [
             '.refactor.ui.newhome.HomeNewActivity',
             '.refactor.ui.home.TaskActivityV2',
@@ -69,7 +66,6 @@ export default defineGkdApp({
         {
           actionDelay: 3000,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
           matches: '[vid="tv_go_to"][text="去看看"] + [vid="iv_close"]',
         },
@@ -83,7 +79,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
           matches: '@ImageView < [vid="fl_container"]',
         },
@@ -96,7 +91,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.refactor.ui.function.BlindBoxActivity',
           matches:
             '@[vid="iv_close"] - ViewGroup > [vid="tv_buy"][text*="大会员"]',

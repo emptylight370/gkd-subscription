@@ -14,7 +14,6 @@ export default defineGkdApp({
           matchTime: 10000,
           actionMaximum: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: 'com.offcn.mini.view.main.MainActivity',
           matches: '[vid="closeIV"]',
         },

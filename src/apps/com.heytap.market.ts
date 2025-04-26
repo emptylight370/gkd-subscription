@@ -11,7 +11,6 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          action: 'clickCenter',
           activityIds:
             'com.heytap.cdo.client.cards.page.main.maintab.MainTabActivity',
           matches:

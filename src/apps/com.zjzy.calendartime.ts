@@ -16,7 +16,6 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           matchTime: 5000,
-          action: 'clickCenter',
           actionMaximum: 5,
           activityIds: [
             '.desktop_widget.ui.WidgetTargetTransActivity',
@@ -30,7 +29,6 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: [
             '.desktop_widget.ui.WidgetTargetTransActivity',
             '.ui.main.MainActivity',
@@ -49,7 +47,6 @@ export default defineGkdApp({
           actionMaximum: 1,
           matchTime: 2000,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.ui.main.MainActivity',
           matches:
             '[vid="dialogTitle"][text="更新说明"] < LinearLayout + ImageView[vid="iv_close"]',
