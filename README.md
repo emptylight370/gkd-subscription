@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/emptylight370/gkd-subscription/main/dist/gkd.j
 https://cdn.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
 ```
 
-- 当前版本: v30
+- 当前版本: v31
 
 - 当前订阅文件已适配 15 个应用，共有 35 应用规则组，0 全局规则组
 
