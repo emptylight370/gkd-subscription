@@ -18,5 +18,43 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能弹窗-仅WLAN下载',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+          matches: 'TextView[text="仅 WLAN 下载并安装"]',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '功能弹窗-直接下载',
+      desc: '数据网络加速',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+          matches: 'Button[text="直接下载并安装"]',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '功能弹窗-下载异常提醒',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds:
+            'com.heytap.cdo.client.download.ui.activity.DownloadDialogActivity',
+          matches: 'Button[text="取消"]',
+        },
+      ],
+    },
   ],
 });
