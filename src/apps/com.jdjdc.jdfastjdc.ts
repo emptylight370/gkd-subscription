@@ -101,6 +101,7 @@ export default defineGkdApp({
       key: 9,
       name: '全屏广告-不开通会员弹窗',
       desc: '退出会员页面时弹出',
+      enable: false,
       rules: [
         {
           fastQuery: true,
