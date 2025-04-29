@@ -8,14 +8,12 @@ export default defineGkdApp({
       key: 1,
       name: '功能弹窗-打卡',
       desc: '打卡、补卡之后点击完成',
-      matchDelay: 200,
       enable: false,
       rules: [
         {
           name: '打卡完成弹窗',
           key: 1,
           fastQuery: true,
-          matchTime: 5000,
           actionMaximum: 5,
           activityIds: [
             '.desktop_widget.ui.WidgetTargetTransActivity',

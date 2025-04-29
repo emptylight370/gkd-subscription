@@ -15,8 +15,8 @@ export default defineGkdApp({
           actionMaximum: 2,
           activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [
-            '[vid="tv_get_or_complete"][text="领取"] <<n [vid="cl_daily_container"] + [vid="btn_daily_collect_all"]',
-            '[vid="tv_get_or_complete"][text="领取"] <<n [vid="cl_week_container"] + [vid="btn_week_collect_all"]',
+            '[vid="tv_get_or_complete"][text="领取"] <<4 [vid="cl_daily_container"] + [vid="btn_daily_collect_all"]',
+            '[vid="tv_get_or_complete"][text="领取"] <<4 [vid="cl_week_container"] + [vid="btn_week_collect_all"]',
           ],
         },
       ],
@@ -94,6 +94,18 @@ export default defineGkdApp({
           activityIds: '.refactor.ui.function.BlindBoxActivity',
           matches:
             '@[vid="iv_close"] - ViewGroup > [vid="tv_buy"][text*="大会员"]',
+        },
+      ],
+    },
+    {
+      key: 9,
+      name: '全屏广告-不开通会员弹窗',
+      desc: '退出会员页面时弹出',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.refactor.ui.mine.VipThronesActivity',
+          matches: '[vid="tv_close"]',
         },
       ],
     },

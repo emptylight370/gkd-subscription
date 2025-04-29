@@ -12,7 +12,6 @@ export default defineGkdApp({
       rules: [
         {
           name: '每日阅读奖励',
-          actionMaximum: 10,
           fastQuery: true,
           action: 'back',
           actionCdKey: 1,
@@ -25,7 +24,6 @@ export default defineGkdApp({
         },
         {
           name: '每日阅读新作奖励',
-          actionMaximum: 10,
           fastQuery: true,
           actionCdKey: 1,
           activityIds: '.pages.main.MainFragmentActivity',
@@ -40,14 +38,13 @@ export default defineGkdApp({
       enable: false,
       rules: [
         {
-          // text能快查，ui不行
           name: '可领取',
-          actionMaximum: 1,
           fastQuery: true,
           action: 'back',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             'FlattenUIText[text*="宝箱"][text*="奖励"]',
+            // 前面支持快查，后面不支持
             'LynxFlattenUI[text*="宝箱"][text*="奖励"]',
             '[text*="宝箱"][text*="奖励"]',
           ],
@@ -70,12 +67,12 @@ export default defineGkdApp({
       desc: '点击签到按钮并返回',
       enable: false,
       actionCdKey: 3,
+      actionMaximum: 1,
+      matchTime: 10000,
       rules: [
         {
           name: '点击签到',
           key: 1,
-          matchTime: 10000,
-          actionMaximum: 1,
           fastQuery: true,
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
@@ -87,8 +84,6 @@ export default defineGkdApp({
         },
         {
           name: '签到后返回',
-          matchTime: 10000,
-          actionMaximum: 1,
           fastQuery: true,
           preKeys: [1],
           activityIds: '.pages.main.MainFragmentActivity',
@@ -107,12 +102,12 @@ export default defineGkdApp({
       desc: '点击签到按钮并观看广告',
       enable: false,
       actionCdKey: 3,
+      matchTime: 10000,
+      actionMaximum: 1,
       rules: [
         {
           name: '点击签到',
           key: 1,
-          matchTime: 10000,
-          actionMaximum: 1,
           fastQuery: true,
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
@@ -124,8 +119,6 @@ export default defineGkdApp({
         },
         {
           name: '签到后观看广告',
-          matchTime: 10000,
-          actionMaximum: 1,
           fastQuery: true,
           preKeys: [1],
           activityIds: '.pages.main.MainFragmentActivity',
@@ -166,12 +159,11 @@ export default defineGkdApp({
     {
       key: 10,
       name: '功能类-催更',
-      desc: '选择器有点奇怪',
+      desc: '会因为编辑器移动点歪',
       enable: false,
       rules: [
         {
-          actionMaximum: 1,
-          actionDelay: 300,
+          actionMaximum: 2,
           activityIds: '.reader.ui.ReaderActivity',
           matches:
             '@LinearLayout > FrameLayout[childCount=1] + TextView[text~="\\\\d+次"][text.length<7]',
