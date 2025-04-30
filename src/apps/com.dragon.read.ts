@@ -74,6 +74,7 @@ export default defineGkdApp({
           name: '点击签到',
           key: 1,
           fastQuery: true,
+          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             'FlattenUIText[text^="立即签到"]',
@@ -109,6 +110,7 @@ export default defineGkdApp({
           name: '点击签到',
           key: 1,
           fastQuery: true,
+          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             'FlattenUIText[text^="立即签到"]',
