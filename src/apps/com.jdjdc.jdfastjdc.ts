@@ -7,6 +7,8 @@ export default defineGkdApp({
     {
       key: 10,
       name: '功能类-每日签到',
+      enable: false,
+      actionMaximum: 1,
       rules: [
         {
           fastQuery: true,
@@ -19,12 +21,12 @@ export default defineGkdApp({
       key: 1,
       name: '功能类-任务领取',
       enable: false,
+      actionMaximum: 2,
       rules: [
         {
           key: 1,
           name: '每日/每周任务一键领取',
           fastQuery: true,
-          actionMaximum: 2,
           activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [
             '@[vid="btn_daily_collect_all"] - [vid="cl_daily_container"] >3 [text="领取"]',
@@ -120,8 +122,9 @@ export default defineGkdApp({
     {
       key: 9,
       name: '全屏广告-不开通会员弹窗',
-      desc: '退出会员页面时弹出',
+      desc: '退出会员页面时弹出，每天一次',
       enable: false,
+      actionMaximum: 1,
       rules: [
         {
           fastQuery: true,

@@ -161,11 +161,10 @@ export default defineGkdApp({
     {
       key: 10,
       name: '功能类-催更',
-      desc: '会因为编辑器移动点歪',
       enable: false,
+      actionMaximum: 2,
       rules: [
         {
-          actionMaximum: 2,
           activityIds: '.reader.ui.ReaderActivity',
           matches:
             '@LinearLayout > FrameLayout[childCount=1] + TextView[text~="\\\\d+次"][text.length<7]',

@@ -16,5 +16,16 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能类-签到',
+      enable: false,
+      rules: [
+        {
+          activityIds: '.MainActivity',
+          matches: 'ImageView[desc="签到"]',
+        },
+      ],
+    },
   ],
 });

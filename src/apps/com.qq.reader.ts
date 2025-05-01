@@ -9,10 +9,11 @@ export default defineGkdApp({
       name: '功能类-确认退出',
       desc: '确认退出QQ阅读？',
       enable: false,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           fastQuery: true,
-          actionMaximum: 1,
           activityIds: '.activity.MainFlutterActivity',
           matches: '[vid="sureButton"][text="退出"]',
         },
@@ -23,12 +24,12 @@ export default defineGkdApp({
       name: '分段功能-每日签到',
       desc: '书架页面触发，重进应用刷新激活次数',
       enable: false,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 1,
           name: '点击书架签到',
-          actionMaximum: 1,
-          resetMatch: 'app',
           activityIds: '.activity.MainFlutterActivity',
           matches: 'View[desc*="签到"]',
         },
@@ -53,9 +54,9 @@ export default defineGkdApp({
       key: 3,
       name: '局部广告-书架广告',
       enable: false,
+      actionMaximum: 1,
       rules: [
         {
-          actionMaximum: 1,
           fastQuery: true,
           activityIds: '.activity.MainFlutterActivity',
           matches: 'ImageView[vid="close_btn"]',

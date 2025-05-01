@@ -30,11 +30,11 @@ export default defineGkdApp({
       name: '功能类-自动检票',
       desc: '因为没办法区分检票前后状态，会一直点击按钮，每次切换app刷新一次次数',
       enable: false,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           fastQuery: true,
-          actionMaximum: 1,
-          resetMatch: 'app',
           activityIds: '.MainActivity',
           matches: 'ImageView[vid="check"]',
         },
