@@ -5,19 +5,39 @@ export default defineGkdApp({
   name: '奶酪单词',
   groups: [
     {
+      key: 10,
+      name: '功能类-每日签到',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.refactor.ui.home.TaskActivityV2',
+          matches: '@[vid="fl_container"] > [vid="iv_anim"]',
+        },
+      ],
+    },
+    {
       key: 1,
-      name: '功能类-每日/每周任务领取',
+      name: '功能类-任务领取',
       enable: false,
       rules: [
         {
+          key: 1,
           name: '每日/每周任务一键领取',
           fastQuery: true,
           actionMaximum: 2,
           activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [
-            '[vid="tv_get_or_complete"][text="领取"] <<4 [vid="cl_daily_container"] + [vid="btn_daily_collect_all"]',
-            '[vid="tv_get_or_complete"][text="领取"] <<4 [vid="cl_week_container"] + [vid="btn_week_collect_all"]',
+            '@[vid="btn_daily_collect_all"] - [vid="cl_daily_container"] >3 [text="领取"]',
+            '@[vid="btn_week_collect_all"] - [vid="cl_week_container"] >3 [text="领取"]',
           ],
+        },
+        {
+          key: 2,
+          name: '成长之路领取',
+          fastQuery: true,
+          activityIds: '.refactor.ui.home.TaskActivityV2',
+          matches:
+            '@[vid="btn_get"] <<n [vid="recyclerview"] - [vid="cl_header_container"] >2 [text="成长点数"]',
         },
       ],
     },
