@@ -25,6 +25,7 @@ export default defineGkdApp({
       name: '分段功能-领取签到奖励',
       desc: '已适配星铁、崩三、绝区零、原神，匹配时长1分钟',
       enable: false,
+      actionCd: 2000,
       matchTime: 60000,
       rules: [
         {
@@ -80,6 +81,20 @@ export default defineGkdApp({
             'TextView[vid="signTv"][text="打卡"]',
             '[text="打卡"] <<2 LinearLayout[vid="discussSignView"]',
           ],
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '权限提示-订阅消息',
+      desc: '跳过：订阅游戏官方资讯',
+      enable: false,
+      matchTime: 3000,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.main.HyperionMainActivity',
+          matches: '[text="残忍拒绝"] < [vid="leftBtnView"]',
         },
       ],
     },

@@ -21,7 +21,7 @@ export default defineGkdApp({
           preKeys: [1],
           activityIds: '.MainActivity',
           matches:
-            '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~="[^\\\\d]+\\\\*\\\\d+"]',
+            '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~="[^\\\\d]+[\\\\d]?\\\\*\\\\d+"]',
         },
       ],
     },
