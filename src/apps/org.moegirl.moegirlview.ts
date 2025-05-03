@@ -18,12 +18,25 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '功能类-签到',
+      name: '分段功能-签到',
       enable: false,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
+          key: 1,
+          name: '点击签到按钮',
+          fastQuery: true,
           activityIds: '.MainActivity',
-          matches: 'ImageView[desc="签到"]',
+          matches: 'ImageView[desc="签到"] <<13 [id="android:id/content"]',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          name: '关闭签到弹窗',
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: '@Button <<7 [id="android:id/content"]',
         },
       ],
     },
