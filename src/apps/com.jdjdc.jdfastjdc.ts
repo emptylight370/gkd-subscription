@@ -11,9 +11,25 @@ export default defineGkdApp({
       actionMaximum: 1,
       rules: [
         {
+          key: 1,
+          name: '每日签到',
           fastQuery: true,
           activityIds: '.refactor.ui.home.TaskActivityV2',
           matches: '@[vid="fl_container"] > [vid="iv_anim"]',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          name: '连续签到奖励',
+          matchTime: 3000,
+          fastQuery: true,
+          action: 'clickCenter',
+          activityIds: '.refactor.ui.home.TaskActivityV2',
+          anyMatches: [
+            '[vid="pag_light_left"]',
+            '[vid="pag_light_center"]',
+            '[vid="pag_light_right"]',
+          ],
         },
       ],
     },
