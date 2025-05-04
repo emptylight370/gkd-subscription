@@ -23,6 +23,7 @@ export default defineGkdApp({
           name: '连续签到奖励',
           matchTime: 3000,
           fastQuery: true,
+          actionCdKey: 1,
           activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [
             '@[vid="pag_left"] -2 [vid="pag_light_left"]',
@@ -36,6 +37,7 @@ export default defineGkdApp({
           name: '7天签到奖励',
           matchTime: 3000,
           fastQuery: true,
+          actionCdKey: 1,
           activityIds: '.refactor.ui.home.TaskActivityV2',
           matches: '@FrameLayout > [vid="iv_anim"]',
         },
@@ -87,6 +89,7 @@ export default defineGkdApp({
       name: '功能弹窗-点击直接收下',
       desc: '用于关闭其他功能弹出的弹窗',
       enable: false,
+      actionCd: 100,
       rules: [
         {
           fastQuery: true,
@@ -149,6 +152,7 @@ export default defineGkdApp({
       desc: '退出会员页面时弹出，每天一次',
       enable: false,
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           fastQuery: true,

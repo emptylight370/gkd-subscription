@@ -69,7 +69,6 @@ export default defineGkdApp({
       enable: false,
       actionCdKey: 3,
       actionMaximum: 1,
-      matchTime: 10000,
       rules: [
         {
           name: '点击签到',
@@ -104,7 +103,6 @@ export default defineGkdApp({
       desc: '点击签到按钮并观看广告',
       enable: false,
       actionCdKey: 3,
-      matchTime: 10000,
       actionMaximum: 1,
       rules: [
         {

@@ -10,6 +10,7 @@ export default defineGkdApp({
       enable: false,
       matchTime: 10000,
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           name: '返回操作退出',

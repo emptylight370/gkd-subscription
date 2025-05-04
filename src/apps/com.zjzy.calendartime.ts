@@ -9,6 +9,7 @@ export default defineGkdApp({
       name: '功能弹窗-打卡',
       desc: '打卡、补卡之后点击完成',
       enable: false,
+      actionCd: 100,
       rules: [
         {
           name: '打卡完成弹窗',
@@ -40,10 +41,11 @@ export default defineGkdApp({
       key: 2,
       name: '功能弹窗-更新说明',
       enable: false,
+      actionMaximum: 1,
+      matchTime: 2000,
+      resetMatch: 'app',
       rules: [
         {
-          actionMaximum: 1,
-          matchTime: 2000,
           fastQuery: true,
           activityIds: '.ui.main.MainActivity',
           matches:

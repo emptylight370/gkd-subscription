@@ -28,7 +28,7 @@ export default defineGkdApp({
           name: '点击签到按钮',
           fastQuery: true,
           activityIds: '.MainActivity',
-          matches: 'ImageView[desc="签到"] <<13 [id="android:id/content"]',
+          matches: '@ImageView[desc="签到"] <<13 [id="android:id/content"]',
         },
         {
           key: 2,

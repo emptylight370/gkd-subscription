@@ -10,12 +10,12 @@ export default defineGkdApp({
       desc: '书架页面触发，重进应用刷新激活次数',
       enable: false,
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 1,
           name: '点击签到按钮',
           fastQuery: true,
-          resetMatch: 'app',
           activityIds: 'com.sf.ui.main.MainActivity',
           anyMatches: [
             '@[vid="sign_container"] > [text="签到"]',
@@ -124,6 +124,7 @@ export default defineGkdApp({
       key: 5,
       name: '分段功能-领取会员权益',
       desc: '每日/周代券领取',
+      enable: false,
       rules: [
         {
           name: '点击领取',
