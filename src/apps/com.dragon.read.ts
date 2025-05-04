@@ -9,6 +9,7 @@ export default defineGkdApp({
       name: '功能弹窗-关闭领取金币窗口',
       desc: '领取金币后返回',
       enable: false,
+      actionCd: 100,
       rules: [
         {
           name: '每日阅读奖励',
