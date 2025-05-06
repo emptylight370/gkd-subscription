@@ -102,6 +102,7 @@ export default defineGkdApp({
             '[vid="tv_left"][text="直接收下"]',
             '[vid="btn_get"][text="全部收下"]',
             '[vid="tv_receive"][text="直接收下"]',
+            '[vid="tv_left"][text="双倍收下"]',
           ],
         },
       ],
@@ -122,14 +123,18 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '全屏广告-奶酪特别企划',
-      desc: '关闭按钮在右上角',
+      name: '全屏广告-首页广告',
+      desc: '奶酪特别企划，奶酪限时福利',
       enable: false,
+      matchTime: 5000,
       rules: [
         {
           fastQuery: true,
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
-          matches: '@ImageView < [vid="fl_container"]',
+          anyMatches: [
+            '@ImageView < [vid="fl_container"]',
+            '@[vid="iv_close"] <2 [vid="cl_root"]',
+          ],
         },
       ],
     },
