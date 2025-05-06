@@ -13,7 +13,7 @@ export default defineGkdApp({
           activityIds: 'com.oplus.otaui.activity.EntryActivity',
           matches: [
             '[vid="alertTitle"][text="开启自动下载"]',
-            '[text="关闭"] <<2 RelativeLayout',
+            '@RelativeLayout >2 [text="关闭"]',
           ],
         },
       ],
