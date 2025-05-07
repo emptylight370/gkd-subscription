@@ -74,12 +74,10 @@ export default defineGkdApp({
           name: '点击签到',
           key: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
-            'FlattenUIText[text^="立即签到"]',
+            '@LynxFlattenUI + FlattenUIText[text^="立即签到"]',
             // 前面支持快查，后面不支持
-            'LynxFlattenUI[text^="立即签到"]',
             '[text^="立即签到"]',
           ],
         },
@@ -89,7 +87,6 @@ export default defineGkdApp({
           preKeys: [1],
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
-            '@LynxFlattenUI -5 [text="重新签到"]',
             '@LynxFlattenUI -7 FlattenUIText[text^="看视频"]',
             // 前面支持快查，后面不支持
             '@LynxFlattenUI -7 [text^="看视频"]',
@@ -109,12 +106,10 @@ export default defineGkdApp({
           name: '点击签到',
           key: 1,
           fastQuery: true,
-          action: 'clickCenter',
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
-            'FlattenUIText[text^="立即签到"]',
+            '@LynxFlattenUI + FlattenUIText[text^="立即签到"]',
             // 前面支持快查，后面不支持
-            'LynxFlattenUI[text^="立即签到"]',
             '[text^="立即签到"]',
           ],
         },
@@ -124,9 +119,8 @@ export default defineGkdApp({
           preKeys: [1],
           activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
-            'FlattenUIText[text^="看视频"]',
+            '@LynxFlattenUI + FlattenUIText[text^="看视频"]',
             // 前面支持快查，后面不支持
-            'LynxFlattenUI[text^="看视频"]',
             '[text^="看视频"]',
           ],
         },
