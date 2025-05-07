@@ -141,6 +141,7 @@ export default defineGkdApp({
         {
           matchDelay: 100,
           activityIds: '.pages.main.MainFragmentActivity',
+          fastQuery: true,
           actionCdKey: 2,
           anyMatches: [
             '@LynxFlattenUI -2 FlattenUIText[text="前往抽奖"]',
