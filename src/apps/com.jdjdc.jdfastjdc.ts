@@ -103,6 +103,7 @@ export default defineGkdApp({
             '[vid="btn_get"][text="全部收下"]',
             '[vid="tv_receive"][text="直接收下"]',
             '[vid="tv_left"][text="双倍收下"]',
+            '@[vid="fl_get"] > [text="双倍收下"]',
           ],
         },
       ],
