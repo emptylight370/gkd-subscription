@@ -11,17 +11,14 @@ export default defineGkdApp({
       actionMaximum: 1,
       rules: [
         {
-          key: 1,
           name: '每日签到',
           fastQuery: true,
           activityIds: '.refactor.ui.home.TaskActivityV2',
           matches: '@[vid="fl_container"] > [vid="iv_anim"]',
         },
         {
-          key: 2,
-          preKeys: [1],
           name: '连续签到奖励',
-          matchTime: 3000,
+          matchTime: 10000,
           fastQuery: true,
           actionCdKey: 1,
           activityIds: '.refactor.ui.home.TaskActivityV2',
@@ -32,10 +29,8 @@ export default defineGkdApp({
           ],
         },
         {
-          key: 3,
-          preKeys: [1],
           name: '7天签到奖励',
-          matchTime: 3000,
+          matchTime: 10000,
           fastQuery: true,
           actionCdKey: 1,
           activityIds: '.refactor.ui.home.TaskActivityV2',
@@ -50,7 +45,6 @@ export default defineGkdApp({
       actionMaximum: 2,
       rules: [
         {
-          key: 1,
           name: '每日/每周任务一键领取',
           fastQuery: true,
           activityIds: '.refactor.ui.home.TaskActivityV2',
@@ -60,7 +54,6 @@ export default defineGkdApp({
           ],
         },
         {
-          key: 2,
           name: '成长之路领取',
           fastQuery: true,
           activityIds: '.refactor.ui.home.TaskActivityV2',
@@ -77,7 +70,6 @@ export default defineGkdApp({
       rules: [
         {
           name: '领取奶酪福利',
-          key: 1,
           fastQuery: true,
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
           matches: '[vid="tv_action"][text="领取"]',
@@ -104,6 +96,7 @@ export default defineGkdApp({
             '[vid="tv_receive"][text="直接收下"]',
             '[vid="tv_left"][text="双倍收下"]',
             '@[vid="fl_get"] > [text="双倍收下"]',
+            '[vid="btn_right"][text="直接收下"]',
           ],
         },
       ],
