@@ -69,6 +69,44 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 5,
+      name: '分段功能-领取签到奖励(测试版)',
+      desc: '已适配星铁、崩三、绝区零、原神，通过特殊元素试图减少点击次数，可能存在问题',
+      enable: false,
+      rules: [
+        {
+          name: '点击签到',
+          key: 1,
+          activityIds: '.web2.MiHoYoWebActivity',
+          anyMatches: [
+            // 通配符
+            'Image + TextView <2 View',
+            // 崩坏：星穹铁道
+            'Image <3 View + TextView',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/17601269',
+            'https://i.gkd.li/i/17601338',
+            'https://i.gkd.li/i/17611619',
+          ],
+        },
+        {
+          name: '关闭签到成功弹窗',
+          key: 2,
+          preKeys: [1],
+          activityIds: '.web2.MiHoYoWebActivity',
+          matches: 'TextView[text*="签到成功"] < View <2 View + TextView',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17601273',
+            'https://i.gkd.li/i/17601340',
+            'https://i.gkd.li/i/17611620',
+            'https://i.gkd.li/i/17611616',
+            'https://i.gkd.li/i/14967631',
+          ],
+        },
+      ],
+    },
+    {
       key: 3,
       name: '功能类-打卡',
       desc: '全分区适配',
