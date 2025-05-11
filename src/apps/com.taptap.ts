@@ -18,7 +18,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '局部广告-tap沙盒-悬浮窗广告',
+      name: '局部广告-TapPlay-悬浮窗广告',
       desc: '在tap小按钮里面的广告',
       enable: false,
       rules: [
@@ -31,8 +31,8 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '局部广告-tap沙盒-广告',
-      desc: '在关闭游戏弹窗的广告',
+      name: '局部广告-TapPlay-退出广告',
+      desc: '关闭游戏弹窗广告',
       enable: false,
       rules: [
         {
@@ -44,13 +44,26 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '功能类-tap沙盒-退出游戏',
+      name: '功能类-TapPlay-退出游戏',
+      desc: '点击退出游戏按钮',
       enable: false,
       rules: [
         {
           fastQuery: true,
           activityIds: '.sandbox.client.stub.ShadowDialogActivity$P1',
           matches: 'Button[text="退出游戏"]',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '局部广告-个人页广告',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.infra.page.core.activity.PageProxyActivity',
+          matches: '[vid="contentPanel"] > ImageView[vid="iv_close"]',
         },
       ],
     },
