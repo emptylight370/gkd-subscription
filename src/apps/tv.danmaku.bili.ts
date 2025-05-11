@@ -41,5 +41,29 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '功能类-领取大会员每日经验',
+      enable: false,
+      actionMaximum: 1,
+      rules: [
+        {
+          activityIds: 'com.bilibili.vip.web.VipWebActivity',
+          matches: '[id="drawExperienceModule"] >2 [text="领取"]',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '功能类-大积分每日签到',
+      enable: false,
+      actionMaximum: 1,
+      rules: [
+        {
+          activityIds: 'com.bilibili.vip.web.VipWebActivity',
+          matches: '[id="bigPointModule"] > [text="签到"]',
+        },
+      ],
+    },
   ],
 });
