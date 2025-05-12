@@ -25,20 +25,10 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.sandbox.client.stub.ShadowDialogActivity$P1',
-          matches: '[id="com.taptap.sandbox.plugin.FloatPlugin:id/close"]',
-        },
-      ],
-    },
-    {
-      key: 3,
-      name: '局部广告-TapPlay-退出广告',
-      desc: '关闭游戏弹窗广告',
-      enable: false,
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.sandbox.client.stub.ShadowDialogActivity$P1',
-          matches: '[id="com.taptap.sandbox.plugin.FloatPlugin:id/close"]',
+          matches: [
+            '[id="com.taptap.sandbox.plugin.FloatPlugin:id/float_ad_detail"]',
+            '[id="com.taptap.sandbox.plugin.FloatPlugin:id/close"]',
+          ],
         },
       ],
     },
