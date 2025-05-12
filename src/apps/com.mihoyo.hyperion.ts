@@ -32,57 +32,20 @@ export default defineGkdApp({
           name: '点击签到',
           key: 1,
           activityIds: '.web2.MiHoYoWebActivity',
+          // webview不能fastQuery
           anyMatches: [
             // 崩坏：星穹铁道
+            '@TextView[text~=".*第\\\\d+天"] -n View > TextView[text="天"]',
             'WebView[text*="星穹铁道"][text*="签到"] >2 View + View > View + View > View > TextView[text~=".*第\\\\d+天"]',
-            'TextView[text*="级"] <<3 View > TextView[text~=".*第\\\\d+天"]',
             // 崩坏3
+            '@View > Image[text="996923edce4749eff8536dbb75164c55_351516012348375859"]',
             'WebView[text*="崩坏3"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
-            'Image[text="996923edce4749eff8536dbb75164c55_351516012348375859"] < View',
             // 绝区零
+            '@View > Image[text="c4568a8bef48b6926eb59957651393f9_5675517246901582253"]',
             'WebView[text*="绝区零"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
-            'Image[text="c4568a8bef48b6926eb59957651393f9_5675517246901582253"] < View',
             // 原神
+            '@View > Image[text="4404a843b1cf6abe353c0b5b59381db6_655726004525214164"]',
             'WebView[text*="原神"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
-            'Image[text="4404a843b1cf6abe353c0b5b59381db6_655726004525214164"] < View',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/17601269',
-            'https://i.gkd.li/i/17601338',
-            'https://i.gkd.li/i/17611619',
-          ],
-        },
-        {
-          name: '关闭签到成功弹窗',
-          key: 2,
-          preKeys: [1],
-          activityIds: '.web2.MiHoYoWebActivity',
-          matches: 'TextView[text*="签到成功"] < View <2 View + TextView',
-          snapshotUrls: [
-            'https://i.gkd.li/i/17601273',
-            'https://i.gkd.li/i/17601340',
-            'https://i.gkd.li/i/17611620',
-            'https://i.gkd.li/i/17611616',
-            'https://i.gkd.li/i/14967631',
-          ],
-        },
-      ],
-    },
-    {
-      key: 5,
-      name: '分段功能-领取签到奖励(测试版)',
-      desc: '已适配星铁、崩三、绝区零、原神，通过特殊元素试图减少点击次数，可能存在问题',
-      enable: false,
-      rules: [
-        {
-          name: '点击签到',
-          key: 1,
-          activityIds: '.web2.MiHoYoWebActivity',
-          anyMatches: [
-            // 通配符
-            'Image + TextView <2 View',
-            // 崩坏：星穹铁道
-            'Image <3 View + TextView',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/17601269',
