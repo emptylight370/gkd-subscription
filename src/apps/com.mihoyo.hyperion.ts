@@ -35,17 +35,17 @@ export default defineGkdApp({
           // webview不能fastQuery
           anyMatches: [
             // 崩坏：星穹铁道
-            '@TextView[text~=".*第\\\\d+天"] -n View > TextView[text="天"]',
             'WebView[text*="星穹铁道"][text*="签到"] >2 View + View > View + View > View > TextView[text~=".*第\\\\d+天"]',
+            '@TextView[text~=".*第\\\\d+天"] -n View > TextView[text="天"]',
             // 崩坏3
-            '@View > Image[text="996923edce4749eff8536dbb75164c55_351516012348375859"]',
             'WebView[text*="崩坏3"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
+            '@View > Image[text="996923edce4749eff8536dbb75164c55_351516012348375859"]',
             // 绝区零
-            '@View > Image[text="c4568a8bef48b6926eb59957651393f9_5675517246901582253"]',
             'WebView[text*="绝区零"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
+            '@View > Image[text="c4568a8bef48b6926eb59957651393f9_5675517246901582253"]',
             // 原神
-            '@View > Image[text="4404a843b1cf6abe353c0b5b59381db6_655726004525214164"]',
             'WebView[text*="原神"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
+            '@View > Image[text="4404a843b1cf6abe353c0b5b59381db6_655726004525214164"]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/17601269',
