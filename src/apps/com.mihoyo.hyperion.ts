@@ -32,20 +32,15 @@ export default defineGkdApp({
           name: '点击签到',
           key: 1,
           activityIds: '.web2.MiHoYoWebActivity',
-          // webview不能fastQuery
+          // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
+          fastQuery: true,
           anyMatches: [
             // 崩坏：星穹铁道
-            'WebView[text*="星穹铁道"][text*="签到"] >2 View + View > View + View > View > TextView[text~=".*第\\\\d+天"]',
-            '@TextView[text~=".*第\\\\d+天"] -n View > TextView[text="天"]',
+            '@TextView[text~=".*第\\\\d+天"] <n View <3 View <2 View <2 View < WebView[text*="星穹铁道"][text*="签到"] <<2 [vid="webViewContainer"]',
             // 崩坏3
-            'WebView[text*="崩坏3"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
-            '@View > Image[text="996923edce4749eff8536dbb75164c55_351516012348375859"]',
             // 绝区零
-            'WebView[text*="绝区零"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
-            '@View > Image[text="c4568a8bef48b6926eb59957651393f9_5675517246901582253"]',
             // 原神
-            'WebView[text*="原神"][text*="签到"] >2 View + View >2 View + View > TextView[text~=".*第\\\\d+天"] - View',
-            '@View > Image[text="4404a843b1cf6abe353c0b5b59381db6_655726004525214164"]',
+            'Image < @View <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/17601269',
