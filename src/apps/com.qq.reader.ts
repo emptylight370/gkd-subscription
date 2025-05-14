@@ -39,7 +39,10 @@ export default defineGkdApp({
           preKeys: [1],
           name: '签到成功',
           activityIds: '.activity.WebBrowserForFullScreenContents',
-          matches: 'TextView[text="签到成功"] +6 TextView[text="我知道了"]',
+          anyMatches: [
+            'TextView[text="签到成功"] +6 TextView[text="我知道了"]',
+            '@TextView - TextView[text="去抽奖"]',
+          ],
         },
         {
           key: 3,
