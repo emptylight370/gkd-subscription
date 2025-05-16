@@ -91,9 +91,7 @@ export default defineGkdApp({
           anyMatches: [
             '@LynxFlattenUI -7 FlattenUIText[text^="看视频"]',
             '@LynxFlattenUI -7 FlattenUIText[text^="最高"]',
-            // 前面支持快查，后面不支持
-            '@LynxFlattenUI -7 [text^="看视频"]',
-            '@LynxFlattenUI -7 [text^="最高"]',
+            '@LynxFlattenUI -4 FlattenUIText[text="明日再来"]',
           ],
         },
       ],
