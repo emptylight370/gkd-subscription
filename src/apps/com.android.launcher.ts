@@ -16,8 +16,10 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.android.launcher3.dragndrop.AddItemActivity',
-          matches:
-            '[vid="alertTitle"][text="添加至桌面"] <<3 * +2 * > [vid="buttonPanel"] >2 Button[text="取消"]',
+          matches: [
+            '[vid="alertTitle"][text="添加至桌面"]',
+            'Button[text="取消"]',
+          ],
         },
       ],
     },

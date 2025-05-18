@@ -13,8 +13,10 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds:
             'com.heytap.cdo.client.cards.page.main.maintab.MainTabActivity',
-          matches:
-            '[vid="alertTitle"][text*="添加"][text*="桌面"] <<n [vid="topPanel"] + * >2 [vid="ll_real_statement_container"] > * +n TextView[text="取消"]',
+          matches: [
+            '[vid="alertTitle"][text*="添加"][text*="桌面"]',
+            'TextView[text="取消"]',
+          ],
         },
       ],
     },
