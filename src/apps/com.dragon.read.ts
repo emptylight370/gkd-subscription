@@ -169,5 +169,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 11,
+      name: '全屏广告-关闭预约礼包',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.pages.main.MainFragmentActivity',
+          matches: '@LynxFlattenUI - FlattenUIText[text^="预约"]',
+        },
+      ],
+    },
   ],
 });
