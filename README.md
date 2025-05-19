@@ -38,9 +38,9 @@ https://raw.githubusercontent.com/emptylight370/gkd-subscription/main/dist/gkd.j
 https://cdn.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
 ```
 
-- 当前版本: v44
+- 当前版本: v45
 
-- 当前订阅文件已适配 23 个应用，共有 59 应用规则组，0 全局规则组
+- 当前订阅文件已适配 24 个应用，共有 62 应用规则组，0 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
