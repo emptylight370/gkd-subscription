@@ -177,7 +177,23 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.pages.main.MainFragmentActivity',
-          matches: '@LynxFlattenUI - FlattenUIText[text^="预约"]',
+          matches: [
+            'FlattenUIText[text="恭喜获得预约礼包"]',
+            '@LynxFlattenUI - FlattenUIText[text^="预约"][text$="金币"]',
+          ],
+        },
+      ],
+    },
+    {
+      key: 12,
+      name: '功能类-提现页面相关',
+      desc: '银行卡0.5，余额暴涨',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.bullet.widget.BulletContainerActivity',
+          matches: 'FlattenUIText[text="坚持退出"]',
         },
       ],
     },
