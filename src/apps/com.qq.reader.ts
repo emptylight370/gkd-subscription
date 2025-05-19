@@ -26,7 +26,6 @@ export default defineGkdApp({
       enable: false,
       actionMaximum: 1,
       resetMatch: 'app',
-      matchRoot: true,
       rules: [
         {
           key: 1,
