@@ -9,7 +9,6 @@ export default defineGkdApp({
       name: '通知提示-活动时长领取',
       enable: false,
       matchTime: 30000,
-      actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
