@@ -84,6 +84,7 @@ export default defineGkdApp({
       actionCd: 100,
       rules: [
         {
+          name: '普通页面',
           fastQuery: true,
           activityIds: [
             '.refactor.ui.newhome.HomeNewActivity',
@@ -96,6 +97,11 @@ export default defineGkdApp({
             '[vid="tv_left"][text="双倍收下"]',
             '@[vid="fl_get"] > [text="双倍收下"]',
           ],
+        },
+        {
+          name: '活动页面',
+          activityIds: '.refactor.ui.CustomWebViewActivity',
+          matches: 'TextView[text="直接收下"]',
         },
       ],
     },
