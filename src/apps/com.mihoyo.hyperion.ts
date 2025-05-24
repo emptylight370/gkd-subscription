@@ -42,6 +42,13 @@ export default defineGkdApp({
             // 原神
             'Image < @View <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
           ],
+          excludeMatches: [
+            // 崩坏：星穹铁道
+            // 崩坏3
+            // 绝区零
+            // 原神
+            'TextView[text="请在此绑定你的角色"]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/17601269',
             'https://i.gkd.li/i/17601338',
@@ -91,6 +98,29 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.main.HyperionMainActivity',
           matches: '[text="残忍拒绝"] < [vid="leftBtnView"]',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '分段功能-清理通知消息',
+      enable: false,
+      rules: [
+        {
+          key: 1,
+          name: '点击含未读消息对话',
+          fastQuery: true,
+          activityIds: '.main.HyperionMainActivity',
+          matches:
+            '@ViewGroup > [vid="roomDotGroup"] > [vid="messageTextDotViewGroup"] > [vid="messageTextDotView"]',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          name: '返回通知列表',
+          fastQuery: true,
+          activityIds: '.message.tab.channel.NotificationChannelActivity',
+          matches: '[vid="backBtn"]',
         },
       ],
     },
