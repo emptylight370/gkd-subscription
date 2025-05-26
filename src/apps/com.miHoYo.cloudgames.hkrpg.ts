@@ -8,11 +8,8 @@ export default defineGkdApp({
       key: 1,
       name: '通知提示-活动时长领取',
       enable: false,
-      matchTime: 30000,
-      resetMatch: 'app',
       rules: [
         {
-          name: '返回操作退出',
           fastQuery: true,
           action: 'back',
           activityIds: 'com.mihoyo.cloudgame.main.MiHoYoCloudMainActivity',
@@ -20,6 +17,18 @@ export default defineGkdApp({
             '[vid="mTvPopTitle"][text="活动商品赠送"]',
             '[vid="mTvPopTitle"][text="版本福利时长发放"]',
           ],
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '功能类-电脑端登录自动确认',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.mihoyo.cloudgame.main.MiHoYoCloudMainActivity',
+          matches: 'Button[text="确认登录"]',
         },
       ],
     },
