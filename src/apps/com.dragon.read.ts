@@ -158,14 +158,20 @@ export default defineGkdApp({
     },
     {
       key: 10,
-      name: '功能类-催更',
+      name: '功能类-阅读页功能',
+      desc: '催更、评分',
       enable: false,
-      actionMaximum: 2,
+      activityIds: '.reader.ui.ReaderActivity',
       rules: [
         {
-          activityIds: '.reader.ui.ReaderActivity',
+          name: '催更',
           matches:
             '@LinearLayout > FrameLayout[childCount=1] + TextView[text~="\\\\d+次"][text.length<7]',
+        },
+        {
+          name: '评分',
+          fastQuery: true,
+          matches: ['TextView[text="点评此书"]', 'TextView[text="取消"]'],
         },
       ],
     },
@@ -193,7 +199,11 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.bullet.widget.BulletContainerActivity',
-          matches: 'FlattenUIText[text="坚持退出"]',
+          anyMatches: [
+            'FlattenUIText[text="坚持退出"]',
+            '@LynxFlattenUI -9 FlattenUIText[text="恭喜获得现金奖励"]',
+            '@LynxFlattenUI - [text="银行卡提现立即到账"]',
+          ],
         },
       ],
     },
