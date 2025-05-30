@@ -101,49 +101,30 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '功能类-开启每日任务',
-      desc: '就是领取任务',
+      name: '功能类-领取每日任务',
       enable: false,
+      fastQuery: true,
+      activityIds: [
+        'com.sf.ui.my.welfare.WelfareActivity',
+        'com.sf.ui.signresult.SignResultNewActivity',
+      ],
       rules: [
         {
-          fastQuery: true,
-          // 要按钮匹配上一段时间才点击。防止刚领任务没有刷新状态
-          actionDelay: 400,
-          activityIds: [
-            'com.sf.ui.my.welfare.WelfareActivity',
-            'com.sf.ui.signresult.SignResultNewActivity',
-          ],
+          key: 1,
+          name: '领取任务',
+          actionCd: 1500,
           matches: '[vid="tvTaskAction"][text="领取任务"]',
         },
-      ],
-    },
-    {
-      key: 4,
-      name: '分段功能-领取每日任务',
-      desc: '就是领取奖励',
-      enable: false,
-      rules: [
         {
-          name: '点击领取按钮',
-          key: 1,
-          fastQuery: true,
-          // 要匹配上一段时间才点击
-          actionDelay: 400,
-          activityIds: [
-            'com.sf.ui.my.welfare.WelfareActivity',
-            'com.sf.ui.signresult.SignResultNewActivity',
-          ],
+          name: '点击领取奖励按钮',
+          key: 2,
+          actionCd: 1500,
           matches: '[vid="tvTaskAction"][text="领取奖励"]',
         },
         {
           name: '关闭领取成功窗口',
-          key: 2,
-          preKeys: [1, 2],
-          fastQuery: true,
-          activityIds: [
-            'com.sf.ui.my.welfare.WelfareActivity',
-            'com.sf.ui.signresult.SignResultNewActivity',
-          ],
+          key: 3,
+          preKeys: [2, 3],
           matches: '[vid="tvConfirm"][text="开心收下"]',
         },
       ],
