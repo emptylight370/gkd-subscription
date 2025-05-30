@@ -124,5 +124,30 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '分段功能-更新后打开游戏横幅',
+      enable: false,
+      rules: [
+        {
+          key: 1,
+          name: '点击关闭按钮',
+          fastQuery: true,
+          activityIds: '.main.HyperionMainActivity',
+          matches: [
+            '[vid="mOrderGameBtn"][text="打开"]',
+            '[vid="mOrderGameClose"]',
+          ],
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          name: '关闭弹窗',
+          fastQuery: true,
+          activityIds: '.main.HyperionMainActivity',
+          matches: '[vid="confirmTv"][text="确定"]',
+        },
+      ],
+    },
   ],
 });
