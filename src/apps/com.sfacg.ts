@@ -159,7 +159,10 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           activityIds: 'com.sf.ui.main.member.SFMemberActivity',
-          matches: '[vid="tvGet"][text="立即领取"]',
+          anyMatches: [
+            '[vid="tvGet"][text="立即领取"]',
+            '[vid="tvGet"][text="领取"]',
+          ],
         },
         {
           name: '收下奖励',
