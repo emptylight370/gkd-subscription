@@ -33,27 +33,18 @@ export default defineGkdApp({
       name: '功能弹窗-关闭宝箱窗口',
       desc: '领取宝箱后返回',
       enable: false,
+      fastQuery: true,
       activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
           name: '可领取',
-          fastQuery: true,
           action: 'back',
-          anyMatches: [
-            'FlattenUIText[text*="宝箱"][text*="奖励"]',
-            // 前面支持快查，后面不支持
-            'LynxFlattenUI[text*="宝箱"][text*="奖励"]',
-            '[text*="宝箱"][text*="奖励"]',
-          ],
+          matches: 'FlattenUIText[text*="宝箱"][text*="奖励"]',
         },
         {
           name: '不可领取',
-          anyMatches: [
+          matches:
             '@LynxFlattenUI -43 FlattenUIText[text*="倒计时"][text*="宝箱"]',
-            // 前面支持快查，后面不支持
-            '@LynxFlattenUI -43 LynxFlattenUI[text*="倒计时"][text*="宝箱"]',
-            '@LynxFlattenUI -43 [text*="倒计时"][text*="宝箱"]',
-          ],
         },
       ],
     },
@@ -136,12 +127,7 @@ export default defineGkdApp({
         {
           matchDelay: 200,
           actionCdKey: 2,
-          anyMatches: [
-            '@LynxFlattenUI -2 FlattenUIText[text="前往抽奖"]',
-            // 前面支持快查，后面不支持
-            '@LynxFlattenUI -2 LynxFlattenUI[text="前往抽奖"]',
-            '@LynxFlattenUI -2 [text="前往抽奖"]',
-          ],
+          matches: '@LynxFlattenUI -2 FlattenUIText[text="前往抽奖"]',
         },
       ],
     },
