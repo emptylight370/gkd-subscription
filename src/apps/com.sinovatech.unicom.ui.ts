@@ -8,20 +8,18 @@ export default defineGkdApp({
       key: 1,
       name: '分段功能-微信支付',
       enable: false,
+      fastQuery: true,
+      activityIds: 'com.unicom.pay.normal.order.ui.WPOrderActivity',
       rules: [
         {
           key: 1,
           name: '展开更多',
-          fastQuery: true,
-          activityIds: 'com.unicom.pay.normal.order.ui.WPOrderActivity',
           matches: '[text="其他支付方式"]',
         },
         {
           key: 2,
           preKeys: [1],
           name: '点击微信支付',
-          fastQuery: true,
-          activityIds: 'com.unicom.pay.normal.order.ui.WPOrderActivity',
           matches:
             '@[vid="wopay_other_item_icon_font"] < * - * > [text="微信"]',
         },
@@ -31,20 +29,18 @@ export default defineGkdApp({
       key: 2,
       name: '分段功能-支付宝支付',
       enable: false,
+      fastQuery: true,
+      activityIds: 'com.unicom.pay.normal.order.ui.WPOrderActivity',
       rules: [
         {
           key: 1,
           name: '展开更多',
-          fastQuery: true,
-          activityIds: 'com.unicom.pay.normal.order.ui.WPOrderActivity',
           matches: '[text="其他支付方式"]',
         },
         {
           key: 2,
           preKeys: [1],
           name: '点击支付宝支付',
-          fastQuery: true,
-          activityIds: 'com.unicom.pay.normal.order.ui.WPOrderActivity',
           matches:
             '@[vid="wopay_other_item_icon_font"] < * - * > [text="支付宝"]',
         },

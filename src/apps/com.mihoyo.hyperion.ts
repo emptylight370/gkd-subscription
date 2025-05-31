@@ -27,11 +27,11 @@ export default defineGkdApp({
       enable: false,
       actionCd: 2000,
       matchTime: 60000,
+      activityIds: '.web2.MiHoYoWebActivity',
       rules: [
         {
           name: '点击签到',
           key: 1,
-          activityIds: '.web2.MiHoYoWebActivity',
           // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
           fastQuery: true,
           anyMatches: [
@@ -59,7 +59,6 @@ export default defineGkdApp({
           name: '关闭签到成功弹窗',
           key: 2,
           preKeys: [1],
-          activityIds: '.web2.MiHoYoWebActivity',
           matches: 'TextView[text*="签到成功"] < View <2 View + TextView',
           snapshotUrls: [
             'https://i.gkd.li/i/17601273',
@@ -105,11 +104,11 @@ export default defineGkdApp({
       key: 5,
       name: '分段功能-清理通知消息',
       enable: false,
+      fastQuery: true,
       rules: [
         {
           key: 1,
           name: '点击含未读消息对话',
-          fastQuery: true,
           activityIds: '.main.HyperionMainActivity',
           matches:
             '@ViewGroup > [vid="roomDotGroup"] > [vid="messageTextDotViewGroup"] > [vid="messageTextDotView"]',
@@ -118,7 +117,6 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           name: '返回通知列表',
-          fastQuery: true,
           activityIds: '.message.tab.channel.NotificationChannelActivity',
           matches: '[vid="backBtn"]',
         },
@@ -128,12 +126,12 @@ export default defineGkdApp({
       key: 6,
       name: '分段功能-更新后打开游戏横幅',
       enable: false,
+      fastQuery: true,
+      activityIds: '.main.HyperionMainActivity',
       rules: [
         {
           key: 1,
           name: '点击关闭按钮',
-          fastQuery: true,
-          activityIds: '.main.HyperionMainActivity',
           matches: [
             '[vid="mOrderGameBtn"][text="打开"]',
             '[vid="mOrderGameClose"]',
@@ -143,8 +141,6 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           name: '关闭弹窗',
-          fastQuery: true,
-          activityIds: '.main.HyperionMainActivity',
           matches: '[vid="confirmTv"][text="确定"]',
         },
       ],

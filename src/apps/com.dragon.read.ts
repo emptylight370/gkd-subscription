@@ -10,13 +10,12 @@ export default defineGkdApp({
       desc: '领取金币后返回',
       enable: false,
       actionCd: 100,
+      fastQuery: true,
+      activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
           name: '每日阅读奖励',
-          fastQuery: true,
           action: 'back',
-          actionCdKey: 1,
-          activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             '[vid = "title"][text="恭喜你获得"]',
             'TextView[text="恭喜你获得"]',
@@ -25,9 +24,6 @@ export default defineGkdApp({
         },
         {
           name: '每日阅读新作奖励',
-          fastQuery: true,
-          actionCdKey: 1,
-          activityIds: '.pages.main.MainFragmentActivity',
           matches: 'TextView[text="开心收下"]',
         },
       ],
@@ -37,12 +33,12 @@ export default defineGkdApp({
       name: '功能弹窗-关闭宝箱窗口',
       desc: '领取宝箱后返回',
       enable: false,
+      activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
           name: '可领取',
           fastQuery: true,
           action: 'back',
-          activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             'FlattenUIText[text*="宝箱"][text*="奖励"]',
             // 前面支持快查，后面不支持
@@ -52,7 +48,6 @@ export default defineGkdApp({
         },
         {
           name: '不可领取',
-          activityIds: '.pages.main.MainFragmentActivity',
           anyMatches: [
             '@LynxFlattenUI -43 FlattenUIText[text*="倒计时"][text*="宝箱"]',
             // 前面支持快查，后面不支持
@@ -69,12 +64,12 @@ export default defineGkdApp({
       enable: false,
       actionCdKey: 3,
       actionMaximum: 1,
+      fastQuery: true,
+      activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
           name: '点击签到',
           key: 1,
-          fastQuery: true,
-          activityIds: '.pages.main.MainFragmentActivity',
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI + FlattenUIText[text^="立即签到"]',
@@ -84,9 +79,7 @@ export default defineGkdApp({
         },
         {
           name: '签到后返回',
-          fastQuery: true,
           preKeys: [1],
-          activityIds: '.pages.main.MainFragmentActivity',
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI -7 FlattenUIText[text^="看视频"]',
@@ -103,12 +96,12 @@ export default defineGkdApp({
       enable: false,
       actionCdKey: 3,
       actionMaximum: 1,
+      fastQuery: true,
+      activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
           name: '点击签到',
           key: 1,
-          fastQuery: true,
-          activityIds: '.pages.main.MainFragmentActivity',
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI + FlattenUIText[text^="立即签到"]',
@@ -118,9 +111,7 @@ export default defineGkdApp({
         },
         {
           name: '签到后观看广告',
-          fastQuery: true,
           preKeys: [1],
-          activityIds: '.pages.main.MainFragmentActivity',
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI + FlattenUIText[text^="看视频"]',
@@ -134,18 +125,16 @@ export default defineGkdApp({
       key: 9,
       name: '局部广告-广告抽奖弹窗',
       enable: false,
+      fastQuery: true,
+      activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
           action: 'back',
-          activityIds: '.pages.main.MainFragmentActivity',
-          fastQuery: true,
           actionCdKey: 2,
           matches: '[text="前往抽奖"]',
         },
         {
-          matchDelay: 100,
-          activityIds: '.pages.main.MainFragmentActivity',
-          fastQuery: true,
+          matchDelay: 200,
           actionCdKey: 2,
           anyMatches: [
             '@LynxFlattenUI -2 FlattenUIText[text="前往抽奖"]',

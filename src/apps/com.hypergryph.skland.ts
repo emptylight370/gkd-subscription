@@ -8,18 +8,17 @@ export default defineGkdApp({
       key: 1,
       name: '分段功能-每日签到',
       enable: false,
+      activityIds: '.MainActivity',
       rules: [
         {
           name: '领取签到奖励',
           key: 1,
           fastQuery: true,
-          activityIds: '.MainActivity',
           matches: '@ViewGroup > TextView[text="领"]',
         },
         {
           name: '关闭签到窗口',
           preKeys: [1],
-          activityIds: '.MainActivity',
           matches:
             '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~="[^\\\\d]+[\\\\d]?\\\\*\\\\d+"]',
         },

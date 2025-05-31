@@ -8,20 +8,18 @@ export default defineGkdApp({
       key: 10,
       name: '功能类-每日签到',
       enable: false,
+      fastQuery: true,
       actionMaximum: 1,
+      activityIds: '.refactor.ui.home.TaskActivityV2',
       rules: [
         {
           name: '每日签到',
-          fastQuery: true,
-          activityIds: '.refactor.ui.home.TaskActivityV2',
           matches: '@[vid="fl_container"] > [vid="iv_anim"]',
         },
         {
           name: '连续签到奖励',
           matchTime: 10000,
-          fastQuery: true,
           actionCdKey: 1,
-          activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [
             '@[vid="pag_left"] -2 [vid="pag_light_left"]',
             '@[vid="pag_center"] -2 [vid="pag_light_center"]',
@@ -31,9 +29,7 @@ export default defineGkdApp({
         {
           name: '7天签到奖励',
           matchTime: 10000,
-          fastQuery: true,
           actionCdKey: 1,
-          activityIds: '.refactor.ui.home.TaskActivityV2',
           matches: '@FrameLayout > [vid="iv_anim"]',
         },
       ],
@@ -43,11 +39,11 @@ export default defineGkdApp({
       name: '功能类-任务领取',
       enable: false,
       actionMaximum: 2,
+      fastQuery: true,
+      activityIds: '.refactor.ui.home.TaskActivityV2',
       rules: [
         {
           name: '每日/每周任务一键领取',
-          fastQuery: true,
-          activityIds: '.refactor.ui.home.TaskActivityV2',
           anyMatches: [
             '@[vid="btn_daily_collect_all"] - [vid="cl_daily_container"] >3 [text="领取"]',
             '@[vid="btn_week_collect_all"] - [vid="cl_week_container"] >3 [text="领取"]',
@@ -55,8 +51,6 @@ export default defineGkdApp({
         },
         {
           name: '成长之路领取',
-          fastQuery: true,
-          activityIds: '.refactor.ui.home.TaskActivityV2',
           matches:
             '@[vid="btn_get"] <<n [vid="recyclerview"] - [vid="cl_header_container"] >2 [text="成长点数"]',
         },
