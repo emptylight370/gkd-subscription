@@ -9,9 +9,6 @@ export default defineGkdApp({
       name: '局部广告-角色大图广告',
       desc: '也可以是游戏',
       enable: false,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
           fastQuery: true,
