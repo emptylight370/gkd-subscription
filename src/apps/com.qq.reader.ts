@@ -66,5 +66,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '功能类-领取奖励',
+      enable: false,
+      rules: [
+        {
+          activityIds: '.activity.WebBrowserForFullScreenContents',
+          matches: [
+            '[text="恭喜获得"]',
+            '[text="获得"]',
+            '@TextView -6 [text="恭喜获得"]',
+          ],
+        },
+      ],
+    },
   ],
 });
