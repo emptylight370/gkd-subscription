@@ -20,7 +20,7 @@ export default defineGkdApp({
           name: '关闭签到窗口',
           preKeys: [1],
           matches:
-            '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~="[^\\\\d]+[\\\\d]?\\\\*\\\\d+"]',
+            '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~=".+\\\\*\\\\d+"]',
         },
       ],
     },

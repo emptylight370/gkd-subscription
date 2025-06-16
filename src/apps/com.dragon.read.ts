@@ -61,6 +61,7 @@ export default defineGkdApp({
         {
           name: '点击签到',
           key: 1,
+          actionCdKey: 1,
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI + FlattenUIText[text^="立即签到"]',
@@ -69,8 +70,19 @@ export default defineGkdApp({
           ],
         },
         {
+          name: '不续签',
+          key: 2,
+          actionCdKey: 1,
+          action: 'clickCenter',
+          matches: [
+            'FlattenUIText[text="可续签"]',
+            '@LynxFlattenUI - FlattenUIText[text="重新签到"]',
+          ],
+          excludeMatches: 'FlattenUIText[text^="立即签到"]',
+        },
+        {
           name: '签到后返回',
-          preKeys: [1],
+          preKeys: [1, 2],
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI -7 FlattenUIText[text^="看视频"]',
@@ -93,6 +105,7 @@ export default defineGkdApp({
         {
           name: '点击签到',
           key: 1,
+          actionCdKey: 1,
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI + FlattenUIText[text^="立即签到"]',
@@ -101,8 +114,19 @@ export default defineGkdApp({
           ],
         },
         {
+          name: '看视频续签',
+          key: 2,
+          actionCdKey: 1,
+          action: 'clickCenter',
+          matches: [
+            'FlattenUIText[text="可续签"]',
+            '@LynxFlattenUI - FlattenUIText[text="看视频立即续签"]',
+          ],
+          excludeMatches: 'FlattenUIText[text^="立即签到"]',
+        },
+        {
           name: '签到后观看广告',
-          preKeys: [1],
+          preKeys: [1, 2],
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI + FlattenUIText[text^="看视频"]',
