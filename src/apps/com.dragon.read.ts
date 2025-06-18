@@ -14,8 +14,20 @@ export default defineGkdApp({
       activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
-          name: '每日阅读奖励',
+          name: '每日阅读奖励(新)',
+          key: 3,
           action: 'back',
+          actionCdKey: 4,
+          anyMatches: [
+            'FlattenUIText[text^="恭喜你获得"]',
+            'FlattenUIText[text^="看视频"]',
+          ],
+        },
+        {
+          name: '每日阅读奖励(旧)',
+          key: 1,
+          action: 'back',
+          actionCdKey: 4,
           anyMatches: [
             '[vid = "title"][text="恭喜你获得"]',
             'TextView[text="恭喜你获得"]',
@@ -24,6 +36,7 @@ export default defineGkdApp({
         },
         {
           name: '每日阅读新作奖励',
+          key: 2,
           matches: 'TextView[text="开心收下"]',
         },
       ],
