@@ -99,6 +99,7 @@ export default defineGkdApp({
           action: 'clickCenter',
           anyMatches: [
             '@LynxFlattenUI -7 FlattenUIText[text^="看视频"]',
+            '@LynxFlattenUI -1 FlattenUIText[text^="看视频"]',
             '@LynxFlattenUI -7 FlattenUIText[text^="最高"]',
             '@LynxFlattenUI -4 FlattenUIText[text="明日再来"]',
           ],
