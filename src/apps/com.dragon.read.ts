@@ -16,11 +16,10 @@ export default defineGkdApp({
         {
           name: '每日阅读奖励(新)',
           key: 3,
-          action: 'back',
           actionCdKey: 4,
-          anyMatches: [
+          matches: [
             'FlattenUIText[text^="恭喜你获得"]',
-            'FlattenUIText[text^="看视频"]',
+            '@LynxFlattenUI -1 FlattenUIText[text^="看视频"]',
           ],
         },
         {
@@ -28,6 +27,7 @@ export default defineGkdApp({
           key: 1,
           action: 'back',
           actionCdKey: 4,
+          excludeVersionCodes: [67532, 67732],
           anyMatches: [
             '[vid = "title"][text="恭喜你获得"]',
             'TextView[text="恭喜你获得"]',
@@ -94,11 +94,21 @@ export default defineGkdApp({
           excludeMatches: 'FlattenUIText[text^="立即签到"]',
         },
         {
-          name: '签到后返回',
+          name: '签到后返回(旧)',
+          preKeys: [1, 2],
+          action: 'clickCenter',
+          excludeVersionCodes: [67532, 67732],
+          anyMatches: [
+            '@LynxFlattenUI -7 FlattenUIText[text^="看视频"]',
+            '@LynxFlattenUI -7 FlattenUIText[text^="最高"]',
+            '@LynxFlattenUI -4 FlattenUIText[text="明日再来"]',
+          ],
+        },
+        {
+          name: '签到后返回(新)',
           preKeys: [1, 2],
           action: 'clickCenter',
           anyMatches: [
-            '@LynxFlattenUI -7 FlattenUIText[text^="看视频"]',
             '@LynxFlattenUI -1 FlattenUIText[text^="看视频"]',
             '@LynxFlattenUI -7 FlattenUIText[text^="最高"]',
             '@LynxFlattenUI -4 FlattenUIText[text="明日再来"]',
