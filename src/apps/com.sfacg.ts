@@ -75,6 +75,7 @@ export default defineGkdApp({
       activityIds: [
         'com.sf.ui.my.welfare.WelfareActivity',
         'com.sf.ui.signresult.SignResultNewActivity',
+        'com.sf.ui.main.mine.MyLevelActivity',
       ],
       rules: [
         {
