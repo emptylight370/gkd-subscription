@@ -63,7 +63,7 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '分段功能-每日签到1',
+      name: '分段功能-每日签到',
       desc: '点击签到按钮并返回',
       enable: false,
       actionCdKey: 3,
@@ -89,73 +89,19 @@ export default defineGkdApp({
           action: 'clickCenter',
           matches: [
             'FlattenUIText[text="可续签"]',
-            '@LynxFlattenUI - FlattenUIText[text="重新签到"]',
+            '@LynxFlattenUI[text.length=0] - FlattenUIText[text="重新签到"]',
           ],
           excludeMatches: 'FlattenUIText[text^="立即签到"]',
         },
         {
-          name: '签到后返回(旧)',
-          preKeys: [1, 2],
-          action: 'clickCenter',
-          excludeVersionCodes: [67532, 67732],
-          anyMatches: [
-            '@LynxFlattenUI -7 FlattenUIText[text^="看视频"]',
-            '@LynxFlattenUI -7 FlattenUIText[text^="最高"]',
-            '@LynxFlattenUI -4 FlattenUIText[text="明日再来"]',
-          ],
-        },
-        {
-          name: '签到后返回(新)',
+          name: '签到后返回',
           preKeys: [1, 2],
           action: 'clickCenter',
           anyMatches: [
-            '@LynxFlattenUI -1 FlattenUIText[text^="看视频"]',
-            '@LynxFlattenUI -7 FlattenUIText[text^="最高"]',
-            '@LynxFlattenUI -4 FlattenUIText[text="明日再来"]',
-          ],
-        },
-      ],
-    },
-    {
-      key: 8,
-      name: '分段功能-每日签到2',
-      desc: '点击签到按钮并观看广告',
-      enable: false,
-      actionCdKey: 3,
-      actionMaximum: 1,
-      fastQuery: true,
-      activityIds: '.pages.main.MainFragmentActivity',
-      rules: [
-        {
-          name: '点击签到',
-          key: 1,
-          actionCdKey: 1,
-          action: 'clickCenter',
-          anyMatches: [
-            '@LynxFlattenUI + FlattenUIText[text^="立即签到"]',
-            // 前面支持快查，后面不支持
-            '[text^="立即签到"]',
-          ],
-        },
-        {
-          name: '看视频续签',
-          key: 2,
-          actionCdKey: 1,
-          action: 'clickCenter',
-          matches: [
-            'FlattenUIText[text="可续签"]',
-            '@LynxFlattenUI - FlattenUIText[text="看视频立即续签"]',
-          ],
-          excludeMatches: 'FlattenUIText[text^="立即签到"]',
-        },
-        {
-          name: '签到后观看广告',
-          preKeys: [1, 2],
-          action: 'clickCenter',
-          anyMatches: [
-            '@LynxFlattenUI + FlattenUIText[text^="看视频"]',
-            // 前面支持快查，后面不支持
-            '[text^="看视频"]',
+            '@LynxFlattenUI[text.length=0] -7 FlattenUIText[text^="看视频"]',
+            '@LynxFlattenUI[text.length=0] -1 FlattenUIText[text^="看视频"]',
+            '@LynxFlattenUI[text.length=0] -7 FlattenUIText[text^="最高"]',
+            '@LynxFlattenUI[text.length=0] -4 FlattenUIText[text="明日再来"]',
           ],
         },
       ],
