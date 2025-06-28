@@ -17,9 +17,9 @@ export default defineGkdApp({
           name: '每日阅读奖励(新)',
           key: 3,
           actionCdKey: 4,
-          matches: [
-            'FlattenUIText[text^="恭喜你获得"]',
+          anyMatches: [
             '@LynxFlattenUI -1 FlattenUIText[text^="看视频"]',
+            '@ImageView < FrameLayout - FrameLayout >2 TextView[text^="看视频"]',
           ],
         },
         {
