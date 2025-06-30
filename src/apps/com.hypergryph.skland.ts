@@ -22,6 +22,12 @@ export default defineGkdApp({
           matches:
             '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~=".+\\\\*\\\\d+"]',
         },
+        {
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: 'TextView[text="网络开小差，请点击重试"]',
+          excludeMatches: 'TextView[text="领"]',
+        },
       ],
     },
     {
