@@ -22,15 +22,26 @@ export default defineGkdApp({
       name: '分段功能-领取签到奖励',
       desc: '已适配星铁、崩三、绝区零、原神',
       enable: false,
-      actionCd: 2000,
       matchDelay: 1000,
       activityIds: '.web2.MiHoYoWebActivity',
       rules: [
+        {
+          key: 3,
+          name: '登录游戏账号',
+          matches: 'TextView[text="请在此绑定你的角色"]',
+        },
+        {
+          key: 4,
+          preKeys: [3],
+          name: '登录第一个账号',
+          matches: 'ListView > @View > TextView[text^="UID"]',
+        },
         {
           name: '点击签到',
           key: 1,
           // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
           fastQuery: true,
+          actionCd: 2000,
           anyMatches: [
             // 崩坏：星穹铁道
             '@TextView[text~=".*第\\\\d+天"] <n View <3 View <2 View <2 View < WebView[text*="星穹铁道"][text*="签到"] <<2 [vid="webViewContainer"]',
@@ -38,13 +49,6 @@ export default defineGkdApp({
             // 绝区零
             // 原神
             'Image < @View <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
-          ],
-          excludeMatches: [
-            // 崩坏：星穹铁道
-            // 崩坏3
-            // 绝区零
-            // 原神
-            'TextView[text="请在此绑定你的角色"]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/17601269',
