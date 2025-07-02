@@ -18,11 +18,14 @@ export default defineGkdApp({
         },
         {
           name: '关闭签到窗口',
+          key: 2,
           preKeys: [1],
           matches:
             '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~=".+\\\\*\\\\d+"]',
         },
         {
+          name: '登录账号',
+          key: 3,
           fastQuery: true,
           activityIds: '.MainActivity',
           matches: 'TextView[text="网络开小差，请点击重试"]',
