@@ -14,17 +14,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          key: 1,
-          name: '点击签到按钮',
-          activityIds: 'com.sf.ui.main.MainActivity',
-          anyMatches: [
-            '@[vid="sign_container"] > [text="签到"]',
-            '@LinearLayout > TextView[text="签到"]',
-          ],
-        },
-        {
           key: 2,
-          preKeys: [1],
           name: '签到',
           activityIds: 'com.sf.ui.main.MainActivity',
           matches: '@LinearLayout > TextView[text="点击签到"]',
