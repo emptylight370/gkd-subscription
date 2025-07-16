@@ -46,5 +46,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '全屏广告-若干广告',
+      enable: false,
+      rules: [
+        {
+          action: 'clickCenter',
+          activityIds:
+            'com.sinovatech.unicom.basic.ui.activity.WebDetailActivity',
+          matches: '@TextView <3 View <<3 View[id="app"]',
+        },
+      ],
+    },
   ],
 });
