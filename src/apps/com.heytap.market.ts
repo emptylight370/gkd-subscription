@@ -23,6 +23,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '功能弹窗-仅WLAN下载',
+      desc: 'WiFi流量混合加速',
       enable: false,
       rules: [
         {
@@ -35,7 +36,7 @@ export default defineGkdApp({
     {
       key: 3,
       name: '功能弹窗-直接下载',
-      desc: '数据网络加速',
+      desc: 'WiFi流量混合加速',
       enable: false,
       rules: [
         {
@@ -55,6 +56,38 @@ export default defineGkdApp({
           activityIds:
             'com.heytap.cdo.client.download.ui.activity.DownloadDialogActivity',
           matches: 'Button[text="取消"]',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '功能弹窗-流量直接下载',
+      desc: '仅流量下载',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+          matches: [
+            '[vid="alertTitle"][text="流量安装提醒"]',
+            '[vid="download_remind_download_btn"][text="直接下载并安装"]',
+          ],
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '功能弹窗-等待WiFi下载',
+      desc: '仅流量下载',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+          matches: [
+            '[vid="alertTitle"][text="流量安装提醒"]',
+            '[vid="download_remind_close"][text="稍后安装"]',
+          ],
         },
       ],
     },
