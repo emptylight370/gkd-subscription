@@ -10,8 +10,6 @@ export default defineGkdApp({
       desc: '书架页面触发，重进应用刷新激活次数',
       enable: false,
       fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
           key: 2,

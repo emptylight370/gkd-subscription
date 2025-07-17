@@ -55,7 +55,7 @@ export default defineGkdApp({
           action: 'clickCenter',
           activityIds:
             'com.sinovatech.unicom.basic.ui.activity.WebDetailActivity',
-          matches: '@TextView <3 View <<3 View[id="app"]',
+          matches: '@TextView[text.length=0] <3 View <<3 View[id="app"]',
         },
       ],
     },
