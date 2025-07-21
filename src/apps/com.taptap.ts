@@ -57,5 +57,37 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '功能弹窗-直接使用流量下载',
+      desc: '仅流量下载',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.infra.page.core.activity.PageProxyActivity',
+          matches: [
+            '[vid="dialog_title"][text="流量下载提醒"]',
+            '[vid="dialog_btn_top"][text="立即下载"]',
+          ],
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '功能弹窗-等待连接WiFi下载',
+      desc: '仅流量下载',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.infra.page.core.activity.PageProxyActivity',
+          matches: [
+            '[vid="dialog_title"][text="流量下载提醒"]',
+            '[vid="dialog_btn_bottom"][text="连接 Wi-Fi 时下载"]',
+          ],
+        },
+      ],
+    },
   ],
 });

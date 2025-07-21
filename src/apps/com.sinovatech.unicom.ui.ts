@@ -52,10 +52,18 @@ export default defineGkdApp({
       enable: false,
       rules: [
         {
-          action: 'clickCenter',
           activityIds:
             'com.sinovatech.unicom.basic.ui.activity.WebDetailActivity',
           matches: '@TextView[text.length=0] <3 View <<3 View[id="app"]',
+        },
+        {
+          activityIds: 'com.sinovatech.unicom.basic.ui.activity.MainActivity',
+          matches: '@Image[width<150] -(1,2) TextView[text="广告"]',
+        },
+        {
+          fastQuery: true,
+          activityIds: 'com.sinovatech.unicom.basic.ui.activity.MainActivity',
+          matches: '[vid="home_drag_view_close"]',
         },
       ],
     },

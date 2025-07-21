@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '分段功能-每日签到',
-      desc: '书架页面触发，重进应用刷新激活次数',
+      desc: '点击签到按钮，领取21天奖励',
       enable: false,
       fastQuery: true,
       rules: [
@@ -39,6 +39,11 @@ export default defineGkdApp({
           action: 'back',
           activityIds: 'com.sf.ui.main.MainActivity',
           matches: 'TextView[text="点击签到"]',
+        },
+        {
+          key: 6,
+          activityIds: 'com.sf.ui.signresult.SignGiftBagActivity',
+          matches: '[vid="tvAction"][text="领取"]',
         },
       ],
     },

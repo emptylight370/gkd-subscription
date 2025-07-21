@@ -20,6 +20,7 @@ export default defineGkdApp({
           anyMatches: [
             '@LynxFlattenUI -1 FlattenUIText[text^="看视频"]',
             '@ImageView < FrameLayout - FrameLayout >2 TextView[text^="看视频"]',
+            '@LynxFlattenUI - FlattenUIText[text="明日再来"]',
           ],
         },
         {
@@ -27,7 +28,7 @@ export default defineGkdApp({
           key: 1,
           action: 'back',
           actionCdKey: 4,
-          excludeVersionCodes: [67532, 67732],
+          excludeVersionCodes: [67532, 67732, 68132],
           anyMatches: [
             '[vid = "title"][text="恭喜你获得"]',
             'TextView[text="恭喜你获得"]',
