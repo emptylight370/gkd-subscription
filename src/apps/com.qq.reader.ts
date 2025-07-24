@@ -22,34 +22,17 @@ export default defineGkdApp({
     {
       key: 2,
       name: '分段功能-每日签到',
-      desc: '书架页面触发，重进应用刷新激活次数',
+      desc: '领取签到奖励',
       enable: false,
-      actionMaximum: 1,
-      resetMatch: 'app',
       rules: [
         {
-          key: 1,
-          name: '点击书架签到',
-          activityIds: '.activity.MainFlutterActivity',
-          matches: 'View[desc*="签到"]',
-        },
-        {
           key: 2,
-          preKeys: [1],
           name: '签到成功',
           activityIds: '.activity.WebBrowserForFullScreenContents',
           anyMatches: [
             'TextView[text="签到成功"] +6 TextView[text="我知道了"]',
             '@TextView - TextView[text="去抽奖"]',
           ],
-        },
-        {
-          key: 3,
-          preKeys: [2],
-          name: '退出签到页面',
-          fastQuery: true,
-          activityIds: '.activity.WebBrowserForFullScreenContents',
-          matches: '[vid="profile_header_left_back"]',
         },
       ],
     },
@@ -73,11 +56,7 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: '.activity.WebBrowserForFullScreenContents',
-          matches: [
-            '[text="恭喜获得"]',
-            '[text="获得"]',
-            '@TextView -6 [text="恭喜获得"]',
-          ],
+          anyMatches: ['@TextView -6 [text="恭喜获得"]'],
         },
       ],
     },
