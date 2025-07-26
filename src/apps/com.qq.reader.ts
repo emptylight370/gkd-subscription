@@ -38,14 +38,13 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '局部广告-书架广告',
+      name: '局部广告-主页右下角小广告',
       enable: false,
-      actionMaximum: 1,
       rules: [
         {
           fastQuery: true,
           activityIds: '.activity.MainFlutterActivity',
-          matches: 'ImageView[vid="close_btn"]',
+          matches: '[vid="operating_activity_close_view"]',
         },
       ],
     },
