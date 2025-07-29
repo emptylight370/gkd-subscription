@@ -59,5 +59,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '全屏广告-主页全屏广告',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.activity.MainFlutterActivity',
+          matches: '@[vid="close_btn"] <n [vid="adv_native"]',
+        },
+      ],
+    },
   ],
 });
