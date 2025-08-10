@@ -148,15 +148,25 @@ export default defineGkdApp({
     },
     {
       key: 11,
-      name: '全屏广告-关闭预约礼包',
+      name: '全屏广告-若干广告',
       enable: false,
+      fastQuery: true,
+      activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
-          fastQuery: true,
-          activityIds: '.pages.main.MainFragmentActivity',
+          key: 1,
+          name: '预约礼包',
           matches: [
             'FlattenUIText[text="恭喜获得预约礼包"]',
             '@LynxFlattenUI - FlattenUIText[text^="预约"][text$="金币"]',
+          ],
+        },
+        {
+          key: 2,
+          name: '现金红包',
+          matches: [
+            'FlattenUIText[text$="现金红包"]',
+            '@LynxFlattenUI -28 FlattenUIText[text$="现金红包"]',
           ],
         },
       ],

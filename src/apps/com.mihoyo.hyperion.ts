@@ -37,6 +37,15 @@ export default defineGkdApp({
           matches: 'ListView > @View > TextView[text^="UID"]',
         },
         {
+          key: 5,
+          name: '关闭登录账号弹窗',
+          fastQuery: true,
+          matches: [
+            '@TextView[text!="请在此绑定你的角色"] < View < View <2 View < View <2 View < View <2 View < WebView < WebView < [vid="webViewContainer"]',
+            '@TextView - TextView[text="请选择角色"]',
+          ],
+        },
+        {
           name: '点击签到',
           key: 1,
           // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
