@@ -28,7 +28,10 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+          activityIds: [
+            'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+            'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+          ],
           matches: 'TextView[text="仅 WLAN 下载并安装"]',
         },
       ],
@@ -41,7 +44,10 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+          activityIds: [
+            'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+            'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+          ],
           matches: 'Button[text="直接下载并安装"]',
         },
       ],
@@ -53,8 +59,10 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
+          activityIds: [
             'com.heytap.cdo.client.download.ui.activity.DownloadDialogActivity',
+            'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+          ],
           matches: 'Button[text="取消"]',
         },
       ],
@@ -67,7 +75,10 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+          activityIds: [
+            'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+            'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+          ],
           matches: [
             '[vid="alertTitle"][text="流量安装提醒"]',
             '[vid="download_remind_download_btn"][text="直接下载并安装"]',
@@ -83,7 +94,10 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+          activityIds: [
+            'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+            'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+          ],
           matches: [
             '[vid="alertTitle"][text="流量安装提醒"]',
             '[vid="download_remind_close"][text="稍后安装"]',
