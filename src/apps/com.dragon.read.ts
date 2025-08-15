@@ -136,6 +136,7 @@ export default defineGkdApp({
         {
           name: '催更',
           actionMaximum: 2,
+          actionCd: 3000,
           matches:
             '@LinearLayout > FrameLayout[childCount=1] + TextView[text~="\\\\d+次"][text.length<7]',
         },
