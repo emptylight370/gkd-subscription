@@ -31,6 +31,7 @@ export default defineGkdApp({
           activityIds: [
             'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
             'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+            'com.heytap.cdo.client.detail.app.AppDetailActivity',
           ],
           matches: 'TextView[text="仅 WLAN 下载并安装"]',
         },
@@ -47,6 +48,7 @@ export default defineGkdApp({
           activityIds: [
             'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
             'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+            'com.heytap.cdo.client.detail.app.AppDetailActivity',
           ],
           matches: 'Button[text="直接下载并安装"]',
         },
@@ -62,6 +64,7 @@ export default defineGkdApp({
           activityIds: [
             'com.heytap.cdo.client.download.ui.activity.DownloadDialogActivity',
             'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+            'com.heytap.cdo.client.detail.app.AppDetailActivity',
           ],
           matches: 'Button[text="取消"]',
         },
@@ -78,6 +81,7 @@ export default defineGkdApp({
           activityIds: [
             'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
             'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+            'com.heytap.cdo.client.detail.app.AppDetailActivity',
           ],
           matches: [
             '[vid="alertTitle"][text="流量安装提醒"]',
@@ -97,6 +101,7 @@ export default defineGkdApp({
           activityIds: [
             'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
             'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
+            'com.heytap.cdo.client.detail.app.AppDetailActivity',
           ],
           matches: [
             '[vid="alertTitle"][text="流量安装提醒"]',

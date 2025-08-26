@@ -120,6 +120,7 @@ export default defineGkdApp({
           key: 1,
           name: '点击含未读消息对话',
           activityIds: '.main.HyperionMainActivity',
+          actionDelay: 300,
           matches:
             '@ViewGroup > [vid="roomDotGroup"] > [vid="messageTextDotViewGroup"] > [vid="messageTextDotView"]',
         },
