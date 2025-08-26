@@ -74,7 +74,8 @@ export default defineGkdApp({
         {
           key: 1,
           name: '领取任务',
-          actionCd: 2500,
+          actionCd: 2000,
+          actionDelay: 500,
           actionCdKey: 1,
           matches: '[vid="tvTaskAction"][text="领取任务"]',
         },
