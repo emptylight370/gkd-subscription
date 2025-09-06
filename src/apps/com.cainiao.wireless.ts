@@ -17,5 +17,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能类-自动已读消息',
+      enable: false,
+      actionMaximum: 1,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.homepage.view.activity.HomePageActivity',
+          matches: [
+            '[vid="number_red_dots_textView"]',
+            'TextView[text="一键已读"]',
+          ],
+        },
+      ],
+    },
   ],
 });
