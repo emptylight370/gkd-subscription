@@ -124,7 +124,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
           anyMatches: [
-            '@ImageView < [vid="fl_container"]',
+            '@ImageView[width<200] <n [vid="fl_container"]',
             '@[vid="iv_close"] <2 [vid="cl_root"]',
           ],
         },
