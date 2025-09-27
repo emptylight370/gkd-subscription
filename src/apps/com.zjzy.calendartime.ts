@@ -48,5 +48,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '功能类-点击进行系统解锁',
+      desc: '触发系统验证',
+      enable: true,
+      matchTime: 3000,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: ['.ui.main.MainActivity', '.ui.base.ContainerActivity'],
+          matches: '[vid="curUnlockTypeImg"]',
+        },
+      ],
+    },
   ],
 });
