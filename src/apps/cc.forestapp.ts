@@ -13,8 +13,10 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.activities.main.MainActivity',
-          matches:
+          anyMatches: [
             '@ImageView[desc="dialog_system_close_button"] <<10 [id="android:id/content"]',
+            '[vid="button_close"]',
+          ],
         },
       ],
     },

@@ -18,9 +18,9 @@ export default defineGkdApp({
           key: 3,
           actionCdKey: 4,
           anyMatches: [
-            '@LynxFlattenUI -1 FlattenUIText[text^="看视频"]',
-            '@ImageView < FrameLayout - FrameLayout >2 TextView[text^="看视频"]',
-            '@LynxFlattenUI - FlattenUIText[text="明日再来"]',
+            '@LynxFlattenUI[visibleToUser=true] -1 FlattenUIText[text^="看视频"]',
+            '@ImageView[visibleToUser=true] < FrameLayout - FrameLayout >2 TextView[text^="看视频"]',
+            '@LynxFlattenUI[visibleToUser=true] - FlattenUIText[text="明日再来"]',
           ],
         },
         {
@@ -168,6 +168,16 @@ export default defineGkdApp({
           matches: [
             'FlattenUIText[text$="现金红包"]',
             '@LynxFlattenUI -28 FlattenUIText[text$="现金红包"]',
+          ],
+        },
+        {
+          key: 3,
+          name: '连续打卡',
+          fastQuery: true,
+          activityIds: '.pages.main.MainFragmentActivity',
+          matches: [
+            'FlattenUIText[text~="已有.*人参与"]',
+            '@LynxFlattenUI -5 FlattenUIText[text="立即参与"]',
           ],
         },
       ],
