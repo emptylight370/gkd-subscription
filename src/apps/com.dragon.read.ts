@@ -16,7 +16,7 @@ export default defineGkdApp({
         {
           name: '每日阅读奖励(新)',
           key: 3,
-          actionCdKey: 4,
+          versionCode: { minimum: 67532 },
           anyMatches: [
             '@LynxFlattenUI[visibleToUser=true] -1 FlattenUIText[text^="看视频"]',
             '@ImageView[visibleToUser=true] < FrameLayout - FrameLayout >2 TextView[text^="看视频"]',
@@ -27,8 +27,7 @@ export default defineGkdApp({
           name: '每日阅读奖励(旧)',
           key: 1,
           action: 'back',
-          actionCdKey: 4,
-          excludeVersionCodes: [67532, 67732, 68132],
+          versionCode: { maximum: 67531 },
           anyMatches: [
             '[vid = "title"][text="恭喜你获得"]',
             'TextView[text="恭喜你获得"]',
