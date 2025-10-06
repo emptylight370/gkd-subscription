@@ -14,7 +14,7 @@ export default defineGkdApp({
       activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
-          name: '每日阅读奖励(新)',
+          name: '每日阅读奖励V2',
           key: 3,
           versionCode: { minimum: 67532 },
           anyMatches: [
@@ -24,7 +24,7 @@ export default defineGkdApp({
           ],
         },
         {
-          name: '每日阅读奖励(旧)',
+          name: '每日阅读奖励V1',
           key: 1,
           action: 'back',
           versionCode: { maximum: 67531 },
