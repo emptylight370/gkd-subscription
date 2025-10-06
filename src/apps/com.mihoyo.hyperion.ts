@@ -52,11 +52,9 @@ export default defineGkdApp({
           fastQuery: true,
           actionCd: 2000,
           anyMatches: [
-            // 崩坏：星穹铁道
+            // 崩坏：星穹铁道，会一直点击按钮（即使当天已签到）
             '@TextView[text~=".*第\\\\d+天"] <n View <3 View <2 View <2 View < WebView[text*="星穹铁道"][text*="签到"] <<2 [vid="webViewContainer"]',
-            // 崩坏3
-            // 绝区零
-            // 原神
+            // 崩坏3、绝区零、原神
             'Image < @View <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
           ],
           snapshotUrls: [
@@ -76,6 +74,19 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17611620',
             'https://i.gkd.li/i/17611616',
             'https://i.gkd.li/i/14967631',
+          ],
+        },
+        {
+          name: '轮空',
+          // 用于更换账号期间保持规则继续匹配，签到页面更换账号不会触发再次匹配
+          key: 6,
+          // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
+          fastQuery: true,
+          action: 'none',
+          actionCd: 3000,
+          anyMatches: [
+            // 崩坏：星穹铁道、崩坏3、绝区零、原神
+            'WebView[text*="签到"] <<2 [vid="webViewContainer"]',
           ],
         },
       ],
