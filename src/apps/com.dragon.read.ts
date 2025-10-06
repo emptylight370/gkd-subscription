@@ -18,9 +18,9 @@ export default defineGkdApp({
           key: 3,
           versionCode: { minimum: 67532 },
           anyMatches: [
-            '@LynxFlattenUI[visibleToUser=true] -1 FlattenUIText[text^="看视频"]',
-            '@ImageView[visibleToUser=true] < FrameLayout - FrameLayout >2 TextView[text^="看视频"]',
-            '@LynxFlattenUI[visibleToUser=true] - FlattenUIText[text="明日再来"]',
+            '@LynxFlattenUI -1 FlattenUIText[text^="看视频"][text!$="赚钱"]',
+            '@ImageView < FrameLayout - FrameLayout >2 TextView[text^="看视频"][text!$="赚钱"]',
+            '@LynxFlattenUI - FlattenUIText[text="明日再来"]',
           ],
         },
         {
