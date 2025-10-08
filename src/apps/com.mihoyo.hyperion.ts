@@ -67,7 +67,8 @@ export default defineGkdApp({
           name: '关闭签到成功弹窗',
           key: 2,
           preKeys: [1],
-          matches: 'TextView[text*="签到成功"] < View <2 View + TextView',
+          matches:
+            '@TextView - View > View + View > TextView[text*="签到成功"]',
           snapshotUrls: [
             'https://i.gkd.li/i/17601273',
             'https://i.gkd.li/i/17601340',
@@ -80,7 +81,6 @@ export default defineGkdApp({
           name: '轮空',
           // 用于更换账号期间保持规则继续匹配，签到页面更换账号不会触发再次匹配
           key: 6,
-          // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
           fastQuery: true,
           action: 'none',
           actionCd: 3000,

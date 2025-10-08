@@ -9,7 +9,6 @@ export default defineGkdApp({
       name: '功能弹窗-关闭领取金币窗口',
       desc: '领取金币后返回',
       enable: false,
-      actionCd: 100,
       fastQuery: true,
       activityIds: '.pages.main.MainFragmentActivity',
       rules: [
@@ -27,6 +26,7 @@ export default defineGkdApp({
           name: '每日阅读奖励V1',
           key: 1,
           action: 'back',
+          actionCd: 100,
           versionCode: { maximum: 67531 },
           anyMatches: [
             '[vid = "title"][text="恭喜你获得"]',
