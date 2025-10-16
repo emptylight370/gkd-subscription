@@ -1,10 +1,10 @@
 name: build_release
 
 permissions:
-  contents: write     # 用于创建release和推送代码
-  checks: read        # 用于读取检查状态
-  actions: read       # 用于读取工作流运行状态
-  statuses: read      # 用于读取提交状态
+  contents: write # 用于创建release和推送代码
+  checks: read # 用于读取检查状态
+  actions: read # 用于读取工作流运行状态
+  statuses: read # 用于读取提交状态
   pull-requests: read # 用于读取PR相关检查
 
 on:
@@ -35,12 +35,12 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
 
