@@ -42,6 +42,8 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
 
+      - run: volta install
+
       - name: Install deps
         run: pnpm install
 

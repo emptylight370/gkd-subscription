@@ -25,6 +25,8 @@ jobs:
       - name: Setup Environment
         uses: volta-cli/action@v4
 
+      - run: volta install
+
       - name: Install deps
         run: |
           sudo apt-get install jq -y
