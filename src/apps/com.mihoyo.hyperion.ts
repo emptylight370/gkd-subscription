@@ -46,6 +46,20 @@ export default defineGkdApp({
           ],
         },
         {
+          name: '关闭签到成功弹窗',
+          key: 2,
+          preKeys: [1],
+          matches:
+            '@TextView - View > View + View > TextView[text*="签到成功"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17601273',
+            'https://i.gkd.li/i/17601340',
+            'https://i.gkd.li/i/17611620',
+            'https://i.gkd.li/i/17611616',
+            'https://i.gkd.li/i/14967631',
+          ],
+        },
+        {
           name: '点击签到',
           key: 1,
           // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
@@ -61,21 +75,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17601269',
             'https://i.gkd.li/i/17601338',
             'https://i.gkd.li/i/17611619',
-          ],
-        },
-        {
-          name: '关闭签到成功弹窗',
-          key: 2,
-          preKeys: [1],
-          actionDelay: 200,
-          matches:
-            '@TextView - View > View + View > TextView[text*="签到成功"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/17601273',
-            'https://i.gkd.li/i/17601340',
-            'https://i.gkd.li/i/17611620',
-            'https://i.gkd.li/i/17611616',
-            'https://i.gkd.li/i/14967631',
           ],
         },
         {
