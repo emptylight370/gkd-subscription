@@ -22,10 +22,10 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - name: Setup Environment
-        uses: volta-cli/action@v4
-
-      - run: volta install
+      - name: Install node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
 
       - name: Install deps
         run: |
