@@ -48,5 +48,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '青少年模式-青少年模式弹窗',
+      enable: false,
+      matchTime: 5000,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches:
+            '@[vid="confirmTv"][text="我知道了"] -2 TextView[text*="未成年人模式"]',
+        },
+      ],
+    },
   ],
 });
