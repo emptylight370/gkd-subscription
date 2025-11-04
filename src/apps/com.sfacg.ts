@@ -74,16 +74,15 @@ export default defineGkdApp({
         {
           key: 1,
           name: '领取任务',
-          actionCd: 2200,
-          actionDelay: 500,
+          actionCd: 3000,
           actionCdKey: 1,
-          matches: '[vid="tvTaskAction"][text="领取任务"]',
+          matches: '[vid="tvTaskAction"][text="领取任务"][visibleToUser=true]',
         },
         {
           name: '点击领取奖励按钮',
           key: 2,
           actionCdKey: 1,
-          matches: '[vid="tvTaskAction"][text="领取奖励"]',
+          matches: '[vid="tvTaskAction"][text="领取奖励"][visibleToUser=true]',
         },
         {
           name: '关闭领取成功窗口',
@@ -104,8 +103,7 @@ export default defineGkdApp({
         {
           name: '点击领取',
           key: 1,
-          actionCd: 1700,
-          actionDelay: 500,
+          actionCd: 3000,
           anyMatches: [
             '[vid="tvGet"][text="立即领取"]',
             '[vid="tvGet"][text="领取"]',

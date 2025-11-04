@@ -67,9 +67,9 @@ export default defineGkdApp({
           actionCd: 2000,
           anyMatches: [
             // 崩坏：星穹铁道，会一直点击按钮（即使当天已签到）
-            '@TextView[text~=".*第\\\\d+天"] <n View <3 View <2 View <2 View < WebView[text*="星穹铁道"][text*="签到"] <<2 [vid="webViewContainer"]',
+            '@TextView[text~=".*第\\\\d+天"][visibleToUser=true] <n View <3 View <2 View <2 View < WebView[text*="星穹铁道"][text*="签到"] <<2 [vid="webViewContainer"]',
             // 崩坏3、绝区零、原神
-            'Image < @View <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
+            'Image[visibleToUser=true] < @View <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/17601269',
