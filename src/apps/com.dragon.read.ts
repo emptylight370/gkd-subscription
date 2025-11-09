@@ -15,7 +15,10 @@ export default defineGkdApp({
         {
           name: '每日阅读奖励V2',
           key: 3,
-          versionCode: { minimum: 67532 },
+          versionCode: {
+            minimum: 67532,
+            // exclude: 69532, // 可能是灰度测试，不在福利页可用
+          },
           anyMatches: [
             '@LynxFlattenUI -1 FlattenUIText[text^="看视频"][text!$="赚钱"]',
             '@ImageView < FrameLayout - FrameLayout >2 TextView[text^="看视频"][text!$="赚钱"]',
