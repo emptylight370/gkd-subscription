@@ -49,6 +49,7 @@ export default defineGkdApp({
           name: '关闭签到成功弹窗',
           key: 2,
           preKeys: [1],
+          priorityActionMaximum: 30,
           matches:
             '@TextView - View > View + View > TextView[text*="签到成功"]',
           snapshotUrls: [
