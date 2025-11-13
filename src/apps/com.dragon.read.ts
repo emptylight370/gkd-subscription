@@ -31,11 +31,7 @@ export default defineGkdApp({
           action: 'back',
           actionCd: 100,
           versionCode: { maximum: 67531 },
-          anyMatches: [
-            '[vid = "title"][text="恭喜你获得"]',
-            'TextView[text="恭喜你获得"]',
-            'TextView[text^="看视频"]',
-          ],
+          anyMatches: ['[vid = "title"][text="恭喜你获得"]', 'TextView[text="恭喜你获得"]', 'TextView[text^="看视频"]'],
         },
         {
           name: '每日阅读新作奖励',
@@ -59,8 +55,7 @@ export default defineGkdApp({
         },
         {
           name: '不可领取',
-          matches:
-            '@LynxFlattenUI -43 FlattenUIText[text*="倒计时"][text*="宝箱"]',
+          matches: '@LynxFlattenUI -43 FlattenUIText[text*="倒计时"][text*="宝箱"]',
         },
       ],
     },
@@ -75,7 +70,14 @@ export default defineGkdApp({
       activityIds: '.pages.main.MainFragmentActivity',
       rules: [
         {
-          name: '点击签到',
+          name: '点击签到V2',
+          key: 3,
+          actionCdKey: 1,
+          versionCode: { minimum: 69532 },
+          matches: '@LynxFlattenUI[text^="立即签到"] +(1,2,3,4) FlattenUIText[text^="立即签到"]',
+        },
+        {
+          name: '点击签到V1',
           key: 1,
           actionCdKey: 1,
           action: 'clickCenter',
@@ -90,14 +92,17 @@ export default defineGkdApp({
           key: 2,
           actionCdKey: 1,
           action: 'clickCenter',
-          matches: [
-            'FlattenUIText[text="可续签"]',
-            '@LynxFlattenUI[text.length=0] - FlattenUIText[text="重新签到"]',
-          ],
+          matches: ['FlattenUIText[text="可续签"]', '@LynxFlattenUI[text.length=0] - FlattenUIText[text="重新签到"]'],
           excludeMatches: 'FlattenUIText[text^="立即签到"]',
         },
         {
-          name: '签到后返回',
+          name: '签到后返回V2',
+          preKeys: [3],
+          versionCode: { minimum: 69532 },
+          matches: '@LynxFlattenUI[text.length=0] - FlattenUIText[text^="最高"]',
+        },
+        {
+          name: '签到后返回V1',
           preKeys: [1, 2],
           action: 'clickCenter',
           anyMatches: [
@@ -167,20 +172,14 @@ export default defineGkdApp({
         {
           key: 2,
           name: '现金红包',
-          matches: [
-            'FlattenUIText[text$="现金红包"]',
-            '@LynxFlattenUI -28 FlattenUIText[text$="现金红包"]',
-          ],
+          matches: ['FlattenUIText[text$="现金红包"]', '@LynxFlattenUI -28 FlattenUIText[text$="现金红包"]'],
         },
         {
           key: 3,
           name: '连续打卡',
           fastQuery: true,
           activityIds: '.pages.main.MainFragmentActivity',
-          matches: [
-            'FlattenUIText[text~="已有.*人参与"]',
-            '@LynxFlattenUI -5 FlattenUIText[text="立即参与"]',
-          ],
+          matches: ['FlattenUIText[text~="已有.*人参与"]', '@LynxFlattenUI -5 FlattenUIText[text="立即参与"]'],
         },
       ],
     },
