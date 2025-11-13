@@ -26,10 +26,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.homepage.view.activity.HomePageActivity',
-          matches: [
-            '[vid="number_red_dots_textView"]',
-            'TextView[text="一键已读"]',
-          ],
+          matches: ['[vid="number_red_dots_textView"]', 'TextView[text="一键已读"]'],
         },
       ],
     },

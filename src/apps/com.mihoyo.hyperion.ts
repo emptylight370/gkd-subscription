@@ -50,8 +50,7 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           priorityActionMaximum: 30,
-          matches:
-            '@TextView - View > View + View > TextView[text*="签到成功"]',
+          matches: '@TextView - View > View + View > TextView[text*="签到成功"]',
           snapshotUrls: [
             'https://i.gkd.li/i/17601273',
             'https://i.gkd.li/i/17601340',
@@ -72,11 +71,7 @@ export default defineGkdApp({
             // 崩坏3、绝区零、原神
             'Image[visibleToUser=true] < @View <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
           ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/17601269',
-            'https://i.gkd.li/i/17601338',
-            'https://i.gkd.li/i/17611619',
-          ],
+          snapshotUrls: ['https://i.gkd.li/i/17601269', 'https://i.gkd.li/i/17601338', 'https://i.gkd.li/i/17611619'],
         },
         {
           name: '轮空',
@@ -101,10 +96,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.main.HyperionMainActivity',
-          anyMatches: [
-            'TextView[vid="signTv"][text="打卡"]',
-            '[text="打卡"] <<2 LinearLayout[vid="discussSignView"]',
-          ],
+          anyMatches: ['TextView[vid="signTv"][text="打卡"]', '[text="打卡"] <<2 LinearLayout[vid="discussSignView"]'],
         },
       ],
     },
@@ -133,8 +125,7 @@ export default defineGkdApp({
           name: '点击含未读消息对话',
           activityIds: '.main.HyperionMainActivity',
           actionDelay: 300,
-          matches:
-            '@ViewGroup > [vid="roomDotGroup"] > [vid="messageTextDotViewGroup"] > [vid="messageTextDotView"]',
+          matches: '@ViewGroup > [vid="roomDotGroup"] > [vid="messageTextDotViewGroup"] > [vid="messageTextDotView"]',
         },
         {
           key: 2,
@@ -155,10 +146,7 @@ export default defineGkdApp({
         {
           key: 1,
           name: '点击关闭按钮',
-          matches: [
-            '[vid="mOrderGameBtn"][text="打开"]',
-            '[vid="mOrderGameClose"]',
-          ],
+          matches: ['[vid="mOrderGameBtn"][text="打开"]', '[vid="mOrderGameClose"]'],
         },
         {
           key: 2,

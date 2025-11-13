@@ -11,10 +11,7 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.oplus.otaui.activity.EntryActivity',
-          matches: [
-            '[vid="alertTitle"][text="开启自动下载"]',
-            '@RelativeLayout >2 [text="关闭"]',
-          ],
+          matches: ['[vid="alertTitle"][text="开启自动下载"]', '@RelativeLayout >2 [text="关闭"]'],
         },
       ],
     },

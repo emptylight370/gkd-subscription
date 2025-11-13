@@ -21,8 +21,7 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           priorityActionMaximum: 30,
-          matches:
-            '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~=".+\\\\*\\\\d+"]',
+          matches: '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~=".+\\\\*\\\\d+"]',
         },
         {
           name: '登录账号',
@@ -58,8 +57,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.MainActivity',
-          matches:
-            '@[vid="confirmTv"][text="我知道了"] -2 TextView[text*="未成年人模式"]',
+          matches: '@[vid="confirmTv"][text="我知道了"] -2 TextView[text*="未成年人模式"]',
         },
       ],
     },

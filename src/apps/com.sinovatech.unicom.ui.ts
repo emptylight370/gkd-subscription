@@ -21,16 +21,14 @@ export default defineGkdApp({
           preKeys: [1],
           name: '点击微信支付v1',
           versionCode: { maximum: 182 },
-          matches:
-            '@[vid="wopay_other_item_icon_font"] < * - * > [text="微信"]',
+          matches: '@[vid="wopay_other_item_icon_font"] < * - * > [text="微信"]',
         },
         {
           key: 3,
           preKeys: [1],
           name: '点击微信支付v2',
           versionCode: { minimum: 183 },
-          matches:
-            '@[vid="wopay_discount_right_ll"] - ViewGroup > ViewGroup > * > TextView[text="微信"]',
+          matches: '@[vid="wopay_discount_right_ll"] - ViewGroup > ViewGroup > * > TextView[text="微信"]',
         },
       ],
     },
@@ -51,16 +49,14 @@ export default defineGkdApp({
           preKeys: [1],
           name: '点击支付宝支付v1',
           versionCode: { maximum: 182 },
-          matches:
-            '@[vid="wopay_other_item_icon_font"] < * - * > [text="支付宝"]',
+          matches: '@[vid="wopay_other_item_icon_font"] < * - * > [text="支付宝"]',
         },
         {
           key: 3,
           preKeys: [1],
           name: '点击支付宝支付v2',
           versionCode: { minimum: 183 },
-          matches:
-            '@[vid="wopay_discount_right_ll"] - ViewGroup > ViewGroup > * > TextView[text="支付宝"]',
+          matches: '@[vid="wopay_discount_right_ll"] - ViewGroup > ViewGroup > * > TextView[text="支付宝"]',
         },
       ],
     },
@@ -70,8 +66,7 @@ export default defineGkdApp({
       enable: false,
       rules: [
         {
-          activityIds:
-            'com.sinovatech.unicom.basic.ui.activity.WebDetailActivity',
+          activityIds: 'com.sinovatech.unicom.basic.ui.activity.WebDetailActivity',
           matches: '@TextView[text.length=0] <3 View <<3 View[id="app"]',
         },
         {

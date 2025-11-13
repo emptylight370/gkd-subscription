@@ -28,10 +28,7 @@ export default defineGkdApp({
         {
           action: 'back',
           activityIds: '.feature.reward.RewardActivity',
-          matches: [
-            'TextView[text="恭喜获得"]',
-            'TextView[text="按空白处继续"]',
-          ],
+          matches: ['TextView[text="恭喜获得"]', 'TextView[text="按空白处继续"]'],
         },
       ],
     },

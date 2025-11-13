@@ -12,8 +12,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.MainActivity',
-          matches:
-            '[vid="user_content_vibrant_life"] +2 LinearLayout > TextView[text="取消"]',
+          matches: '[vid="user_content_vibrant_life"] +2 LinearLayout > TextView[text="取消"]',
         },
       ],
     },

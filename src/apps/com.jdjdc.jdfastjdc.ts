@@ -51,8 +51,7 @@ export default defineGkdApp({
         },
         {
           name: '成长之路领取',
-          matches:
-            '@[vid="btn_get"] <<n [vid="recyclerview"] - [vid="cl_header_container"] >2 [text="成长点数"]',
+          matches: '@[vid="btn_get"] <<n [vid="recyclerview"] - [vid="cl_header_container"] >2 [text="成长点数"]',
         },
       ],
     },
@@ -80,10 +79,7 @@ export default defineGkdApp({
         {
           name: '普通页面',
           fastQuery: true,
-          activityIds: [
-            '.refactor.ui.newhome.HomeNewActivity',
-            '.refactor.ui.home.TaskActivityV2',
-          ],
+          activityIds: ['.refactor.ui.newhome.HomeNewActivity', '.refactor.ui.home.TaskActivityV2'],
           anyMatches: [
             '[text="直接收下"]',
             '[text="全部收下"]',
@@ -123,10 +119,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.refactor.ui.newhome.HomeNewActivity',
-          anyMatches: [
-            '@ImageView[width<200] <n [vid="fl_container"]',
-            '@[vid="iv_close"] <2 [vid="cl_root"]',
-          ],
+          anyMatches: ['@ImageView[width<200] <n [vid="fl_container"]', '@[vid="iv_close"] <2 [vid="cl_root"]'],
         },
       ],
     },
@@ -138,8 +131,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.refactor.ui.function.BlindBoxActivity',
-          matches:
-            '@[vid="iv_close"] - ViewGroup > [vid="tv_buy"][text*="大会员"]',
+          matches: '@[vid="iv_close"] - ViewGroup > [vid="tv_buy"][text*="大会员"]',
         },
       ],
     },

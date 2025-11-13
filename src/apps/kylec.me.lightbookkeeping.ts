@@ -14,11 +14,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.HomeActivity',
           actionCd: 3000,
-          matches: [
-            '[vid="tvUnSyncBillCount"]',
-            '[vid="ivSyncRedNotice"]',
-            '[vid="ivBackupAndSync"]',
-          ],
+          matches: ['[vid="tvUnSyncBillCount"]', '[vid="ivSyncRedNotice"]', '[vid="ivBackupAndSync"]'],
         },
       ],
     },

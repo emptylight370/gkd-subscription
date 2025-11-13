@@ -15,8 +15,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.taobao.tao.welcome.Welcome',
-          matches:
-            '@ImageView <2 [vid="poplayer_native_state_center_layout_frame_id"] < [vid="poplayer_inner_view"]',
+          matches: '@ImageView <2 [vid="poplayer_native_state_center_layout_frame_id"] < [vid="poplayer_inner_view"]',
         },
       ],
     },

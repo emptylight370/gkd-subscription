@@ -32,8 +32,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3',
+          activityIds: 'com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3',
           matches: '[vid="live_game_card_close"]',
         },
       ],

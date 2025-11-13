@@ -13,10 +13,7 @@ export default defineGkdApp({
           fastQuery: true,
           action: 'back',
           activityIds: 'com.mihoyo.cloudgame.main.MiHoYoCloudMainActivity',
-          anyMatches: [
-            '[vid="mTvPopTitle"][text="活动商品赠送"]',
-            '[vid="mTvPopTitle"][text="版本福利时长发放"]',
-          ],
+          anyMatches: ['[vid="mTvPopTitle"][text="活动商品赠送"]', '[vid="mTvPopTitle"][text="版本福利时长发放"]'],
         },
       ],
     },

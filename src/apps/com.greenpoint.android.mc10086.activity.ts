@@ -20,8 +20,7 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           name: '点击微信支付',
-          matches:
-            '@[vid="paytype_check"][checked=false] < * - * >2 [text="微信支付"]',
+          matches: '@[vid="paytype_check"][checked=false] < * - * >2 [text="微信支付"]',
         },
       ],
     },
@@ -41,8 +40,7 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           name: '点击支付宝支付',
-          matches:
-            '@[vid="paytype_check"][checked=false] < * - * >2 [text="支付宝支付"]',
+          matches: '@[vid="paytype_check"][checked=false] < * - * >2 [text="支付宝支付"]',
         },
       ],
     },
@@ -54,10 +52,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.wxapi.WXPayEntryActivity',
-          matches: [
-            '[vid="pointKeep_dialog_title"][text="中移支付"]',
-            '[vid="discard_button"][text="放弃优惠"]',
-          ],
+          matches: ['[vid="pointKeep_dialog_title"][text="中移支付"]', '[vid="discard_button"][text="放弃优惠"]'],
         },
       ],
     },

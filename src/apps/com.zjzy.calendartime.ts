@@ -11,24 +11,19 @@ export default defineGkdApp({
       enable: false,
       fastQuery: true,
       actionCd: 100,
-      activityIds: [
-        '.desktop_widget.ui.WidgetTargetTransActivity',
-        '.ui.main.MainActivity',
-      ],
+      activityIds: ['.desktop_widget.ui.WidgetTargetTransActivity', '.ui.main.MainActivity'],
       rules: [
         {
           name: '打卡完成弹窗',
           key: 1,
           actionMaximum: 5,
-          matches:
-            '[vid="tv_card_tile"][text~="[打补]卡成功"] +3 [vid="btn_share"][text="完成"]',
+          matches: '[vid="tv_card_tile"][text~="[打补]卡成功"] +3 [vid="btn_share"][text="完成"]',
         },
         {
           name: '打卡一周弹窗',
           key: 2,
           preKeys: [1],
-          matches:
-            '[vid="targetTitle"][text$="任务已完成"] <<3 LinearLayout +2 [vid="iv_close"]',
+          matches: '[vid="targetTitle"][text$="任务已完成"] <<3 LinearLayout +2 [vid="iv_close"]',
         },
       ],
     },
@@ -43,8 +38,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.ui.main.MainActivity',
-          matches:
-            '[vid="dialogTitle"][text="更新说明"] < LinearLayout + ImageView[vid="iv_close"]',
+          matches: '[vid="dialogTitle"][text="更新说明"] < LinearLayout + ImageView[vid="iv_close"]',
         },
       ],
     },

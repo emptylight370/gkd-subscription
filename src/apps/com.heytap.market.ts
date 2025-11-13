@@ -11,12 +11,8 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'com.heytap.cdo.client.cards.page.main.maintab.MainTabActivity',
-          matches: [
-            '[vid="alertTitle"][text*="添加"][text*="桌面"]',
-            'TextView[text="取消"]',
-          ],
+          activityIds: 'com.heytap.cdo.client.cards.page.main.maintab.MainTabActivity',
+          matches: ['[vid="alertTitle"][text*="添加"][text*="桌面"]', 'TextView[text="取消"]'],
         },
       ],
     },
@@ -108,10 +104,7 @@ export default defineGkdApp({
             'com.heytap.cdo.client.detail.app.AppDetailActivity',
             'com.downloader.page.ui.main.activity.DownloaderPageActivity',
           ],
-          matches: [
-            '[vid="alertTitle"][text="流量安装提醒"]',
-            '[vid="download_remind_close"][text="稍后安装"]',
-          ],
+          matches: ['[vid="alertTitle"][text="流量安装提醒"]', '[vid="download_remind_close"][text="稍后安装"]'],
         },
       ],
     },
