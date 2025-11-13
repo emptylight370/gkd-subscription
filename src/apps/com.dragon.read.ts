@@ -30,7 +30,7 @@ export default defineGkdApp({
           key: 1,
           action: 'back',
           actionCd: 100,
-          versionCode: { maximum: 67531 },
+          versionCode: { maximum: 67532 },
           anyMatches: ['[vid = "title"][text="恭喜你获得"]', 'TextView[text="恭喜你获得"]', 'TextView[text^="看视频"]'],
         },
         {
@@ -73,7 +73,10 @@ export default defineGkdApp({
           name: '点击签到V2',
           key: 3,
           actionCdKey: 1,
-          versionCode: { minimum: 69532 },
+          versionCode: {
+            minimum: 69532,
+            // exclude: 69732, // 这个版本好像还在灰度，又不行了
+          },
           matches: '@LynxFlattenUI[text^="立即签到"] +(1,2,3,4) FlattenUIText[text^="立即签到"]',
         },
         {
@@ -98,7 +101,10 @@ export default defineGkdApp({
         {
           name: '签到后返回V2',
           preKeys: [3],
-          versionCode: { minimum: 69532 },
+          versionCode: {
+            minimum: 69532,
+            // exclude: 69732, // 这个版本好像还在灰度，又不行了
+          },
           matches: '@LynxFlattenUI[text.length=0] - FlattenUIText[text^="最高"]',
         },
         {
