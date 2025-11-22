@@ -43,7 +43,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '功能弹窗-关闭宝箱窗口',
-      desc: '领取宝箱后返回',
+      desc: '(功能已失效)领取宝箱后返回',
       enable: false,
       fastQuery: true,
       activityIds: '.pages.main.MainFragmentActivity',
@@ -62,7 +62,7 @@ export default defineGkdApp({
     {
       key: 3,
       name: '分段功能-每日签到',
-      desc: '点击签到按钮并返回',
+      desc: '(功能已失效)点击签到按钮并返回',
       enable: false,
       actionCdKey: 3,
       actionMaximum: 1,
@@ -163,6 +163,7 @@ export default defineGkdApp({
     {
       key: 11,
       name: '全屏广告-若干广告',
+      desc: '(功能已失效)',
       enable: false,
       fastQuery: true,
       activityIds: '.pages.main.MainFragmentActivity',
@@ -192,7 +193,7 @@ export default defineGkdApp({
     {
       key: 12,
       name: '功能类-提现页面相关',
-      desc: '银行卡0.5，余额暴涨',
+      desc: '(功能已失效)银行卡0.5，余额暴涨',
       enable: false,
       rules: [
         {
