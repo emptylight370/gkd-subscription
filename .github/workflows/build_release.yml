@@ -39,13 +39,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: Setup environment
+        uses: jdx/mise-action@v3
 
       - name: Install deps
         run: pnpm install
