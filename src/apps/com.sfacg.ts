@@ -114,5 +114,29 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '功能弹窗-流量下载漫画-关',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.sf.ui.comic.content.ComicCachedActivity',
+          matches: ['[vid="tvTitle"][text="流量提醒"]', '[vid="messageBoxBtn2"][text="不下载了"]'],
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '功能弹窗-流量下载漫画-开',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.sf.ui.comic.content.ComicCachedActivity',
+          matches: ['[vid="tvTitle"][text="流量提醒"]', '[vid="messageBoxBtn1"][text="我要下载"]'],
+        },
+      ],
+    },
   ],
 });
