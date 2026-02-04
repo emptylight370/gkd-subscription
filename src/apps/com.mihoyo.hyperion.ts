@@ -26,19 +26,6 @@ export default defineGkdApp({
       activityIds: '.web2.MiHoYoWebActivity',
       rules: [
         {
-          key: 3,
-          name: '登录游戏账号',
-          actionDelay: 1000,
-          matches: 'TextView[text="请在此绑定你的角色"]',
-        },
-        {
-          key: 4,
-          preKeys: [3],
-          name: '登录第一个账号',
-          actionDelay: 200,
-          matches: 'ListView > @View > TextView[text^="UID"]',
-        },
-        {
           key: 5,
           name: '关闭登录账号弹窗',
           fastQuery: true,
@@ -59,6 +46,19 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17611616',
             'https://i.gkd.li/i/14967631',
           ],
+        },
+        {
+          key: 3,
+          name: '登录游戏账号',
+          actionDelay: 1000,
+          matches: 'TextView[text="请在此绑定你的角色"]',
+        },
+        {
+          key: 4,
+          preKeys: [3],
+          name: '登录第一个账号',
+          actionDelay: 200,
+          matches: ['TextView[text="请在此绑定你的角色"]', 'ListView > @View > TextView[text^="UID"]'],
         },
         {
           name: '点击签到',
