@@ -32,8 +32,8 @@ jobs:
           fi
 
       - uses: jdx/mise-action@v3
-        with:
-          cache: false
+        # with:
+        #   cache: false
 
       - run: pnpm install
 
