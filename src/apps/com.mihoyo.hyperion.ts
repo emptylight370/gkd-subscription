@@ -22,7 +22,7 @@ export default defineGkdApp({
       name: '分段功能-领取签到奖励',
       desc: '已适配星铁、崩三、绝区零、原神',
       enable: false,
-      matchDelay: 1000,
+      matchDelay: 2000,
       activityIds: '.web2.MiHoYoWebActivity',
       rules: [
         {

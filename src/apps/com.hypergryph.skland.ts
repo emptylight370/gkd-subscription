@@ -9,6 +9,7 @@ export default defineGkdApp({
       name: '分段功能-每日签到',
       enable: false,
       activityIds: '.MainActivity',
+      matchRoot: true,
       rules: [
         {
           name: '领取签到奖励',
