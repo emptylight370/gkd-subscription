@@ -10,7 +10,10 @@ permissions:
 on:
   workflow_dispatch:
   push:
-    paths: 'src/subscription.ts'
+    branches:
+      - main
+    paths:
+      - src/subscription.ts
 
 jobs:
   wait-for-check-complete:
@@ -39,15 +42,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get latest mise version
-        id: get_mise_version
-        run: |
-          echo "version=$(curl -fsSL https://mise.jdx.dev/VERSION)" >> $GITHUB_OUTPUT
-
-      - uses: jdx/mise-action@v3
-        with:
-          version: ${{ steps.get_mise_version.outputs.version }}
-          # cache_key_prefix: mise-v${{ steps.get_mise_version.outputs.version }}
+      # - name: Get latest mise version
+      #   id: get_mise_version
+      #   run: |
+      #     echo "version=$(curl -fsSL https://mise.jdx.dev/VERSION)" >> $GITHUB_OUTPUT
+      - name: Setup environment
+        uses: jdx/mise-action@v3
+        # with:
+        #   version: ${{ steps.get_mise_version.outputs.version }}
+        #   cache_key_prefix: mise-v${{ steps.get_mise_version.outputs.version }}
 
       - name: Install deps
         run: pnpm install
