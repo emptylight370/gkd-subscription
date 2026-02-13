@@ -34,17 +34,17 @@
     "@gkd-kit/api": "0.8.0",
     "@gkd-kit/define": "0.0.1",
     "@gkd-kit/tools": "0.8.0",
-    "@types/node": "25.2.2",
+    "@types/node": "25.2.3",
     "eslint": "10.0.0",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-unused-imports": "4.3.0",
+    "eslint-plugin-unused-imports": "4.4.1",
     "json5": "2.2.3",
     "lint-staged": "16.2.7",
     "prettier": "3.8.1",
     "simple-git-hooks": "2.13.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.54.0"
+    "typescript-eslint": "8.55.0"
   },
   "packageManager": "pnpm@10.29.1",
   "engines": {
