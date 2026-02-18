@@ -31,14 +31,7 @@ jobs:
             exit 1
           fi
 
-      # - name: Get latest mise version
-      #   id: get_mise_version
-      #   run: |
-      #     echo "version=$(curl -fsSL https://mise.jdx.dev/VERSION)" >> $GITHUB_OUTPUT
       - uses: jdx/mise-action@v3
-        # with:
-        #   version: ${{ steps.get_mise_version.outputs.version }}
-        #   cache_key_prefix: mise-v${{ steps.get_mise_version.outputs.version }}
 
       - run: pnpm install
 

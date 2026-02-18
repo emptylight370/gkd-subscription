@@ -1,17 +1,7 @@
 [[tools.node]]
 version = "24.13.1"
 backend = "core:node"
-"platforms.linux-arm64" = { checksum = "sha256:4873459d7c9b28feaa1f0fade9bb9c81cb702670991ff80a51d805325c5e3456", url = "https://nodejs.org/dist/v24.13.1/node-v24.13.1-linux-arm64.tar.gz"}
-"platforms.linux-x64" = { checksum = "sha256:7ad28fb172a9ab0593f86c1a39e5c268d0d8fc3d6cb0167f455b5655a7a6e2fd", url = "https://nodejs.org/dist/v24.13.1/node-v24.13.1-linux-x64.tar.gz"}
-"platforms.macos-arm64" = { checksum = "sha256:8c039d59f2fec6195e4281ad5b0d02b9a940897b4df7b849c6fb48be6787bba6", url = "https://nodejs.org/dist/v24.13.1/node-v24.13.1-darwin-arm64.tar.gz"}
-"platforms.macos-x64" = { checksum = "sha256:527f0578d9812e7dfa225121bda0b1546a6a0e4b5f556295fc8299c272de5fbf", url = "https://nodejs.org/dist/v24.13.1/node-v24.13.1-darwin-x64.tar.gz"}
-"platforms.windows-x64" = { checksum = "sha256:fba577c4bb87df04d54dd87bbdaa5a2272f1f99a2acbf9152e1a91b8b5f0b279", url = "https://nodejs.org/dist/v24.13.1/node-v24.13.1-win-x64.zip"}
 
 [[tools.pnpm]]
-version = "10.29.1"
+version = "10.30.0"
 backend = "aqua:pnpm/pnpm"
-"platforms.linux-arm64" = { checksum = "sha256:09d3821bc2f1ed882885429b25652df8b2f1e25f95b5588ca4664bc9b1096e31", url = "https://github.com/pnpm/pnpm/releases/download/v10.29.1/pnpm-linux-arm64"}
-"platforms.linux-x64" = { checksum = "sha256:df728857c759d9d355b245ae889aee1c54a634d51486e76d1ecaaaead26569b2", url = "https://github.com/pnpm/pnpm/releases/download/v10.29.1/pnpm-linux-x64"}
-"platforms.macos-arm64" = { checksum = "sha256:8d2ea78407abea669c15d1dc28dddd2888040b88319ad7d54bb455f033047bfe", url = "https://github.com/pnpm/pnpm/releases/download/v10.29.1/pnpm-macos-arm64"}
-"platforms.macos-x64" = { checksum = "sha256:c19ff1f2869e7ccd74845a8198ed41478b14d1f2410057adf6468a39adcd75b2", url = "https://github.com/pnpm/pnpm/releases/download/v10.29.1/pnpm-macos-x64"}
-"platforms.windows-x64" = { checksum = "sha256:c2e20df7e15ed446f5f3e33abe013ae861dab2c2dd32bd62065fd43645973e5c", url = "https://github.com/pnpm/pnpm/releases/download/v10.29.1/pnpm-win-x64.exe"}
