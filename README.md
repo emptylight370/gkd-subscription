@@ -12,7 +12,7 @@
 
 ## 赞助
 
-- **如果这个项目对你有帮助，欢迎在 [爱发电](https://ifdian.net/a/tingyuting) 支持我！**~~（掉认证是正常的，因为一直没人发电）~~
+- **如果这个项目对你有帮助，欢迎在 [这里](https://blog.emptylight.cn/sponsor) 支持我！**~~（爱发电掉认证是正常的，因为一直没人发电）~~
 
 ## 说明
 
@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/emptylight370/gkd-subscription/main/dist/gkd.j
 https://cdn.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
 ```
 
-- 当前版本: v88
+- 当前版本: v89
 
 - 当前订阅文件已适配 34 个应用，共有 89 应用规则组，0 全局规则组
 
