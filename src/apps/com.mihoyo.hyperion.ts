@@ -38,7 +38,6 @@ export default defineGkdApp({
         {
           name: '关闭签到成功弹窗',
           key: 2,
-          preKeys: [1],
           matches: '@TextView - View > View + View > TextView[text*="签到成功"]',
           snapshotUrls: [
             'https://i.gkd.li/i/17601273',
@@ -56,7 +55,6 @@ export default defineGkdApp({
         },
         {
           key: 4,
-          preKeys: [3],
           name: '登录第一个账号',
           actionDelay: 200,
           matches: ['TextView[text="请在此绑定你的角色"]', 'ListView > @View > TextView[text^="UID"]'],
