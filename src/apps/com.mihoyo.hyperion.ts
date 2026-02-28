@@ -52,6 +52,7 @@ export default defineGkdApp({
           name: '登录游戏账号',
           actionDelay: 1000,
           matches: 'TextView[text="请在此绑定你的角色"]',
+          excludeMatches: 'TextView[text="请选择角色"]',
         },
         {
           key: 4,
