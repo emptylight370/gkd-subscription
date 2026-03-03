@@ -17,9 +17,9 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '功能弹窗-仅WLAN下载',
-      desc: 'WiFi流量混合加速',
+      key: 3,
+      name: '功能弹窗-直接下载',
+      desc: 'WiFi+流量、仅流量',
       enable: false,
       rules: [
         {
@@ -30,14 +30,14 @@ export default defineGkdApp({
             'com.heytap.cdo.client.detail.app.AppDetailActivity',
             'com.downloader.page.ui.main.activity.DownloaderPageActivity',
           ],
-          matches: 'TextView[text="仅 WLAN 下载并安装"]',
+          matches: ['[vid="alertTitle"][text="流量安装提醒"]', '[vid="download_remind_download_btn"]'],
         },
       ],
     },
     {
-      key: 3,
-      name: '功能弹窗-直接下载',
-      desc: 'WiFi流量混合加速',
+      key: 2,
+      name: '功能弹窗-仅WLAN下载',
+      desc: 'WiFi+流量、仅流量',
       enable: false,
       rules: [
         {
@@ -48,7 +48,7 @@ export default defineGkdApp({
             'com.heytap.cdo.client.detail.app.AppDetailActivity',
             'com.downloader.page.ui.main.activity.DownloaderPageActivity',
           ],
-          matches: 'Button[text="直接下载并安装"]',
+          matches: ['[vid="alertTitle"][text="流量安装提醒"]', '[vid="download_remind_close"]'],
         },
       ],
     },
@@ -66,45 +66,6 @@ export default defineGkdApp({
             'com.downloader.page.ui.main.activity.DownloaderPageActivity',
           ],
           matches: 'Button[text="取消"]',
-        },
-      ],
-    },
-    {
-      key: 5,
-      name: '功能弹窗-流量直接下载',
-      desc: '仅流量下载',
-      enable: false,
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: [
-            'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
-            'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
-            'com.heytap.cdo.client.detail.app.AppDetailActivity',
-            'com.downloader.page.ui.main.activity.DownloaderPageActivity',
-          ],
-          matches: [
-            '[vid="alertTitle"][text="流量安装提醒"]',
-            '[vid="download_remind_download_btn"][text="直接下载并安装"]',
-          ],
-        },
-      ],
-    },
-    {
-      key: 6,
-      name: '功能弹窗-等待WiFi下载',
-      desc: '仅流量下载',
-      enable: false,
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: [
-            'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
-            'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
-            'com.heytap.cdo.client.detail.app.AppDetailActivity',
-            'com.downloader.page.ui.main.activity.DownloaderPageActivity',
-          ],
-          matches: ['[vid="alertTitle"][text="流量安装提醒"]', '[vid="download_remind_close"][text="稍后安装"]'],
         },
       ],
     },
