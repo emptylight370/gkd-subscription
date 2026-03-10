@@ -58,4 +58,4 @@ https://cdn.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
 
 ## 感谢以下项目
 
-[gkd-kit/subscription](https://github.com/gkd-kit/subscription)
+[gkd-kit/subscription-template](https://github.com/gkd-kit/subscription-template)
