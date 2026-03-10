@@ -16,6 +16,7 @@ export default defineGkdGlobalGroups([
     rules: [
       {
         key: 1,
+        name: '默认开屏广告',
         // 防止误触
         excludeMatches:
           '([text*="搜索" || text="历史记录" || text$="在搜"][text.length>3 && text.length<7][visibleToUser=true]) || ([text="Submit" || text*="阅读并同意" || text="书签" || text="NEXT"][visibleToUser=true]) || ([text$="设置" || text$="选好了" || text^="下一步" || text^="完成" || text*="跳过片"][text.length<10][visibleToUser=true]) || ([text^="选择"][text*="偏好" || text*="兴趣" || text*="喜好"][text.length<10][visibleToUser=true])',
@@ -59,6 +60,22 @@ export default defineGkdGlobalGroups([
           'https://i.gkd.li/i/23741801', // text^="下一步" text$="设置"
           'https://i.gkd.li/i/23741779', // text^="完成" text$="设置"
           'https://i.gkd.li/i/25039297', // text*="跳过片"、text!*="片头"、text!*="片尾"、vid!~="(?is).*head.*"、vid!~="(?is).*tail.*"
+        ],
+      },
+      {
+        key: 2, // 字节SDK
+        name: '字节SDK',
+        anyMatches: [
+          '@View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0] <n FrameLayout[childCount>2][text=null][desc=null] >(n+6) [text*="第三方应用" || text*="扭动手机" || text*="点击或上滑" || text*="省钱好物" || text*="扭一扭"][visibleToUser=true]',
+          'FrameLayout > FrameLayout[childCount>2][text=null][desc=null] > @View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0][visibleToUser=true]',
+        ],
+        snapshotUrls: [
+          'https://i.gkd.li/i/19685971', // +(1,2)
+          'https://i.gkd.li/i/19701216', // +(1,2)
+          'https://i.gkd.li/i/20262130',
+          'https://i.gkd.li/i/20768349',
+          'https://i.gkd.li/i/20883248', // >(n+6)
+          'https://i.gkd.li/i/23549504', // text*="扭一扭"
         ],
       },
     ],
