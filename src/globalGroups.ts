@@ -1,5 +1,10 @@
 import { defineGkdGlobalGroups } from '@gkd-kit/define';
-import { openAdBlackListAppIDs, openAdWhiteListAppIDs } from './globalDefaultApps';
+import {
+  openAdBlackListAppIDs,
+  openAdWhiteListAppIDs,
+  yongBlackListAppIDs,
+  yongWhiteListAppIDs,
+} from './globalDefaultApps';
 
 export default defineGkdGlobalGroups([
   {
@@ -83,5 +88,33 @@ export default defineGkdGlobalGroups([
           .concat([...openAdWhiteListAppIDs].map((id) => ({ id, enable: true }))),
       },
     ],
+  },
+  {
+    key: 2,
+    name: '青少年模式-全局',
+    desc: '关闭应用的青少年模式弹窗',
+    fastQuery: true,
+    matchTime: 10000,
+    actionMaximum: 1,
+    resetMatch: 'app',
+    disableIfAppGroupMatch: '青少年模式',
+    rules: [
+      {
+        key: 1,
+        name: 'AIsouler',
+        matches: [
+          '[text*="青少年" || text*="未成年" || text*="儿童"][text*="模式" || text*="守护"][text.length<15][childCount=0][visibleToUser=true]',
+          '[text*="知道了" || text*="我已知晓" || text*="已满" || text*="不再提醒"][text.length<8][childCount=0][visibleToUser=true]',
+        ],
+      },
+      {
+        key: 2,
+        name: 'ganlinte',
+        matches: ['TextView[text="未成年人模式" ||text*="青少年模式"]', 'TextView[text="我知道了"||text="知道了"]'],
+      },
+    ],
+    apps: [...yongBlackListAppIDs]
+      .map((id) => ({ id, enable: false }))
+      .concat([...yongWhiteListAppIDs].map((id) => ({ id, enable: true }))),
   },
 ]);
