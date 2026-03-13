@@ -1,7 +1,6 @@
 // 全局规则黑名单
 // 在一些非系统应用中禁用所有全局规则
 const blackListAppIDs: string[] = [
-  'com.tencent.mm', // 微信
   'li.songe.gkd', // GKD
   'com.eg.android.AlipayGphone', //支付宝
   'com.tencent.wetype', // 微信输入法
@@ -43,6 +42,7 @@ const blackListAppIDs: string[] = [
   'io.github.jd1378.otphelper', // 短信验证码自动复制
   'com.valvesoftware.android.steam.community', // Steam
   'io.legado.app.release', // 阅读
+  'com.legado.app.release', // 阅读
   'com.getsurfboard', // Surfboard
   'moe.nb4a', // NekoBox
   'com.v2ray.ang', // v2rayNG
@@ -195,8 +195,8 @@ const blackListAppIDs: string[] = [
   'one.yufz.hmspush',
   'io.github.huskydg.magisk',
   'xzr.konabess',
-  'org.lsposed.manager',
-  'org.lsposed.daemon',
+  'org.lsposed.manager', // LSPosed
+  'org.lsposed.daemon', // LSPosed Daemon
   'tw.nekomimi.nekogram',
   'io.github.qauxv',
   'com.rezvorck.tiktokplugin',
@@ -209,10 +209,10 @@ const blackListAppIDs: string[] = [
   'com.pittvandewitt.wavelet',
   'one.yufz.onebox',
   'com.Wecrane.Scar.pubg',
-  'me.bmax.apatch',
+  'me.bmax.apatch', // Apatch
   'com.tubevpn.client',
   'github.tornaco.android.thanos.pro',
-  'com.omarea.vtools',
+  'com.omarea.vtools', // Scene
   'com.litebyte.samhelper',
   'com.nurke.perfectone',
   'qlenlen.OneDesign',
@@ -222,7 +222,8 @@ const blackListAppIDs: string[] = [
   'com.samsung.android.memoryguardian',
   'com.music.khkj',
   'Hook.JiuWu.Xp',
-  'me.weishu.kernelsu',
+  'top.hookvip.pro', // HookVip
+  'me.weishu.kernelsu', // KernelSU
   'com.franco.kernel',
   'com.samsung.android.themedesigner',
   'com.samsung.android.game.gamehome',
@@ -233,7 +234,7 @@ const blackListAppIDs: string[] = [
   'com.Twilight.tools',
   'com.miui.securitymanager',
   'com.google.android.documentsui',
-  'com.android.settings',
+  'com.android.settings', // System Settings
   'com.miui.creation',
   'com.xiaomi.scanner',
   'com.miui.gallery',
@@ -253,9 +254,9 @@ const blackListAppIDs: string[] = [
   'be.mygod.vpnhotspot',
   'com.samsung.android.bixby.agent',
   'com.reveny.vbmetafix.service',
-  'com.google.android.gms',
+  'com.google.android.gms', // GMS
   'com.android.vending',
-  'com.android.camera',
+  'com.android.camera', // System Camera
   'com.android.traceur',
   'com.android.mms',
   'com.google.android.accessibility.switchaccess',
@@ -336,7 +337,8 @@ export const updateBlackListAppIDs = new Set([
   'com.samsung.android.packageinstaller', // 软件包安装程序
 
   //-----------------------------------------------------
-
+  // 非系统应用
+  'com.tencent.mm', // 微信
   'info.muge.appshare', // AppShare
   'com.jingdong.app.mall', // 京东
   'com.netease.uuremote', // UU远程（不更新会强制退出）
@@ -346,6 +348,7 @@ export const updateBlackListAppIDs = new Set([
 // 青少年模式黑名单
 export const yongBlackListAppIDs = new Set([
   ...blackListAppIDs,
+  'com.tencent.mm', // 微信
   'xxx.pornhub.fuck', // JavDB
   'com.netease.cloudmusic', // 网易云音乐 全局规则在 https://i.gkd.li/i/14931708 误触
   'com.zhihu.android', // 知乎 全局规则在 https://i.gkd.li/i/14964990 误触
