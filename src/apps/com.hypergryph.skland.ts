@@ -50,7 +50,7 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '青少年模式-青少年模式弹窗',
+      name: '青少年模式',
       enable: false,
       matchTime: 5000,
       rules: [
@@ -58,6 +58,27 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.MainActivity',
           matches: '@[vid="confirmTv"][text="我知道了"] -2 TextView[text*="未成年人模式"]',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '分段功能-清理提示消息红点',
+      rules: [
+        {
+          key: 1,
+          name: '点击红点',
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: '@[vid="messageItemArea"] > [vid="messageReddot"]',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          name: '返回消息列表',
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: '@ImageView < View < View < View < ComposeView < [vid="nav_host_fragment"]',
         },
       ],
     },
