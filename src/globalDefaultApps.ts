@@ -191,21 +191,21 @@ const blackListAppIDs: string[] = [
 
   'com.canghai.haoka',
   'com.xy.td',
-  'com.bug.hookvip',
-  'one.yufz.hmspush',
+  'com.bug.hookvip', // Fuck for VIP
+  'one.yufz.hmspush', // HMS Push
   'io.github.huskydg.magisk',
   'xzr.konabess',
   'org.lsposed.manager', // LSPosed
   'org.lsposed.daemon', // LSPosed Daemon
   'tw.nekomimi.nekogram',
-  'io.github.qauxv',
+  'io.github.qauxv', // QAuxiliary
   'com.rezvorck.tiktokplugin',
   'com.zhiliaoapp.musically',
-  'com.github.tianma8023.xposed.smscode',
+  'com.github.tianma8023.xposed.smscode', // XposedSmsCode
   'Han.GJZS',
   'org.adblockplus.adblockplussbrowser',
   'com.viewblocker.jrsen',
-  'com.tsng.hidemyapplist',
+  'com.tsng.hidemyapplist', // Hide My Applist
   'com.pittvandewitt.wavelet',
   'one.yufz.onebox',
   'com.Wecrane.Scar.pubg',
@@ -221,7 +221,7 @@ const blackListAppIDs: string[] = [
   'io.github.vvb2060.mahoshojo',
   'com.samsung.android.memoryguardian',
   'com.music.khkj',
-  'Hook.JiuWu.Xp',
+  'Hook.JiuWu.Xp', // HookVip
   'top.hookvip.pro', // HookVip
   'me.weishu.kernelsu', // KernelSU
   'com.franco.kernel',
@@ -256,9 +256,9 @@ const blackListAppIDs: string[] = [
   'com.reveny.vbmetafix.service',
   'com.google.android.gms', // GMS
   'com.android.vending',
-  'com.android.camera', // System Camera
+  'com.android.camera', // Android System Camera
   'com.android.traceur',
-  'com.android.mms',
+  'com.android.mms', // Android System Message
   'com.google.android.accessibility.switchaccess',
   'com.miui.voiceassist',
   'com.android.fileexplorer',

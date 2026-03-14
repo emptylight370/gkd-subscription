@@ -84,11 +84,11 @@ export default defineGkdGlobalGroups([
           'https://i.gkd.li/i/20883248', // >(n+6)
           'https://i.gkd.li/i/23549504', // text*="扭一扭"
         ],
-        apps: [...openAdBlackListAppIDs]
-          .map((id) => ({ id, enable: false }))
-          .concat([...openAdWhiteListAppIDs].map((id) => ({ id, enable: true }))),
       },
     ],
+    apps: [...openAdBlackListAppIDs]
+      .map((id) => ({ id, enable: false }))
+      .concat([...openAdWhiteListAppIDs].map((id) => ({ id, enable: true }))),
   },
   {
     key: 2,
