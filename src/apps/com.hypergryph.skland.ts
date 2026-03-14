@@ -33,21 +33,21 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '功能类-自动检票',
-      desc: '因为没办法区分检票前后状态，会一直点击按钮，每次切换app刷新一次次数',
-      enable: false,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.MainActivity',
-          matches: 'ImageView[vid="check"]',
-        },
-      ],
-    },
+    // {
+    //   key: 2,
+    //   name: '功能类-自动检票',
+    //   desc: '因为没办法区分检票前后状态，会一直点击按钮，每次切换app刷新一次次数',
+    //   enable: false,
+    //   actionMaximum: 1,
+    //   resetMatch: 'app',
+    //   rules: [
+    //     {
+    //       fastQuery: true,
+    //       activityIds: '.MainActivity',
+    //       matches: 'ImageView[vid="check"]',
+    //     },
+    //   ],
+    // },
     {
       key: 3,
       name: '青少年模式',
@@ -67,6 +67,7 @@ export default defineGkdApp({
     {
       key: 4,
       name: '分段功能-清理提示消息红点',
+      enable: false,
       rules: [
         {
           key: 1,
