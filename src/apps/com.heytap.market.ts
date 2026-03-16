@@ -26,6 +26,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: [
             'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+            '.appmanage.core.upgrade.upgrademgr.AppUpdateActivity',
             'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
             'com.heytap.cdo.client.detail.app.AppDetailActivity',
             'com.downloader.page.ui.main.activity.DownloaderPageActivity',
@@ -44,6 +45,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: [
             'com.heytap.cdo.client.ui.upgrademgr.AppUpdateActivity',
+            '.appmanage.core.upgrade.upgrademgr.AppUpdateActivity',
             'com.heytap.cdo.client.ui.downloadmgr.DownloadManageActivity',
             'com.heytap.cdo.client.detail.app.AppDetailActivity',
             'com.downloader.page.ui.main.activity.DownloaderPageActivity',
