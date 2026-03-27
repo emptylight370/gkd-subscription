@@ -43,7 +43,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup environment
-        uses: jdx/mise-action@v3
+        uses: jdx/mise-action@v4
 
       - name: Install deps
         run: pnpm install
