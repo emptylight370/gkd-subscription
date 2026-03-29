@@ -147,11 +147,20 @@ export default defineGkdApp({
       activityIds: '.reader.ui.ReaderActivity',
       rules: [
         {
-          name: '催更',
+          name: '催更V1',
           actionMaximum: 2,
+          actionMaximumKey: 3,
           actionCd: 3000,
+          actionCdKey: 4,
           matches:
             '@LinearLayout[visibleToUser=true] > FrameLayout[childCount=1] + TextView[text~="\\\\d+次"][text.length<7]',
+        },
+        {
+          name: '催更V2',
+          fastQuery: true,
+          actionMaximumKey: 3,
+          actionCdKey: 4,
+          matches: 'ViewGroup > [text="催更"]',
         },
         {
           name: '评分',
