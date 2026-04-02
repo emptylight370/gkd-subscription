@@ -70,6 +70,10 @@ export default defineGkdApp({
           matches: '@TextView[text.length=0] <3 View <<3 View[id="app"]',
         },
         {
+          matchTime: 10000,
+          forcedTime: 10000,
+          resetMatch: 'app',
+          actionMaximum: 2,
           activityIds: 'com.sinovatech.unicom.basic.ui.activity.MainActivity',
           matches: '@Image[width<150] -(1,2) TextView[text="广告"]',
         },

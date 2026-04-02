@@ -10,6 +10,7 @@ export default defineGkdApp({
       enable: false,
       fastQuery: true,
       activityIds: '.wxapi.WXPayEntryActivity',
+      actionMaximum: 2,
       rules: [
         {
           key: 1,
@@ -20,7 +21,8 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           name: '点击微信支付',
-          matches: '@[vid="paytype_check"][checked=false] < * - * >2 [text="微信支付"]',
+          matches:
+            '@[vid="paytype_check"][checked=false][visibleToUser=true] < * - * >2 [text="微信支付"][visibleToUser=true]',
         },
       ],
     },
@@ -30,6 +32,7 @@ export default defineGkdApp({
       enable: false,
       fastQuery: true,
       activityIds: '.wxapi.WXPayEntryActivity',
+      actionMaximum: 2,
       rules: [
         {
           key: 1,
@@ -40,7 +43,8 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           name: '点击支付宝支付',
-          matches: '@[vid="paytype_check"][checked=false] < * - * >2 [text="支付宝支付"]',
+          matches:
+            '@[vid="paytype_check"][checked=false][visibleToUser=true] < * - * >2 [text="支付宝支付"][visibleToUser=true]',
         },
       ],
     },
