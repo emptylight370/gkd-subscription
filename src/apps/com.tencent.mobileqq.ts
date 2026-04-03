@@ -60,5 +60,26 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '功能弹窗-频道消息通知升级',
+      desc: '接收全部消息',
+      fastQuery: true,
+      activityIds: '.guild.base.QPublicFragmentActivityForMainWebActivity',
+      enable: false,
+      rules: [
+        {
+          key: 1,
+          name: '接收全部消息',
+          matches: ['[vid="title"][text="消息通知升级"]', '@ViewGroup > LinearLayout > [text="接收全部消息"]'],
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          name: '确认',
+          matches: ['[vid="title"][text="消息通知升级"]', '[text="确认"]'],
+        },
+      ],
+    },
   ],
 });
