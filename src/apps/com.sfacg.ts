@@ -138,5 +138,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 8,
+      name: '更新提示',
+      enable: true,
+      matchTime: 10000,
+      priorityTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.sf.ui.main.MainActivity',
+          matches: ['[vid="tvTitle"][text="版本升级"]', '[text="暂不下载"]'],
+        },
+      ],
+    },
   ],
 });
