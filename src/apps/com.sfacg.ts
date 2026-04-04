@@ -143,7 +143,6 @@ export default defineGkdApp({
       name: '更新提示',
       enable: true,
       matchTime: 10000,
-      priorityTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
