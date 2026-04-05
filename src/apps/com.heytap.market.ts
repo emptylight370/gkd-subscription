@@ -71,5 +71,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '全屏广告-添加应用搜索卡到桌面',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.search.core.activity.SearchActivity',
+          matches: ['[vid="alertTitle"][text*="应用搜索卡"]', '[vid="cancel"][text="取消"]'],
+        },
+      ],
+    },
   ],
 });
