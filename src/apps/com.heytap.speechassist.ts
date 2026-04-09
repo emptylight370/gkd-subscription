@@ -11,8 +11,8 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.aichathome.chat.ui.AIChatHomeActivity',
-          matches: ['[id="android:id/button1"][text="马上添加"]', '[id="android:id/button2"][text="残忍拒绝"]'],
+          activityIds: ['.aichathome.chat.ui.AIChatHomeActivity', '.launcher.SpeechAssistMainActivity'],
+          matches: ['[vid="alertTitle"][text*="桌面"]', '[text="残忍拒绝"]'],
         },
       ],
     },
