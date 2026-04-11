@@ -28,5 +28,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '功能类-清理存储推荐优化应用管理',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.oplus.phonemanager.clear.ClearMainActivity',
+          matches: ['[vid="card_title_text"][text="应用管理"]', '[vid="card_layout_ignore_button"][text="忽略"]'],
+        },
+      ],
+    },
   ],
 });
