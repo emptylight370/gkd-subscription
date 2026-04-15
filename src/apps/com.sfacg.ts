@@ -78,14 +78,16 @@ export default defineGkdApp({
         {
           key: 1,
           name: '领取任务',
-          actionCd: 2500,
+          actionCd: 1500,
           actionCdKey: 1,
+          actionDelay: 1500,
           matches: '[vid="tvTaskAction"][text="领取任务"][visibleToUser=true]',
         },
         {
           name: '点击领取奖励按钮',
           key: 2,
           actionCdKey: 1,
+          actionDelay: 1500,
           matches: '[vid="tvTaskAction"][text="领取奖励"][visibleToUser=true]',
         },
         {
