@@ -52,9 +52,9 @@ export default defineGkdApp({
       key: 3,
       name: '青少年模式',
       enable: true,
-      matchTime: 10000,
+      matchTime: 3000,
       actionMaximum: 1,
-      resetMatch: 'app',
+      resetMatch: 'match',
       matchRoot: true,
       rules: [
         {
