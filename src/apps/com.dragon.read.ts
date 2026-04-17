@@ -165,6 +165,7 @@ export default defineGkdApp({
         {
           name: '评分',
           fastQuery: true,
+          versionCode: { maximum: 71531 },
           matches: ['TextView[text="点评此书"]', 'TextView[text="取消"]'],
         },
       ],
