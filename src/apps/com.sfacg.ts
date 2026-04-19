@@ -109,7 +109,7 @@ export default defineGkdApp({
         {
           name: '点击领取',
           key: 1,
-          actionCd: 2500,
+          actionDelay: 1500,
           anyMatches: ['[vid="tvGet"][text="立即领取"]', '[vid="tvGet"][text="领取"]'],
         },
         {
