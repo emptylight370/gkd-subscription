@@ -22,4 +22,4 @@ node_modules
 package-lock.json
 yarn.lock
 
-.mise/prepare-state.toml
+.mise/deps-state.toml

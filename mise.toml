@@ -2,4 +2,4 @@
 node = "24"
 pnpm = "latest"
 
-[prepare.pnpm]
+[deps.pnpm]
