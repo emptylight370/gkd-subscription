@@ -157,5 +157,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 7,
+      name: '功能类-首页断网刷新',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.main.HyperionMainActivity',
+          matches: '[vid="mCommonPageStatusViewTvEmpty"][text="似乎与网络失去了连接\\n点击屏幕刷新"]',
+          snapshotUrls: ['https://i.gkd.li/i/27061345'],
+        },
+      ],
+    },
   ],
 });
