@@ -50,7 +50,7 @@ https://cdn.jsdelivr.net/gh/emptylight370/gkd-subscription@main/dist/gkd.json5
 - 在 [GKD 官网](https://gkd.li/)查看 [GKD 基础使用教程](https://gkd.li/guide/)、[常见问题](https://gkd.li/guide/faq)以及 [API 文档](https://gkd.li/api/)
 - 查看[规则编写教程](https://github.com/Snoopy1866/notebook/blob/main/04%20Others/GKD%20%E8%A7%84%E5%88%99%E7%BC%96%E5%86%99%E6%95%99%E7%A8%8B/gkd-rule-tutorial.md) By [@Snoopy1866](https://github.com/Snoopy1866)
 - 使用 [GKD 网页审查工具增强脚本](https://github.com/adproqwq/MikuMagicWand)可以高度自定义从网页复制出来的规则，提高规则编写效率
-- 体验 Plus 版的快照审查工具 [inspect-plus](https://github.com/cjy0812/inspect-plus)
+- 体验 Plus 版的快照审查工具 [inspect-plus](https://github.com/cjy0812/inspect-plus)，使用[跳转脚本](https://github.com/emptylight370/release/blob/main/user-script/gkd-redirect.user.js)，自动从官方网站跳转到 Plus 版快照审查工具
 
 ## 感谢以下项目
 
