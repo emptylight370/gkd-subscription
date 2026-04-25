@@ -26,14 +26,15 @@ jobs:
         id: wait-check
         with:
           ref: ${{ github.sha }}
-          check-name: 'check'
+          check-name: check
           repo-token: ${{ github.token }}
           wait-interval: 10
 
   build_release:
     runs-on: ubuntu-latest
     needs: wait-for-check-complete
-    if: always() && (needs.wait-for-check-complete.result == 'success' || needs.wait-for-check-complete.result == 'skipped')
+    if: always() && (needs.wait-for-check-complete.result == 'success' ||
+      needs.wait-for-check-complete.result == 'skipped')
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:

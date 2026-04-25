@@ -3,7 +3,7 @@ name: check_fix_push
 on:
   push:
     branches:
-      - '**'
+      - "**"
 
 permissions: write-all
 
@@ -11,7 +11,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     if: |
-      ${{ github.event.head_commit.message!='chore(actions): check_format_lint' }}
+      ${{ github.event.head_commit.message != 'chore(actions): check_format_lint' }}
     steps:
       - uses: actions/checkout@v6
 
