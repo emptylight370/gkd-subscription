@@ -66,7 +66,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.infra.page.core.activity.PageProxyActivity',
-          matches: ['[vid="dialog_title"][text="流量下载提醒"]', '[vid="dialog_btn_top"][text="立即下载"]'],
+          matches: ['[text="流量下载提醒"]', '[text="立即下载"]'],
         },
       ],
     },
@@ -79,7 +79,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.infra.page.core.activity.PageProxyActivity',
-          matches: ['[vid="dialog_title"][text="流量下载提醒"]', '[vid="dialog_btn_bottom"][text="连接 Wi-Fi 时下载"]'],
+          matches: ['[text="流量下载提醒"]', '[text="连接 Wi-Fi 时下载"]'],
         },
       ],
     },
