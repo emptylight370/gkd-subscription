@@ -22,11 +22,27 @@ export default defineGkdApp({
       name: '功能类-自动已读消息',
       enable: false,
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           fastQuery: true,
           activityIds: '.homepage.view.activity.HomePageActivity',
           matches: ['[vid="number_red_dots_textView"]', 'TextView[text="一键已读"]'],
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '评价提示',
+      enable: false,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.homepage.view.activity.HomePageActivity',
+          matches: ['[text="好评"]', '[text="取消"]'],
         },
       ],
     },

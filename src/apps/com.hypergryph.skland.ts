@@ -52,15 +52,16 @@ export default defineGkdApp({
       key: 3,
       name: '青少年模式',
       enable: true,
-      matchTime: 20000,
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       matchRoot: true,
+      forcedTime: 10000,
       rules: [
         {
           fastQuery: true,
           activityIds: '.MainActivity',
-          matches: '@[vid="confirmTv"][text="我知道了"] -2 TextView[text*="未成年人模式"]',
+          matches: '[text*="未成年人模式"] +2 [text="我知道了"]',
         },
       ],
     },
