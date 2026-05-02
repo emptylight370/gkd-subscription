@@ -23,3 +23,4 @@ package-lock.json
 yarn.lock
 
 .mise/deps-state.toml
+pnpm-workspace.yaml
