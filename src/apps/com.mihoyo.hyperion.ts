@@ -171,7 +171,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
+      key: 8,
       name: '功能类-扫码登录',
       enable: false,
       rules: [
