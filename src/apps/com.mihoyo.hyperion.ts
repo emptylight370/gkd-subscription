@@ -170,5 +170,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 7,
+      name: '功能类-扫码登录',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.mihoyo.platform.account.miyosummer.view.qr.PorteQRConfirmActivity',
+          matches: ['[text="扫码登录"]', '[vid="qr_login_btn"]'],
+        },
+      ],
+    },
   ],
 });
