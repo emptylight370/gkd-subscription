@@ -37,5 +37,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 7,
+      name: '局部广告-直播投喂',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3',
+          matches: ['[vid="tv_send"][text^="投喂"]', '[vid="tv_cancel"][text="取消"]'],
+        },
+      ],
+    },
   ],
 });
