@@ -11,7 +11,10 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: '.plugin.appbrand.ui.AppBrandPluginUI',
-          matches: ['TextView[text="摇优惠"]', '@View > [text^="摇一摇"][text.length>3][text.length<10]'],
+          matches: [
+            'TextView[text="摇优惠"]',
+            '@View[visibleToUser=true] > [text^="摇一摇"][text.length>3][text.length<10]',
+          ],
         },
       ],
     },
