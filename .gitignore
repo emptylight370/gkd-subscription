@@ -24,4 +24,3 @@ yarn.lock
 
 mise.local.toml
 mise.local.lock
-.mise/deps-state.toml
