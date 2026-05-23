@@ -39,19 +39,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 3,
-      name: '功能类-支付完成后摇一摇',
-      enable: false,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'match',
-      rules: [
-        {
-          activityIds: '.plugin.lite.ui.WxaLiteAppTransparentLiteUI',
-          matches: 'Button[desc="摇一摇，有优惠"]',
-        },
-      ],
-    },
   ],
 });
