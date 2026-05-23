@@ -17,5 +17,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '局部广告-首页左上角悬浮广告',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.WelcomeActivity',
+          matches: '[vid="banner_layout"] [vid="shrink_close_image"]',
+        },
+      ],
+    },
   ],
 });
