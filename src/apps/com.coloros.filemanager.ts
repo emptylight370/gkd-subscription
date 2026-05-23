@@ -19,5 +19,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '通知提示-视频清理',
+      enable: false,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.oplus.filemanager.category.audiovideo.ui.CategoryAudioActivity',
+          matches: '[vid="ignore"][text="忽略"]',
+        },
+      ],
+    },
   ],
 });
