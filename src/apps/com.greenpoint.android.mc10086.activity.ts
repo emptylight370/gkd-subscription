@@ -20,11 +20,29 @@ export default defineGkdApp({
       key: 4,
       name: '全屏广告-首页全屏广告',
       enable: false,
+      fastQuery: true,
+      activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
+      actionMaximum: 2,
+      matchTime: 10000,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: ['[text="广告"]', '[vid="iv_close_top"]'],
+        },
+        {
+          matches: ['[text="广告"]', '[vid="close_btn"]'],
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '更新提示',
+      enable: true,
       rules: [
         {
           fastQuery: true,
           activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
-          matches: ['[text="广告"]', '[vid="iv_close_top"]'],
+          matches: '[text="暂不更新"]',
         },
       ],
     },
