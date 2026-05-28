@@ -204,7 +204,7 @@ export default defineGkdApp({
           resetMatch: 'app',
           actionMaximum: 2,
           versionCode: { minimum: 71932 },
-          matches: ['LinearLayout > ImageView', '* + ImageView'],
+          anyMatches: ['LinearLayout > RelativeLayout + ImageView', 'LinearLayout > ViewGroup + ImageView'],
           snapshotUrls: ['https://i.gkd.li/i/28058528', 'https://i.gkd.li/i/28300067'],
         },
         {
