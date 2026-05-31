@@ -15,7 +15,6 @@ export default defineGkdApp({
           name: '领取签到奖励V1',
           key: 1,
           fastQuery: true,
-          versionCode: { maximum: 105700007 },
           matches: '@ViewGroup > TextView[text="领"]',
         },
         {
@@ -23,7 +22,6 @@ export default defineGkdApp({
           key: 2,
           preKeys: [1],
           actionCd: 200,
-          versionCode: { maximum: 105700007 },
           matches: '@ImageView < ViewGroup < ViewGroup + ViewGroup > TextView[text~=".+\\\\*\\\\d+"]',
         },
         {
@@ -47,7 +45,6 @@ export default defineGkdApp({
           key: 3,
           fastQuery: true,
           actionDelay: 1000,
-          versionCode: { maximum: 105700007 },
           matches: 'TextView[text="网络开小差，请点击重试"]',
           excludeMatches: 'TextView[text="领"]',
         },
