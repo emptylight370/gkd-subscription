@@ -14,7 +14,7 @@ export default defineGkdApp({
         {
           name: '签到',
           activityIds: '.ui.activity.SignInActivity',
-          matches: ['[vid="status"][text="待领取"]', '[vid="tv_title"][text="立即签到"]'],
+          matches: '[text="立即签到"]',
         },
       ],
     },
