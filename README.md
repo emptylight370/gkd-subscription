@@ -1,9 +1,9 @@
 # @emptylight370/gkd-subscription
 
-[![Release](https://img.shields.io/badge/发行版-v131-blue)](https://github.com/emptylight370/gkd-subscription/releases/latest)
-[![已适配应用](https://img.shields.io/badge/已适配应用-43-brightgreen)](./dist/README.md#应用规则)
+[![Release](https://img.shields.io/badge/发行版-v132-blue)](https://github.com/emptylight370/gkd-subscription/releases/latest)
+[![已适配应用](https://img.shields.io/badge/已适配应用-44-brightgreen)](./dist/README.md#应用规则)
 [![全局规则组](https://img.shields.io/badge/全局规则组-2-blueviolet)](./dist/README.md#全局规则)
-[![应用规则组](https://img.shields.io/badge/应用规则组-103-orange)](./dist/README.md#应用规则)
+[![应用规则组](https://img.shields.io/badge/应用规则组-104-orange)](./dist/README.md#应用规则)
 
 ---
 
