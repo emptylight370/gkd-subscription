@@ -9,7 +9,6 @@ export default defineGkdApp({
       name: '分段功能-签到',
       desc: '居然有签到功能',
       enable: false,
-      fastQuery: true,
       rules: [
         {
           name: '签到',
