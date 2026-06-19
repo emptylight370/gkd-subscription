@@ -6,8 +6,8 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '功能类-QQ更新',
-      enable: false,
+      name: '更新提示',
+      enable: true,
       fastQuery: true,
       rules: [
         {
