@@ -145,9 +145,11 @@ export default defineGkdApp({
       desc: '催更、评分',
       enable: false,
       activityIds: '.reader.ui.ReaderActivity',
+      fastQuery: true,
       rules: [
         {
           name: '催更V1',
+          fastQuery: false,
           actionMaximum: 2,
           actionMaximumKey: 3,
           actionCd: 3000,
@@ -157,14 +159,16 @@ export default defineGkdApp({
         },
         {
           name: '催更V2',
-          fastQuery: true,
           actionMaximumKey: 3,
           actionCdKey: 4,
           matches: 'ViewGroup > [text="催更"]',
         },
         {
+          name: '催更V3',
+          matches: '[text$="人已催"] - * > [text="催更"]',
+        },
+        {
           name: '评分',
-          fastQuery: true,
           matches: ['TextView[text="点评此书"]', 'TextView[text="取消"]'],
         },
       ],
