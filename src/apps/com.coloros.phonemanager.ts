@@ -40,5 +40,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '全屏广告-应用清理弹窗',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.oplus.phonemanager.clear.appuninstall.AppCleanMainActivity',
+          matches: '[text="完成"]',
+        },
+      ],
+    },
   ],
 });
