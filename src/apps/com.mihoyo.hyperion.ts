@@ -57,7 +57,7 @@ export default defineGkdApp({
         {
           key: 4,
           name: '登录第一个账号',
-          actionDelay: 200,
+          actionDelay: 400,
           matches: ['TextView[text="请在此绑定你的角色"]', 'ListView > @View > TextView[text^="UID"]'],
         },
         {
@@ -66,6 +66,7 @@ export default defineGkdApp({
           // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
           fastQuery: true,
           actionCd: 2000,
+          actionDelay: 100,
           anyMatches: [
             // 崩坏：星穹铁道，会一直点击按钮（即使当天已签到）
             '@TextView[text~=".*第\\\\d+天"][visibleToUser=true] <n View <3 View <2 View <2 View < WebView[text*="星穹铁道"][text*="签到"] <<2 [vid="webViewContainer"]',
