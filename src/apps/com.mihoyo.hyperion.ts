@@ -67,6 +67,7 @@ export default defineGkdApp({
           fastQuery: true,
           actionCd: 2000,
           actionDelay: 100,
+          actionCdKey: 1,
           anyMatches: [
             // 崩坏：星穹铁道，会一直点击按钮（即使当天已签到）
             '@TextView[text~=".*第\\\\d+天"][visibleToUser=true] <n View <3 View <2 View <2 View < WebView[text*="星穹铁道"][text*="签到"] <<2 [vid="webViewContainer"]',
@@ -74,6 +75,19 @@ export default defineGkdApp({
             'Image[visibleToUser=true] < @View[childCount=3] <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
           ],
           snapshotUrls: ['https://i.gkd.li/i/17601269', 'https://i.gkd.li/i/17601338', 'https://i.gkd.li/i/17611619'],
+        },
+        {
+          name: '点击签到V2',
+          key: 7,
+          actionCdKey: 1,
+          actionDelay: 100,
+          anyMatches: [
+            // 崩坏：星穹铁道
+            'TextView[text~=".*第\\\\d+天"][visibleToUser=true]',
+            // 崩坏三、绝区零、原神
+            '@View TextView[text~="第\\\\d+天"] -2 Image[visibleToUser=true]',
+          ],
+          snapshotUrls: ['https://i.gkd.li/i/30355136'],
         },
         {
           name: '轮空',
