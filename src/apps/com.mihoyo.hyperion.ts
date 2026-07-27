@@ -83,11 +83,11 @@ export default defineGkdApp({
           actionDelay: 100,
           anyMatches: [
             // 崩坏：星穹铁道
-            'TextView[text~=".*第\\\\d+天"][visibleToUser=true]',
+            'TextView[text~=".+第\\\\d+天"][visibleToUser=true]',
             // 崩坏三、绝区零、原神
             '@View TextView[text~="第\\\\d+天"] -2 Image[visibleToUser=true]',
           ],
-          snapshotUrls: ['https://i.gkd.li/i/30355136'],
+          snapshotUrls: ['https://i.gkd.li/i/30355136', 'https://i.gkd.li/i/30401351'],
         },
         {
           name: '轮空',
