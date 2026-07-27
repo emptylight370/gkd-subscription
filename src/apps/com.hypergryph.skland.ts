@@ -5,6 +5,21 @@ export default defineGkdApp({
   name: '森空岛',
   groups: [
     {
+      key: 5,
+      name: '更新提示',
+      enable: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: ['[text="立即升级"]', '[text="下次再说"]'],
+        },
+      ],
+    },
+    {
       key: 1,
       name: '分段功能-每日签到',
       enable: false,
