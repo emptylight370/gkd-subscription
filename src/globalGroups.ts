@@ -8,7 +8,6 @@ import {
 
 export default defineGkdGlobalGroups([
   {
-    // https://github.com/AIsouler/GKD_subscription/blob/main/src/globalGroups.ts
     // https://github.com/Lin-arm/GKD_subscription/blob/main/src/globalGroups.ts
     key: 1,
     name: '开屏广告-全局',
@@ -27,7 +26,8 @@ export default defineGkdGlobalGroups([
         name: '默认开屏广告',
         // 防止误触
         excludeMatches:
-          '([text*="搜索" || text="历史记录" || text$="在搜"][text.length>3 && text.length<7][visibleToUser=true]) || ([text="Submit" || text*="阅读并同意" || text="书签" || text="NEXT"][visibleToUser=true]) || ([text$="设置" || text$="选好了" || text^="下一步" || text^="完成" || text*="跳过片"][text.length<10][visibleToUser=true]) || ([text^="选择"][text*="偏好" || text*="兴趣" || text*="喜好"][text.length<10][visibleToUser=true])',
+          '[text="Submit" || text="书签" || text="NEXT" || text="覆盖" || text*="阅读并同意" || ((text*="搜索" || text="历史记录" || text$="在搜") && text.length>3 && text.length<7) || ((text$="设置" || text*="跳过片" || (text^="选择" && (text*="偏好" || text*="兴趣" || text*="喜好" || text*="行业"))) && text.length<10)][visibleToUser=true]',
+        // '([text*="搜索" || text="历史记录" || text$="在搜"][text.length>3 && text.length<7][visibleToUser=true]) || ([text="Submit" || text*="阅读并同意" || text="书签" || text="NEXT" || text="覆盖"][visibleToUser=true]) || ([text$="设置" || text$="选好了" || text^="下一步" || text^="完成" || text*="跳过片"][text.length<10][visibleToUser=true]) || ([text^="选择"][text*="偏好" || text*="兴趣" || text*="喜好"][text.length<10][visibleToUser=true])',
         anyMatches: [
           '[text*="跳过"][text.length<10][width<500 && height<300][visibleToUser=true]',
           '@[name$="View" || name$="LinearLayout"][clickable=true][childCount<2][width<300 && height<200] - [text="互动广告"][visibleToUser=true]',
@@ -52,16 +52,17 @@ export default defineGkdGlobalGroups([
         excludeSnapshotUrls: [
           // 避免误触
           'https://i.gkd.li/i/19952277', // text="Submit"
-          'https://i.gkd.li/i/22634992', // text*="阅读并同意"
           'https://i.gkd.li/i/23122415', // text="书签"
           'https://i.gkd.li/i/23225609', // text="NEXT"
+          'https://i.gkd.li/i/27801562', // text="覆盖"
+          'https://i.gkd.li/i/22634992', // text*="阅读并同意" , (text.length=40)
           'https://i.gkd.li/i/20946730', // text$="设置" text*="跳过片"
-          'https://i.gkd.li/i/23052289', // text="选好了"
-          'https://i.gkd.li/i/23741801', // text^="下一步" text$="设置"
-          'https://i.gkd.li/i/23741779', // text^="完成" text$="设置"
-          'https://i.gkd.li/i/23051921', // [text^="选择"]
-          'https://i.gkd.li/i/23742770', // [text^="选择"]
-          'https://i.gkd.li/i/23743049', // [text^="选择"]
+          'https://i.gkd.li/i/23741801', // text$="设置"
+          'https://i.gkd.li/i/23741779', // text$="设置"
+          'https://i.gkd.li/i/23051921', // [text^="选择"]  偏好
+          'https://i.gkd.li/i/23742770', // [text^="选择"]  兴趣
+          'https://i.gkd.li/i/23743049', // [text^="选择"]  喜好
+          'https://i.gkd.li/i/23052289', // [text^="选择"]  行业
 
           // anyMatches 中的排除
           'https://i.gkd.li/i/15079224', // !(text*="退出")
@@ -94,7 +95,6 @@ export default defineGkdGlobalGroups([
       .concat([...openAdWhiteListAppIDs].map((id) => ({ id, enable: true }))),
   },
   {
-    // https://github.com/AIsouler/GKD_subscription/blob/main/src/globalGroups.ts
     // https://github.com/Lin-arm/GKD_subscription/blob/main/src/globalGroups.ts
     // https://github.com/ganlinte/GKD-subscription/blob/main/src/globalGroups.ts
     key: 2,
@@ -109,13 +109,14 @@ export default defineGkdGlobalGroups([
     rules: [
       {
         key: 1,
-        name: 'AIsouler',
+        name: 'Lin-arm',
         matches: [
           '[text*="青少年" || text*="未成年" || text*="儿童"][text*="模式" || text*="守护"][text.length<15][childCount=0][visibleToUser=true]',
-          '[text*="知道了" || text*="我已知晓" || text*="已满" || text*="不再提醒" || text="关闭"][text.length<8][childCount=0][visibleToUser=true]',
+          '[text*="知道了" || text*="我已知晓" || text*="已满" || text*="不再提" || text="关闭"][text.length<8][childCount=0][visibleToUser=true]',
         ],
         snapshotUrls: [
           'https://i.gkd.li/i/23427881', // 关闭
+          'https://i.gkd.li/i/27382640', // 不再提示 (不是 "不再提醒")
         ],
       },
       {
