@@ -6,7 +6,7 @@ import globalGroups from './globalGroups';
 export default defineGkdSubscription({
   id: 6676,
   name: 'EmptyLight Subscription',
-  version: 140,
+  version: 141,
   author: 'Emptylight',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/emptylight370/gkd-subscription/issues',
