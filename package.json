@@ -34,16 +34,16 @@
     "@gkd-kit/api": "^0.9.3",
     "@gkd-kit/define": "^0.0.1",
     "@gkd-kit/tools": "^0.8.0",
-    "@types/node": "^26.1.2",
-    "eslint": "^10.8.0",
+    "@types/node": "^26.2.0",
+    "eslint": "^10.8.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-unused-imports": "^4.4.1",
     "json5": "^2.2.3",
     "lint-staged": "^17.3.0",
     "prettier": "^3.9.6",
-    "tsx": "^4.23.5",
+    "tsx": "^4.23.11",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.65.0"
+    "typescript-eslint": "^8.66.0"
   },
   "packageManager": "pnpm@11.20.0",
   "engines": {
