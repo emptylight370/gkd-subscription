@@ -62,24 +62,9 @@ export default defineGkdApp({
           matches: ['TextView[text="请在此绑定你的角色"]', 'ListView > @View > TextView[text^="UID"]'],
         },
         {
-          name: '点击签到',
-          key: 1,
-          // webview不能fastQuery，使用取巧方法使用支持fastQuery的容器假装fastQuery
-          fastQuery: true,
-          actionCd: 2000,
-          actionDelay: 100,
-          actionCdKey: 1,
-          anyMatches: [
-            // 崩坏：星穹铁道，会一直点击按钮（即使当天已签到）
-            '@TextView[text~=".*第\\\\d+天"][visibleToUser=true] <n View <3 View <2 View <2 View < WebView[text*="星穹铁道"][text*="签到"] <<2 [vid="webViewContainer"]',
-            // 崩坏3、绝区零、原神
-            'Image[visibleToUser=true] < @View[childCount=3] <n View <n View < View <2 View < WebView[text*="签到"][text!="星穹铁道"] <<2 [vid="webViewContainer"]',
-          ],
-          snapshotUrls: ['https://i.gkd.li/i/17601269', 'https://i.gkd.li/i/17601338', 'https://i.gkd.li/i/17611619'],
-        },
-        {
           name: '点击签到V2-崩铁',
           key: 7,
+          actionCd: 2000,
           actionCdKey: 1,
           actionDelay: 100,
           matches: ['[text*="星穹铁道"][text*="签到"]', 'TextView[text~=".+第\\\\d+天"][visibleToUser=true]'],
@@ -94,7 +79,12 @@ export default defineGkdApp({
             '[text!*="星穹铁道"][text*="签到"][text!*="提醒"][text!*="累计"]',
             '@View TextView[text~="第\\\\d+天"] -2 Image[visibleToUser=true]',
           ],
-          snapshotUrls: ['https://i.gkd.li/i/30355136'],
+          snapshotUrls: [
+            'https://i.gkd.li/i/17601269',
+            'https://i.gkd.li/i/17601338',
+            'https://i.gkd.li/i/17611619',
+            'https://i.gkd.li/i/30355136',
+          ],
         },
         {
           name: '轮空',
