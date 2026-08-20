@@ -56,6 +56,7 @@ export default defineGkdApp({
         },
         {
           key: 4,
+          preKeys: [3],
           name: '登录第一个账号',
           actionDelay: 400,
           matches: ['TextView[text="请在此绑定你的角色"]', 'ListView > @View > TextView[text^="UID"]'],
@@ -77,17 +78,23 @@ export default defineGkdApp({
           snapshotUrls: ['https://i.gkd.li/i/17601269', 'https://i.gkd.li/i/17601338', 'https://i.gkd.li/i/17611619'],
         },
         {
-          name: '点击签到V2',
+          name: '点击签到V2-崩铁',
           key: 7,
           actionCdKey: 1,
           actionDelay: 100,
-          anyMatches: [
-            // 崩坏：星穹铁道
-            'TextView[text~=".+第\\\\d+天"][visibleToUser=true]',
-            // 崩坏三、绝区零、原神
+          matches: ['[text*="星穹铁道"][text*="签到"]', 'TextView[text~=".+第\\\\d+天"][visibleToUser=true]'],
+          snapshotUrls: ['https://i.gkd.li/i/30401351'],
+        },
+        {
+          name: '点击签到V2-非崩铁',
+          key: 8,
+          actionCdKey: 1,
+          actionDelay: 100,
+          matches: [
+            '[text!*="星穹铁道"][text*="签到"][text!*="提醒"][text!*="累计"]',
             '@View TextView[text~="第\\\\d+天"] -2 Image[visibleToUser=true]',
           ],
-          snapshotUrls: ['https://i.gkd.li/i/30355136', 'https://i.gkd.li/i/30401351'],
+          snapshotUrls: ['https://i.gkd.li/i/30355136'],
         },
         {
           name: '轮空',
