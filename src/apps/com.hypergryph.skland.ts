@@ -108,6 +108,7 @@ export default defineGkdApp({
       key: 4,
       name: '分段功能-清理提示消息红点',
       enable: false,
+      versionCode: { maximum: 199999999 },
       rules: [
         {
           key: 1,
