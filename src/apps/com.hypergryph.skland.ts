@@ -98,9 +98,15 @@ export default defineGkdApp({
       forcedTime: 10000,
       rules: [
         {
+          versionCode: { maximum: 200000199 },
           fastQuery: true,
           activityIds: '.MainActivity',
           matches: '[text*="未成年人模式"] +2 [text="我知道了"]',
+        },
+        {
+          versionCode: { minimum: 200000200 },
+          activityIds: '.MainActivity',
+          matches: ['[text*="未成年人模式"]', '@View > [text="我知道了"]'],
         },
       ],
     },
