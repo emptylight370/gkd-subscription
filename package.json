@@ -49,16 +49,16 @@
     "@gkd-kit/api": "^0.9.3",
     "@gkd-kit/define": "^0.0.1",
     "@gkd-kit/tools": "^0.8.0",
-    "@types/node": "^26.4.1",
+    "@types/node": "^26.5.1",
     "eslint": "^10.10.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-unused-imports": "^4.4.1",
     "json5": "^2.2.3",
-    "lint-staged": "^17.5.0",
+    "lint-staged": "^17.5.1",
     "prettier": "^3.9.6",
     "tsx": "^4.23.13",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.69.0"
+    "typescript-eslint": "^8.70.0"
   },
   "devDependencies": {
     "simple-git-hooks": "^2.14.0"
