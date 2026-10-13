@@ -102,5 +102,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '全屏广告-安装应用',
+      desc: '进入应用商店首页时弹出下载弹窗',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          activityIds: 'com.heytap.market.activity.MainActivity',
+          matches: ['[vid="tv_upgrade_require_title"]', '[text="暂不安装"]'],
+        },
+      ],
+    },
   ],
 });
