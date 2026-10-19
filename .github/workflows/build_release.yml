@@ -39,15 +39,15 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
 
       - name: Setup environment
-        uses: jdx/mise-action@2d8d4cafcbd33be2ea37d2b6f5ad595363d1f1ca # v5.1.1
+        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
 
       - name: Install deps
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build Releases
         run: pnpm run build
@@ -87,7 +87,7 @@ jobs:
 
       - name: Git push
         if: ${{ steps.commit.outcome == 'success' }}
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@881a6320fdb16eb5318c5054f31c218aec2b324c # v1.3.0
         with:
           github_token: ${{ github.token }}
           branch: ${{ github.ref }}
@@ -95,19 +95,9 @@ jobs:
 
       - name: Create Release
         if: ${{ steps.commit.outcome == 'success' }}
-        uses: softprops/action-gh-release@v3
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
         with:
           tag_name: v${{ steps.version.outputs.version }}
           name: Release ${{ steps.version.outputs.version }}
           body_path: ./dist/CHANGELOG.md
           make_latest: true
-
-      - name: Publish package(if npm token exists)
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ steps.commit.outcome == 'success' && env.NPM_TOKEN != '' }}
-        run: |
-          pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-          node -e "import('@gkd-kit/tools').then((m) => m.updatePkgVersion());"
-          pnpm publish --no-git-checks
-          node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"
