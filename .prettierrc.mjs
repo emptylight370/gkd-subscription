@@ -7,4 +7,12 @@ export default {
   singleQuote: true,
   trailingComma: 'all',
   printWidth: 120,
+  overrides: [
+    {
+      files: ['*.yml', '*.yaml'],
+      options: {
+        singleQuote: false,
+      },
+    },
+  ],
 };

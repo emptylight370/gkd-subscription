@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "postinstall": "simple-git-hooks",
-    "format": "prettier --cache --write ./**/*.{js,cjs,mjs,ts,jsx,tsx,json}",
-    "lint": "eslint --cache --fix ./**/*.{js,cjs,mjs,ts,jsx,tsx}",
+    "format": "prettier --cache --write --ignore-unknown .",
+    "lint": "eslint --cache --fix .",
     "check": "tsc --noEmit && tsx ./scripts/check.ts",
     "build": "tsc --noEmit && tsx ./scripts/build.ts"
   },
@@ -30,18 +30,16 @@
     "./dist"
   ],
   "engines": {
-    "node": ">=22"
+    "node": ">=26"
   },
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": ">=22.0.0",
-      "onFail": "warn"
+      "version": ">=26.0.0"
     },
     "packageManager": {
       "name": "pnpm",
-      "version": ">=11.0.0",
-      "onFail": "warn"
+      "version": ">=11.0.0"
     }
   },
   "dependencies": {
