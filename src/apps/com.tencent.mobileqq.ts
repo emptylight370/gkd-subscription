@@ -81,5 +81,28 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '分段广告-频道瀑布流广告',
+      fastQuery: true,
+      activityIds: 'com.tencent.mobileqq.guild.base.QPublicFragmentActivityForMainWebActivity',
+      enable: false,
+      rules: [
+        {
+          key: 1,
+          matches: '@LinearLayout [text="广告"]',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          matches: '@LinearLayout [text="关闭这条"]',
+        },
+        {
+          key: 3,
+          preKeys: [2],
+          matches: '[text="直接关闭"]',
+        },
+      ],
+    },
   ],
 });
