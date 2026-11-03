@@ -47,8 +47,8 @@
     "@gkd-kit/api": "^0.9.3",
     "@gkd-kit/define": "^0.0.1",
     "@gkd-kit/tools": "^0.8.0",
-    "@types/node": "^26.6.5",
-    "eslint": "^10.13.0",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-unused-imports": "^4.4.1",
     "json5": "^2.2.3",
@@ -56,7 +56,7 @@
     "prettier": "^3.9.10",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.71.2"
+    "typescript-eslint": "^8.72.1"
   },
   "devDependencies": {
     "simple-git-hooks": "^2.14.0"
