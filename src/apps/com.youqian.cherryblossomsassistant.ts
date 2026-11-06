@@ -12,8 +12,16 @@ export default defineGkdApp({
       rules: [
         {
           name: '签到',
+          versionCode: { maximum: 55 },
           activityIds: '.ui.activity.SignInActivity',
           matches: '[text="立即签到"]',
+        },
+        {
+          name: '签到V2',
+          versionCode: { minimum: 56 },
+          activityIds: 'com.youqian.cherryblossomsassistant.ui.activity.BottomNavigationActivity',
+          matches: '@View > [text="打卡"]',
+          snapshotUrls: 'https://i.gkd.li/i/34492563',
         },
       ],
     },
