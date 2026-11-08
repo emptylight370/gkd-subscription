@@ -19,7 +19,7 @@ export default defineGkdApp({
         {
           name: '签到V2',
           versionCode: { minimum: 56 },
-          activityIds: 'com.youqian.cherryblossomsassistant.ui.activity.BottomNavigationActivity',
+          activityIds: '.ui.activity.BottomNavigationActivity',
           matches: '@View > [text="打卡"]',
           snapshotUrls: 'https://i.gkd.li/i/34492563',
         },

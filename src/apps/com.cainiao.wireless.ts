@@ -46,5 +46,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '局部广告-菜鸟管理包裹',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity',
+          matches: '[vid="cn_bottom_sheet_close"]',
+        },
+      ],
+    },
   ],
 });
