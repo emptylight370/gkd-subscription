@@ -134,7 +134,10 @@ export default defineGkdApp({
           name: '点击红点V2',
           versionCode: { minimum: 200000000 },
           fastQuery: false,
-          matches: '@View[childCount=5] > TextView + View',
+          matches: [
+            '@View < View <4 View < View < View < [vid="bottomNavCompose"]',
+            '@View[childCount=5] > TextView + View',
+          ],
         },
         {
           key: 4,
