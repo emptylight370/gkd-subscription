@@ -99,6 +99,22 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 9,
+      name: '功能类-领取每日任务奖励',
+      enable: false,
+      fastQuery: true,
+      activityIds: [
+        'com.sf.ui.my.welfare.WelfareActivity',
+        'com.sf.ui.signresult.SignResultNewActivity',
+        'com.sf.ui.main.mine.MyLevelActivity',
+      ],
+      rules: [
+        {
+          matches: '[vid="tvConfirm"][text="开心收下"]',
+        },
+      ],
+    },
+    {
       key: 5,
       name: '分段功能-领取会员权益',
       desc: '每日/周代券领取',
